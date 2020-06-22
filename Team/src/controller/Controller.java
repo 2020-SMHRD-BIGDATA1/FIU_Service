@@ -24,4 +24,14 @@ public class Controller {
 		int cnt = dao.insert(joinUser);
 		return cnt;
 	}
+
+	public boolean check(String id) {
+		String check_ID;
+		check_ID = dao.selectCheck(id);
+		if (check_ID != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
