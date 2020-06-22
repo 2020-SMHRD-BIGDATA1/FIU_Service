@@ -62,6 +62,7 @@ public class JoinGUI {
 		panel_1.setLayout(sl_panel_1);
 
 		JLabel lblNewLabel = new JLabel("\uD68C\uC6D0\uAC00\uC785 \uD398\uC774\uC9C0");
+		lblNewLabel.setFont(new Font("휴먼편지체", Font.PLAIN, 20));
 		sl_panel_1.putConstraint(SpringLayout.NORTH, lblNewLabel, 20, SpringLayout.NORTH, panel_1);
 		sl_panel_1.putConstraint(SpringLayout.WEST, lblNewLabel, 100, SpringLayout.WEST, panel_1);
 		sl_panel_1.putConstraint(SpringLayout.SOUTH, lblNewLabel, 60, SpringLayout.NORTH, panel_1);
@@ -192,7 +193,7 @@ public class JoinGUI {
 				}
 
 				String age = txt_Age.getText();
-				
+
 				MemberVO joinUser = new MemberVO(id, pw, name, phone, location, sex, age);
 
 				int cnt = controller.join(joinUser);
@@ -202,6 +203,7 @@ public class JoinGUI {
 						frame.dispose();
 					} else {
 						JOptionPane.showMessageDialog(frame, "비밀번호가 일치하지 않습니다", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
+						txt_pwCheck.setText("");
 					}
 				} else {
 					JOptionPane.showMessageDialog(frame, "회원가입 실패", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
