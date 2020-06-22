@@ -145,6 +145,12 @@ public class MainGUI{
 		panel_6.add(btn_now);
 		
 		JButton btn_my = new JButton("My FEST");
+		btn_my.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+//				내정보GUI GUI클래스명 = new 내정보GUI();
+//				frame.dispose();
+			}
+		});
 		btn_my.setFont(new Font("맑은 고딕 Semilight", Font.BOLD, 12));
 		btn_my.setBorderPainted(false);
 		btn_my.setBackground(Color.WHITE);
