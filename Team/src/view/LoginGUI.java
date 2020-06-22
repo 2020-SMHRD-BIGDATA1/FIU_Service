@@ -107,6 +107,10 @@ public class LoginGUI {
 		panel_2.add(txt_PW);
 		panel.add(panel_3);
 
+		JCheckBox save_ID = new JCheckBox("\uC544\uC774\uB514 \uC800\uC7A5");
+		save_ID.setBounds(115, 6, 145, 25);
+		panel_3.add(save_ID);
+
 		btn_Login = new JButton("\uB85C\uADF8\uC778");
 		btn_Login.setBounds(70, 80, 125, 30);
 		btn_Login.addActionListener(new ActionListener() {
@@ -123,6 +127,12 @@ public class LoginGUI {
 				} else {
 					JOptionPane.showMessageDialog(frame, "로그인 실패", "로그인 결과", JOptionPane.PLAIN_MESSAGE);
 				}
+				if (save_ID.isSelected()) {
+					txt_ID.setText(id);
+				} else {
+					txt_ID.setText("");
+				}
+				txt_PW.setText("");
 			}
 		});
 		panel_3.setLayout(null);
@@ -137,8 +147,5 @@ public class LoginGUI {
 		});
 		panel_3.add(btn_Join);
 
-		JCheckBox chckbxNewCheckBox = new JCheckBox("\uC544\uC774\uB514 \uC800\uC7A5");
-		chckbxNewCheckBox.setBounds(115, 6, 145, 25);
-		panel_3.add(chckbxNewCheckBox);
 	}
 }
