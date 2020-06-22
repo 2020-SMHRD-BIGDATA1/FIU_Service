@@ -89,4 +89,25 @@ public class MemberDAO {
 		}
 		return row;
 	}
+
+	public String selectCheck(String id) {
+		String check_ID = null;
+		getConnection();
+		try {
+			String sql = "SELECT * FROM FESTIVALMEMBER WHERE ID = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, id);
+			rs = pst.executeQuery();
+
+			if (rs.next()) {
+				check_ID = rs.getString("ID");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return check_ID;
+	}
 }
