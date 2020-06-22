@@ -42,30 +42,12 @@ public class SearchGUI {
 
 	}
 
-//	public void Main() {
-//		setTitle("Image Change");
-//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//
-//		contentPane = getContentPane();
-//		contentPane.setLayout(new BorderLayout());
-//
-//		img0 = new ImageIcon("images/family.png");
-//		img1 = new ImageIcon("images/bart.png");
-//		img2 = new ImageIcon("images/risa.png");
-//
-//		
-//	}
-
 	private void initialize() {
 
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-
-//		img0 = new ImageIcon("C:\\Users\\SMHRD\\Desktop\\이미지\\서울.PNG");
-//		img1 = new ImageIcon("images/bart.png");
-//		img2 = new ImageIcon("images/risa.png");
 
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
