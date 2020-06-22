@@ -4,6 +4,7 @@ import java.awt.CardLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.Collator;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -84,17 +85,6 @@ public class JoinGUI {
 		txt_ID.setBounds(160, 10, 110, 20);
 		panel_2.add(txt_ID);
 		txt_ID.setColumns(10);
-
-		JButton btn_idCheck = new JButton("\uC911\uBCF5\uD655\uC778");
-		btn_idCheck.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (txt_ID.getText().equals("")) {
-					JOptionPane.showMessageDialog(frame, "ID가 중복되었습니다.", "ID 중복확인", JOptionPane.PLAIN_MESSAGE);
-				}
-			}
-		});
-		btn_idCheck.setBounds(295, 10, 90, 25);
-		panel_2.add(btn_idCheck);
 
 		JLabel lb_PW = new JLabel("PW");
 		lb_PW.setBounds(50, 60, 70, 20);
@@ -192,7 +182,6 @@ public class JoinGUI {
 				String location = box_location.getSelectedItem().toString();
 				String sex = group.getSelection().toString();
 				String age = txt_Age.getText();
-
 				MemberVO joinUser = new MemberVO(id, pw, name, phone, location, sex, age);
 
 				int cnt = controller.join(joinUser);
@@ -210,6 +199,21 @@ public class JoinGUI {
 		});
 		btn_Join.setBounds(70, 10, 115, 30);
 		panel_3.add(btn_Join);
+
+		JButton btn_idCheck = new JButton("\uC911\uBCF5\uD655\uC778");
+		btn_idCheck.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String id = txt_ID.getText();
+				boolean is_Check = controller.check(id);
+				if (is_Check == true) {
+					JOptionPane.showMessageDialog(frame, "ID가 중복되었습니다", "ID 중복확인", JOptionPane.PLAIN_MESSAGE);
+				} else {
+					JOptionPane.showMessageDialog(frame, "사용 가능한 ID입니다", "ID 중복확인", JOptionPane.PLAIN_MESSAGE);
+				}
+			}
+		});
+		btn_idCheck.setBounds(295, 10, 90, 25);
+		panel_2.add(btn_idCheck);
 
 		btn_Cancle = new JButton("\uCDE8\uC18C");
 		btn_Cancle.addActionListener(new ActionListener() {
