@@ -15,11 +15,11 @@ public class MapPanel extends JPanel {
 
 	String path;
 	BufferedImage pic;
-	
+
 	public void setPath(String path) {
 		this.path = path;
 	}
-	
+
 	@Override
 	public void paint(Graphics g) {
 		try {

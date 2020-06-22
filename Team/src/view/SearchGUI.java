@@ -39,10 +39,9 @@ public class SearchGUI {
 	public SearchGUI() {
 		initialize();
 		frame.setVisible(true);
-		
-		
+
 	}
-	
+
 //	public void Main() {
 //		setTitle("Image Change");
 //		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,16 +57,15 @@ public class SearchGUI {
 //	}
 
 	private void initialize() {
-		
+
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 //		img0 = new ImageIcon("C:\\Users\\SMHRD\\Desktop\\이미지\\서울.PNG");
 //		img1 = new ImageIcon("images/bart.png");
 //		img2 = new ImageIcon("images/risa.png");
-
 
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
@@ -131,10 +129,10 @@ public class SearchGUI {
 		tpanel_1.setBackground(Color.WHITE);
 		searchTab.addTab("지역별", tpanel_1);
 		tpanel_1.setLayout(null);
-		
+
 		MapPanel map_panel = new MapPanel();
 		map_panel.setPath("C:\\Users\\SMHRD\\Desktop\\이미지\\지도\\전국.PNG");
-		
+
 		map_panel.setBackground(Color.WHITE);
 		map_panel.setBounds(90, 0, 339, 472);
 		tpanel_1.add(map_panel);
@@ -252,7 +250,7 @@ public class SearchGUI {
 
 		JButton btn_6 = new JButton("\uB300\uAD6C");
 		btn_6.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				map_panel.setVisible(false);
@@ -317,7 +315,7 @@ public class SearchGUI {
 
 		JButton btn_9 = new JButton("\uBD80\uC0B0");
 		btn_9.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				map_panel.setVisible(false);
@@ -504,13 +502,13 @@ public class SearchGUI {
 		});
 		btn_17.setBackground(Color.WHITE);
 		areaList.add(btn_17);
-		
+
 		JPanel tpanel_2 = new JPanel();
 		tpanel_2.setBackground(Color.WHITE);
 		searchTab.addTab("날짜별", tpanel_2);
 		tpanel_2.setLayout(null);
-		
-		JPanel Calendar_Panel = new JPanel(); 
+
+		JPanel Calendar_Panel = new JPanel();
 		Calendar_Panel.setBounds(12, 10, 405, 452);
 		tpanel_2.add(Calendar_Panel);
 
@@ -518,5 +516,5 @@ public class SearchGUI {
 		panel.add(searchTab);
 
 	}
-	
+
 }
