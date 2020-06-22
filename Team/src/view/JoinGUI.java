@@ -5,7 +5,9 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.Collator;
+import java.util.Enumeration;
 
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -180,8 +182,17 @@ public class JoinGUI {
 				String name = txt_Name.getText();
 				String phone = txt_Phone.getText();
 				String location = box_location.getSelectedItem().toString();
-				String sex = group.getSelection().toString();
+				Enumeration<AbstractButton> enums = group.getElements();
+				String sex = null;
+				while (enums.hasMoreElements()) {
+					AbstractButton ab = enums.nextElement();
+					JRadioButton jb = (JRadioButton) ab;
+					if (jb.isSelected())
+						sex = jb.getText().trim();
+				}
+
 				String age = txt_Age.getText();
+				
 				MemberVO joinUser = new MemberVO(id, pw, name, phone, location, sex, age);
 
 				int cnt = controller.join(joinUser);
