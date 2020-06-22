@@ -25,10 +25,6 @@ public class MemberVO {
 		this.pw = pw;
 	}
 
-	public MemberVO(String id) {
-		this.id = id;
-	}
-
 	public String getId() {
 		return id;
 	}
