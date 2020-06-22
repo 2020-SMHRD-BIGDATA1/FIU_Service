@@ -70,7 +70,7 @@ public class MainGUI {
 		panel.add(lblNewLabel);
 
 		JButton btn_list = new JButton("");
-		btn_list.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\\uC774\uBBF8\uC9C0\\btn_list.png"));
+		btn_list.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_list.png"));
 		btn_list.setBorderPainted(false);
 		btn_list.setBackground(Color.WHITE);
 		btn_list.setBounds(0, 0, 65, 60);
@@ -83,7 +83,7 @@ public class MainGUI {
 				frame.dispose();
 			}
 		});
-		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\\uC774\uBBF8\uC9C0\\btn_search.png"));
+		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
 		btn_search.setBorderPainted(false);
 		btn_search.setBackground(Color.WHITE);
 		btn_search.setBounds(369, 0, 65, 60);
