@@ -88,7 +88,7 @@ public class JoinGUI {
 		JButton btn_idCheck = new JButton("\uC911\uBCF5\uD655\uC778");
 		btn_idCheck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (txt_ID.getText().equals("dd")) {
+				if (txt_ID.getText().equals("")) {
 					JOptionPane.showMessageDialog(frame, "ID가 중복되었습니다.", "ID 중복확인", JOptionPane.PLAIN_MESSAGE);
 				}
 			}
@@ -197,11 +197,17 @@ public class JoinGUI {
 
 				int cnt = controller.join(joinUser);
 				if (cnt != 0) {
-					if (pw.equals(String.valueOf(txt_pwCheck.getPassword()))) {
-						JOptionPane.showMessageDialog(frame, "회원가입 성공", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
-						frame.dispose();
-					} else {
-						JOptionPane.showMessageDialog(frame, "비밀번호가 일치하지 않습니다", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
+					if (id == null) {
+						JOptionPane.showMessageDialog(frame, "아이디를 입력해주세요", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
+					} else if (pw == null) {
+						JOptionPane.showMessageDialog(frame, "비밀번호를 입력해주세요", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
+						if (pw.equals(String.valueOf(txt_pwCheck.getPassword()))) {
+							JOptionPane.showMessageDialog(frame, "회원가입 성공", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
+							frame.dispose();
+						} else {
+							JOptionPane.showMessageDialog(frame, "비밀번호가 일치하지 않습니다", "회원가입 결과",
+									JOptionPane.PLAIN_MESSAGE);
+						}
 					}
 				} else {
 					JOptionPane.showMessageDialog(frame, "회원가입 실패", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
