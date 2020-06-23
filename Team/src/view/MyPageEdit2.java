@@ -1,0 +1,183 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+import controller.Controller;
+import model.MemberVO;
+
+import java.awt.Font;
+import java.awt.Image;
+
+import javax.swing.JTextField;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JPasswordField;
+import javax.swing.JList;
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class MyPageEdit2 {
+
+	private JFrame frame;
+	private JTextField txt_name;
+	private JTextField txt_age;
+	private JTextField txt_phone;
+	private JPasswordField txt_pw;
+	
+	private Controller controller = LoginGUI.controller;
+	private JComboBox comboBox;
+
+	public MyPageEdit2() {
+		
+	
+		initialize();
+		MemberVO loginUser = controller.getLoginUser();
+		txt_pw.setText(loginUser.getPw());
+		//MemberVO joinMember = controller.getJoinMember();
+		//txt_name.setText(joinMember.getName());
+		MemberVO pw = new MemberVO(loginUser.getPw());
+		txt_age.setText(controller.select(pw).getAge());
+		txt_name.setText(controller.select(pw).getName());
+		txt_phone.setText(controller.select(pw).getPhone());
+		
+		//comboBox.setSelectedItem(control).toString();
+		
+
+		frame.setVisible(true);
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 700);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new CardLayout(0, 0));
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		frame.getContentPane().add(panel, "name_672105468043500");
+		panel.setLayout(null);
+		
+		JButton btnNewButton_1 = new JButton("\uCDE8\uC18C");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
+		btnNewButton_1.setBackground(Color.WHITE);
+		btnNewButton_1.setBounds(243, 541, 97, 44);
+		panel.add(btnNewButton_1);
+		
+		JButton btnNewButton = new JButton("\uC218\uC815");
+		btnNewButton.setBackground(Color.WHITE);
+		btnNewButton.setBounds(88, 541, 97, 44);
+		panel.add(btnNewButton);
+		
+		JLabel lblNewLabel = new JLabel("\uD68C\uC6D0 \uC815\uBCF4 \uC218\uC815");
+		lblNewLabel.setFont(new Font("함초롬바탕", Font.BOLD, 30));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(12, 20, 410, 96);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("\uC774\uB984");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(25, 326, 49, 36);
+		panel.add(lblNewLabel_1);
+		
+		txt_name = new JTextField();
+		txt_name.setBounds(82, 326, 116, 36);
+		panel.add(txt_name);
+		txt_name.setColumns(10);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("\uB098\uC774");
+		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1.setBounds(232, 326, 49, 36);
+		panel.add(lblNewLabel_1_1);
+		
+		txt_age = new JTextField();
+		txt_age.setColumns(10);
+		txt_age.setBounds(289, 326, 116, 36);
+		panel.add(txt_age);
+		
+		JLabel lblNewLabel_1_2 = new JLabel("\uD734\uB300\uD3F0");
+		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_2.setBounds(232, 381, 49, 36);
+		panel.add(lblNewLabel_1_2);
+		
+		txt_phone = new JTextField();
+		txt_phone.setColumns(10);
+		txt_phone.setBounds(289, 381, 116, 36);
+		panel.add(txt_phone);
+		
+		JLabel lblNewLabel_1_3 = new JLabel("\uC131\uBCC4");
+		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3.setBounds(232, 433, 49, 36);
+		panel.add(lblNewLabel_1_3);
+		
+		ButtonGroup group;
+		group = new ButtonGroup();
+		
+		JRadioButton RB_male = new JRadioButton("\uB0A8");
+		RB_male.setBackground(Color.WHITE);
+		RB_male.setBounds(289, 440, 49, 23);
+		panel.add(RB_male);
+		
+		JRadioButton RB_female = new JRadioButton("\uC5EC");
+		RB_female.setBackground(Color.WHITE);
+		RB_female.setBounds(356, 440, 49, 23);
+		panel.add(RB_female);
+		
+		group.add(RB_male);
+		group.add(RB_female);
+		
+		
+		JLabel lblNewLabel_1_4 = new JLabel("PW");
+		lblNewLabel_1_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_4.setBounds(25, 381, 49, 36);
+		panel.add(lblNewLabel_1_4);
+		
+		txt_pw = new JPasswordField();
+		txt_pw.setColumns(10);
+		txt_pw.setBounds(82, 381, 116, 36);
+		panel.add(txt_pw);
+		
+		JLabel lblNewLabel_1_5 = new JLabel("\uAC70\uC8FC\uC9C0");
+		lblNewLabel_1_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_5.setBounds(25, 433, 49, 36);
+		panel.add(lblNewLabel_1_5);
+		
+		String[] items = { "서울특별시", "대전광역시", "부산광역시", "대구광역시", "인천광역시", "울산광역시", "광주광역시", "세종시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도"};
+	
+		comboBox = new JComboBox(items);
+		comboBox.setBackground(Color.WHITE);
+		comboBox.setBounds(82, 436, 116, 30);
+		panel.add(comboBox);
+		
+		String path2 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\불꽃.png";
+		ImageIcon bg = new ImageIcon(path2);
+		Image originImg2 = bg.getImage(); 
+		//추출된 Image의 크기를 조절하여 새로운 Image객체 생성
+		Image changedImg2= originImg2.getScaledInstance(434, 660, Image.SCALE_SMOOTH );
+		//새로운 Image로 ImageIcon객체를 생성
+		ImageIcon Icon3 = new ImageIcon(changedImg2);
+		
+		JLabel lbl_bg3 = new JLabel(Icon3);
+		lbl_bg3.setBounds(0, 0, 434, 661);
+		panel.add(lbl_bg3);
+		
+
+	}
+}
