@@ -44,6 +44,7 @@ public class MemberDAO {
 	}
 
 	public MemberVO selectOne(MemberVO user) {
+		
 		MemberVO loginuser = null;
 		getConnection();
 		try {
@@ -110,4 +111,69 @@ public class MemberDAO {
 		}
 		return check_ID;
 	}
-}
+	
+	public MemberVO select(MemberVO member) {
+		MemberVO joinMember = null;
+		getConnection();
+		try {
+			String sql = "SELECT * FROM FESTIVALMEMBER WHERE ID = ?";
+			pst = conn.prepareStatement(sql);
+			//pst.setString(1, member.getId());
+			pst.setString(1, member.getId());
+			/*
+			 * pst.setString(3, member.getName()); pst.setString(4, member.getPhone());
+			 * pst.setString(5, member.getlocation()); pst.setString(6, member.getSex());
+			 * pst.setString(7, member.getAge());
+			 */
+			rs = pst.executeQuery();
+			
+			
+			if (rs.next()) {
+				String id = rs.getString("id");
+				String pw = rs.getString("PW");
+				String name = rs.getString("name");
+				String phone = rs.getString("phone");
+				String location = rs.getString("location");
+				String sex = rs.getString("sex");
+				String age = rs.getString("age");
+
+				joinMember = new MemberVO (id, pw, name, phone, location, sex, age);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return joinMember;
+	}
+	
+	public int update(MemberVO update) {
+		int cnt = 0;
+		MemberVO updatemember = null;
+		getConnection();
+		try {
+			String sql = "UPDATE FESTIVALMEMBER SET ID = ?, PW = ?, NAME = ?, PHONE = ?, LOCATION = ?, SEX = ?, AGE = ? Where ID = ? ";
+			pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, update.getId());
+			pst.setString(2, update.getPw());
+			pst.setString(3, update.getName());
+			pst.setString(4, update.getPhone());
+			pst.setString(5, update.getlocation());
+			pst.setString(6, update.getSex());
+			pst.setString(7, update.getAge());	
+			pst.setString(8, update.getId());
+			
+			cnt = pst.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
+	}
+	}
+	
+	
+
