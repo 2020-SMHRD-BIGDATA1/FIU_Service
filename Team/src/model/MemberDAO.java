@@ -48,15 +48,15 @@ public class MemberDAO {
 		MemberVO loginuser = null;
 		getConnection();
 		try {
-			String sql = "SELECT * FROM FESTIVALMEMBER WHERE ID = ? AND PW = ?";
+			String sql = "SELECT * FROM FESTIVALMEMBER WHERE FEST_ID = ? AND FEST_PW = ?";
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, user.getId());
 			pst.setString(2, user.getPw());
 			rs = pst.executeQuery();
 
 			if (rs.next()) {
-				String id = rs.getString("ID");
-				String pw = rs.getString("PW");
+				String id = rs.getString("FEST_ID");
+				String pw = rs.getString("FEST_PW");
 				loginuser = new MemberVO(id, pw);
 			}
 
