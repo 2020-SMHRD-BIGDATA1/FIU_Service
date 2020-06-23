@@ -49,7 +49,7 @@ public class FestivalDAO {
 		int cnt = 0;
 		getConnection();
 		try {
-			String sql = "SELECT * FROM FESTIVAL_INFORMATION WHERE LIKE ?";
+			String sql = "SELECT * FROM FESTIVAL_INFORMATION WHERE FEST_NAME LIKE ?";
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, '%'+search+'%');
 			rs = pst.executeQuery();
