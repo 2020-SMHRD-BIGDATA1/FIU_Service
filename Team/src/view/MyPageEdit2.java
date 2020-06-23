@@ -20,12 +20,16 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JPasswordField;
 import javax.swing.JList;
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.Enumeration;
 
 public class MyPageEdit2 {
 
@@ -39,6 +43,7 @@ public class MyPageEdit2 {
 	private JComboBox comboBox_area;
 	private JRadioButton RB_male;
 	private JRadioButton RB_female;
+	private JTextField txt_id;
 
 	public MyPageEdit2() {
 		
@@ -48,6 +53,8 @@ public class MyPageEdit2 {
 		txt_pw.setText(loginUser.getPw());
 		
 		MemberVO id = new MemberVO(loginUser.getId());
+		txt_id.setText(controller.select(id).getId());
+		txt_id.setEnabled(false);
 		txt_age.setText(controller.select(id).getAge());
 		txt_name.setText(controller.select(id).getName());
 		txt_phone.setText(controller.select(id).getPhone());
@@ -88,6 +95,35 @@ public class MyPageEdit2 {
 		panel.add(btnNewButton_1);
 		
 		JButton btnNewButton = new JButton("\uC218\uC815");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+
+				String id = txt_id.getText();
+				String pw = String.valueOf(txt_pw.getPassword());
+				String name = txt_name.getText();
+				String phone = txt_phone.getText();
+				String location = comboBox_area.getSelectedItem().toString();
+				
+				ButtonGroup group = new ButtonGroup();
+				group.add(RB_male);
+				group.add(RB_female);
+				Enumeration<AbstractButton> enums = group.getElements();
+				String sex = null;
+				while (enums.hasMoreElements()) {
+					AbstractButton ab = enums.nextElement();
+					JRadioButton jb = (JRadioButton) ab;
+					if (jb.isSelected())
+						sex = jb.getText().trim();
+				}
+
+				String age = txt_age.getText();
+				MemberVO joinUser = new MemberVO(id, pw, name, phone, location, sex, age);
+				
+			}
+		});
 		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setBounds(88, 541, 97, 44);
 		panel.add(btnNewButton);
@@ -179,6 +215,17 @@ public class MyPageEdit2 {
 		Image changedImg2= originImg2.getScaledInstance(434, 660, Image.SCALE_SMOOTH );
 		//货肺款 Image肺 ImageIcon按眉甫 积己
 		ImageIcon Icon3 = new ImageIcon(changedImg2);
+		
+		txt_id = new JTextField();
+		txt_id.setText((String) null);
+		txt_id.setColumns(10);
+		txt_id.setBounds(82, 274, 116, 36);
+		panel.add(txt_id);
+		
+		JLabel lblNewLabel_1_6 = new JLabel("\uC544\uC774\uB514");
+		lblNewLabel_1_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_6.setBounds(25, 274, 49, 36);
+		panel.add(lblNewLabel_1_6);
 		
 		JLabel lbl_bg3 = new JLabel(Icon3);
 		lbl_bg3.setBounds(0, 0, 434, 661);

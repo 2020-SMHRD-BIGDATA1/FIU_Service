@@ -183,6 +183,7 @@ public class JoinGUI {
 				String name = txt_Name.getText();
 				String phone = txt_Phone.getText();
 				String location = box_location.getSelectedItem().toString();
+				
 				Enumeration<AbstractButton> enums = group.getElements();
 				String sex = null;
 				while (enums.hasMoreElements()) {

@@ -44,6 +44,7 @@ public class MemberDAO {
 	}
 
 	public MemberVO selectOne(MemberVO user) {
+		
 		MemberVO loginuser = null;
 		getConnection();
 		try {
@@ -145,4 +146,34 @@ public class MemberDAO {
 		}
 		return joinMember;
 	}
-}
+	
+	public int update(MemberVO update) {
+		int cnt = 0;
+		MemberVO updatemember = null;
+		getConnection();
+		try {
+			String sql = "UPDATE FESTIVALMEMBER SET ID = ?, PW = ?, NAME = ?, PHONE = ?, LOCATION = ?, SEX = ?, AGE = ? Where ID = ? ";
+			pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, update.getId());
+			pst.setString(2, update.getPw());
+			pst.setString(3, update.getName());
+			pst.setString(4, update.getPhone());
+			pst.setString(5, update.getlocation());
+			pst.setString(6, update.getSex());
+			pst.setString(7, update.getAge());	
+			pst.setString(8, update.getId());
+			
+			cnt = pst.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
+	}
+	}
+	
+	
+

@@ -49,7 +49,8 @@ public class Controller {
 			return null;
 		}
 	}
-
+	
+	
 	public int join(MemberVO joinUser) {
 		int cnt = dao.insert(joinUser);
 		return cnt;
