@@ -52,8 +52,13 @@ public class MyPageEdit2 {
 		txt_name.setText(controller.select(id).getName());
 		txt_phone.setText(controller.select(id).getPhone());
 		comboBox_area.setSelectedItem(controller.select(id).getlocation());
-		//comboBox.setSelectedItem(control).toString();
 		
+		if (controller.select(id).getSex().equals("³²")) {
+			RB_male.doClick();
+		}
+		if (controller.select(id).getSex().equals("¿©")) {
+			RB_female.doClick();
+		}
 
 		frame.setVisible(true);
 	}
@@ -138,7 +143,7 @@ public class MyPageEdit2 {
 		
 		RB_female = new JRadioButton("\uC5EC");
 		RB_female.setBackground(Color.WHITE);
-		RB_female.setBounds(356, 440, 49, 23);
+		RB_female.setBounds(355, 440, 49, 23);
 		panel.add(RB_female);
 		
 		group.add(RB_male);
