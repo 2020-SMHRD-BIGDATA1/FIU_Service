@@ -1,11 +1,11 @@
 CREATE TABLE FESTIVALMEMBER (
-	id varchar2(100),
-	pw varchar2(100),
-	name varchar2(100),
-	phone varchar2(100),
-	location varchar2(100),
-	sex varchar2(100),
-	age varchar2(100)
+	id varchar2(100) NOT NULL PRIMARY KEY,
+	pw varchar2(100) NOT NULL,
+	name varchar2(100) NOT NULL,
+	phone varchar2(100) NOT NULL,
+	location varchar2(100) NOT NULL,
+	sex varchar2(100) NOT NULL,
+	age varchar2(100) NOT NULL
 )
 
 CREATE TABLE FESTIVAL_INFORMATION(
