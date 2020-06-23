@@ -68,8 +68,8 @@ public class MyPage {
 		lbl_home.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				frame.dispose();
 				MainGUI main = new MainGUI();
-
 			}
 		});
 		lbl_home.setBounds(12, 10, 75, 73);

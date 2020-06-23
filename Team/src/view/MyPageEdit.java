@@ -95,7 +95,7 @@ public class MyPageEdit {
 				
 				if (pw.equals(loginUser.getPw())) {
 					MemberVO password = new MemberVO(pw);
-					
+					frame.dispose();
 					MyPageEdit2 page2 = new MyPageEdit2();
 				}else {
 					JOptionPane.showMessageDialog(frame,

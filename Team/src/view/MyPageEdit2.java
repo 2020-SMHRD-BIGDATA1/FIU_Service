@@ -125,6 +125,7 @@ public class MyPageEdit2 {
 				int cnt = controller.update(joinUser);
 				if (cnt > 0) {
 					JOptionPane.showMessageDialog(frame, "수정 성공", "수정 결과", JOptionPane.PLAIN_MESSAGE);
+					frame.dispose();
 				}
 			}
 		});

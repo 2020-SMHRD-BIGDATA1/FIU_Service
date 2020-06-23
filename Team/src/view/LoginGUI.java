@@ -68,24 +68,9 @@ public class LoginGUI {
 		frame.getContentPane().add(panel, "name_165020780607700");
 		panel.setLayout(null);
 
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(0, 102, 102));
-		panel_1.setBounds(10, 10, 412, 414);
-		panel.add(panel_1);
-
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(51, 153, 153));
 		panel_2.setBounds(10, 434, 412, 116);
-		SpringLayout sl_panel_1 = new SpringLayout();
-		panel_1.setLayout(sl_panel_1);
-
-		JLabel lblNewLabel_2 = new JLabel("\uCD95\uC81C \uC5B4\uB54C");
-		sl_panel_1.putConstraint(SpringLayout.NORTH, lblNewLabel_2, 175, SpringLayout.NORTH, panel_1);
-		sl_panel_1.putConstraint(SpringLayout.WEST, lblNewLabel_2, 75, SpringLayout.WEST, panel_1);
-		sl_panel_1.putConstraint(SpringLayout.SOUTH, lblNewLabel_2, 225, SpringLayout.NORTH, panel_1);
-		sl_panel_1.putConstraint(SpringLayout.EAST, lblNewLabel_2, -82, SpringLayout.EAST, panel_1);
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_1.add(lblNewLabel_2);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
 
@@ -130,12 +115,11 @@ public class LoginGUI {
 				JoinGUI join = new JoinGUI();
 			}
 		});
-
-		JCheckBox save_ID = new JCheckBox("\uC544\uC774\uB514 \uC800\uC7A5");
-		save_ID.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
-		save_ID.setBackground(new Color(51, 153, 153));
-		save_ID.setBounds(80, 555, 145, 25);
-		panel.add(save_ID);
+		
+		JLabel lblNewLabel_2 = new JLabel("\uCD95\uC81C \uC5B4\uB54C");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setBounds(80, 156, 255, 50);
+		panel.add(lblNewLabel_2);
 
 		btn_Login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -151,12 +135,6 @@ public class LoginGUI {
 				} else {
 					JOptionPane.showMessageDialog(frame, "로그인 실패", "로그인 결과", JOptionPane.PLAIN_MESSAGE);
 				}
-				if (save_ID.isSelected()) {
-					txt_ID.setText(id);
-				} else {
-					txt_ID.setText("");
-				}
-				txt_PW.setText("");
 			}
 		});
 	}
