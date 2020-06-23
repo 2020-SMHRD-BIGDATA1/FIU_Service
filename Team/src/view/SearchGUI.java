@@ -1,12 +1,14 @@
 package view;
 
+import java.awt.CardLayout;
 import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.sql.Array;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,25 +18,17 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.JTextArea;
-import javax.swing.JSeparator;
-import javax.swing.DropMode;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.SpringLayout;
-import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
-import java.awt.CardLayout;
+
+import controller.Controller;
+import model.FestivalVO;
 
 public class SearchGUI {
-
+	
 	private JFrame frame;
 	public JTextField txt_search;
 	private JPanel tpanel_1;
+	public static Controller controller = new Controller();
+	public ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
 
 	public SearchGUI() {
 		initialize();
@@ -87,8 +81,8 @@ public class SearchGUI {
 		btn_search.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String search = txt_search.getText();
-				
-				
+				System.out.println(search);
+				 ArrayList<FestivalVO> list = controller.searchList(search);
 			}
 		});
 		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
