@@ -20,6 +20,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JPasswordField;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -38,7 +39,7 @@ public class MyPageEdit2 {
 	private JTextField txt_age;
 	private JTextField txt_phone;
 	private JPasswordField txt_pw;
-	
+
 	private Controller controller = LoginGUI.controller;
 	private JComboBox comboBox_area;
 	private JRadioButton RB_male;
@@ -46,12 +47,11 @@ public class MyPageEdit2 {
 	private JTextField txt_id;
 
 	public MyPageEdit2() {
-		
-	
+
 		initialize();
 		MemberVO loginUser = controller.getLoginUser();
 		txt_pw.setText(loginUser.getPw());
-		
+
 		MemberVO id = new MemberVO(loginUser.getId());
 		txt_id.setText(controller.select(id).getId());
 		txt_id.setEnabled(false);
@@ -59,7 +59,7 @@ public class MyPageEdit2 {
 		txt_name.setText(controller.select(id).getName());
 		txt_phone.setText(controller.select(id).getPhone());
 		comboBox_area.setSelectedItem(controller.select(id).getlocation());
-		
+
 		if (controller.select(id).getSex().equals("남")) {
 			RB_male.doClick();
 		}
@@ -122,6 +122,10 @@ public class MyPageEdit2 {
 				String age = txt_age.getText();
 				MemberVO joinUser = new MemberVO(id, pw, name, phone, location, sex, age);
 				
+				int cnt = controller.update(joinUser);
+				if (cnt > 0) {
+					JOptionPane.showMessageDialog(frame, "수정 성공", "수정 결과", JOptionPane.PLAIN_MESSAGE);
+				}
 			}
 		});
 		btnNewButton.setBackground(Color.WHITE);

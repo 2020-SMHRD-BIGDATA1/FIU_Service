@@ -68,4 +68,10 @@ public class Controller {
 		}
 	}
 
+
+	public int update(MemberVO joinUser) {
+		int cnt = dao.update(joinUser);
+		return cnt;
+	}
+
 }

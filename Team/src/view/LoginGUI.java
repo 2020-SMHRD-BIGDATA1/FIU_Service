@@ -90,13 +90,13 @@ public class LoginGUI {
 		panel_2.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("ID");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\lb_id.PNG"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\lb_id.PNG"));
 		lblNewLabel.setFont(new Font("±¼¸²", Font.PLAIN, 20));
 		lblNewLabel.setBounds(71, 24, 40, 35);
 		panel_2.add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("PW");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\lb_pw.PNG"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\lb_pw.PNG"));
 		lblNewLabel_1.setFont(new Font("±¼¸²", Font.PLAIN, 20));
 		lblNewLabel_1.setBounds(71, 69, 40, 35);
 		panel_2.add(lblNewLabel_1);
@@ -115,13 +115,13 @@ public class LoginGUI {
 		panel_2.add(txt_PW);
 
 		btn_Login = new JButton("Login");
-		btn_Login.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\btn_login.PNG"));
+		btn_Login.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_login.PNG"));
 		btn_Login.setFont(new Font("±¼¸²", Font.PLAIN, 15));
 		btn_Login.setBounds(269, 24, 75, 35);
 		panel_2.add(btn_Login);
 
 		btn_Join = new JButton("Join");
-		btn_Join.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\btn_join.PNG"));
+		btn_Join.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_join.PNG"));
 		btn_Join.setFont(new Font("±¼¸²", Font.PLAIN, 15));
 		btn_Join.setBounds(269, 69, 75, 35);
 		panel_2.add(btn_Join);
