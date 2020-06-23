@@ -110,4 +110,39 @@ public class MemberDAO {
 		}
 		return check_ID;
 	}
+	
+	public MemberVO select(MemberVO member) {
+		MemberVO joinMember = null;
+		getConnection();
+		try {
+			String sql = "SELECT * FROM FESTIVALMEMBER WHERE PW = ?";
+			pst = conn.prepareStatement(sql);
+			//pst.setString(1, member.getId());
+			pst.setString(1, member.getPw());
+			/*
+			 * pst.setString(3, member.getName()); pst.setString(4, member.getPhone());
+			 * pst.setString(5, member.getlocation()); pst.setString(6, member.getSex());
+			 * pst.setString(7, member.getAge());
+			 */
+			rs = pst.executeQuery();
+			
+			
+			if (rs.next()) {
+				String id = rs.getString("id");
+				String pw = rs.getString("PW");
+				String name = rs.getString("name");
+				String phone = rs.getString("phone");
+				String location = rs.getString("location");
+				String sex = rs.getString("sex");
+				String age = rs.getString("age");
+
+				joinMember = new MemberVO (id, pw, name, phone, location, sex, age);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return joinMember;
+	}
 }
