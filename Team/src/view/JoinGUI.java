@@ -196,17 +196,18 @@ public class JoinGUI {
 
 				MemberVO joinUser = new MemberVO(id, pw, name, phone, location, sex, age);
 
-				int cnt = controller.join(joinUser);
-				if (cnt != 0) {
-					if (pw.equals(String.valueOf(txt_pwCheck.getPassword()))) {
+				if (pw.equals(String.valueOf(txt_pwCheck.getPassword()))) {
+					int cnt = controller.join(joinUser);
+					if (cnt > 0) {
 						JOptionPane.showMessageDialog(frame, "회원가입 성공", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
 						frame.dispose();
 					} else {
-						JOptionPane.showMessageDialog(frame, "비밀번호가 일치하지 않습니다", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
-						txt_pwCheck.setText("");
+						JOptionPane.showMessageDialog(frame, "회원가입 실패", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
 					}
+
 				} else {
-					JOptionPane.showMessageDialog(frame, "회원가입 실패", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(frame, "비밀번호가 일치하지 않습니다", "회원가입 결과", JOptionPane.PLAIN_MESSAGE);
+					txt_pwCheck.setText("");
 				}
 			}
 		});
