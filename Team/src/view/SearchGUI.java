@@ -33,7 +33,7 @@ import java.awt.CardLayout;
 public class SearchGUI {
 
 	private JFrame frame;
-	public JTextField textField;
+	public JTextField txt_search;
 	private JPanel tpanel_1;
 
 	public SearchGUI() {
@@ -86,6 +86,9 @@ public class SearchGUI {
 		JButton btn_search = new JButton("");
 		btn_search.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				String search = txt_search.getText();
+				
+				
 			}
 		});
 		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
@@ -94,10 +97,10 @@ public class SearchGUI {
 		btn_search.setBounds(369, 87, 45, 45);
 		panel.add(btn_search);
 
-		textField = new JTextField();
-		textField.setBounds(12, 84, 410, 50);
-		panel.add(textField);
-		textField.setColumns(10);
+		txt_search = new JTextField();
+		txt_search.setBounds(12, 84, 410, 50);
+		panel.add(txt_search);
+		txt_search.setColumns(10);
 
 		JTabbedPane searchTab = new JTabbedPane(JTabbedPane.TOP);
 		searchTab.setBackground(Color.WHITE);
