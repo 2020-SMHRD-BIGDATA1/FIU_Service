@@ -148,7 +148,7 @@ public class MainGUI {
 		btn_my.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			MyPage mypage = new MyPage();
-
+			frame.dispose();
 			}
 		});
 		btn_my.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 12));
