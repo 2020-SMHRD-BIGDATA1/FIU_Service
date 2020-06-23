@@ -9,13 +9,9 @@ import javax.swing.JLabel;
 import javax.swing.SpringLayout;
 import javax.swing.JPanel;
 
-import java.awt.Button;
 import java.awt.Color;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 
 public class FestivalInformation2 {
