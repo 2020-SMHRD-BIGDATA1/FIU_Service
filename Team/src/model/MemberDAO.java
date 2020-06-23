@@ -95,13 +95,13 @@ public class MemberDAO {
 		String check_ID = null;
 		getConnection();
 		try {
-			String sql = "SELECT * FROM FESTIVALMEMBER WHERE ID = ?";
+			String sql = "SELECT * FROM FESTIVALMEMBER WHERE FEST_ID = ?";
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, id);
 			rs = pst.executeQuery();
 
 			if (rs.next()) {
-				check_ID = rs.getString("ID");
+				check_ID = rs.getString("FEST_ID");
 			}
 
 		} catch (SQLException e) {
@@ -116,7 +116,7 @@ public class MemberDAO {
 		MemberVO joinMember = null;
 		getConnection();
 		try {
-			String sql = "SELECT * FROM FESTIVALMEMBER WHERE ID = ?";
+			String sql = "SELECT * FROM FESTIVALMEMBER WHERE FEST_ID = ?";
 			pst = conn.prepareStatement(sql);
 			//pst.setString(1, member.getId());
 			pst.setString(1, member.getId());
@@ -129,9 +129,9 @@ public class MemberDAO {
 			
 			
 			if (rs.next()) {
-				String id = rs.getString("id");
-				String pw = rs.getString("PW");
-				String name = rs.getString("name");
+				String id = rs.getString("FEST_ID");
+				String pw = rs.getString("FEST_PW");
+				String name = rs.getString("MEMBER_NAME");
 				String phone = rs.getString("phone");
 				String location = rs.getString("location");
 				String sex = rs.getString("sex");
@@ -152,7 +152,7 @@ public class MemberDAO {
 		MemberVO updatemember = null;
 		getConnection();
 		try {
-			String sql = "UPDATE FESTIVALMEMBER SET ID = ?, PW = ?, NAME = ?, PHONE = ?, LOCATION = ?, SEX = ?, AGE = ? Where ID = ? ";
+			String sql = "UPDATE FESTIVALMEMBER SET FEST_ID = ?, FEST_PW = ?, MEMBER_NAME = ?, PHONE = ?, LOCATION = ?, SEX = ?, AGE = ? Where FEST_ID = ? ";
 			pst = conn.prepareStatement(sql);
 			
 			pst.setString(1, update.getId());
