@@ -36,8 +36,8 @@ public class MyPage {
 	public MyPage() {
 		initialize();
 		MemberVO loginUser = controller.getLoginUser();
-		MemberVO pw = new MemberVO(loginUser.getPw());
-		lbl_username.setText(controller.select(pw).getName());
+		MemberVO id = new MemberVO(loginUser.getId());
+		lbl_username.setText(controller.select(id).getName());
 		frame.setVisible(true);
 	}
 

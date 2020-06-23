@@ -46,10 +46,10 @@ public class MyPageEdit2 {
 		txt_pw.setText(loginUser.getPw());
 		//MemberVO joinMember = controller.getJoinMember();
 		//txt_name.setText(joinMember.getName());
-		MemberVO pw = new MemberVO(loginUser.getPw());
-		txt_age.setText(controller.select(pw).getAge());
-		txt_name.setText(controller.select(pw).getName());
-		txt_phone.setText(controller.select(pw).getPhone());
+		MemberVO id = new MemberVO(loginUser.getId());
+		txt_age.setText(controller.select(id).getAge());
+		txt_name.setText(controller.select(id).getName());
+		txt_phone.setText(controller.select(id).getPhone());
 		
 		//comboBox.setSelectedItem(control).toString();
 		

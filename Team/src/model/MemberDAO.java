@@ -115,10 +115,10 @@ public class MemberDAO {
 		MemberVO joinMember = null;
 		getConnection();
 		try {
-			String sql = "SELECT * FROM FESTIVALMEMBER WHERE PW = ?";
+			String sql = "SELECT * FROM FESTIVALMEMBER WHERE ID = ?";
 			pst = conn.prepareStatement(sql);
 			//pst.setString(1, member.getId());
-			pst.setString(1, member.getPw());
+			pst.setString(1, member.getId());
 			/*
 			 * pst.setString(3, member.getName()); pst.setString(4, member.getPhone());
 			 * pst.setString(5, member.getlocation()); pst.setString(6, member.getSex());
