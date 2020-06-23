@@ -23,14 +23,16 @@ import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MyPage {
 
 	private JFrame frame;
 	private Controller controller = LoginGUI.controller;
 	private JLabel lbl_username;
-	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_1_1;
+	private JLabel lbl_home;
 
 
 	public MyPage() {
@@ -55,6 +57,25 @@ public class MyPage {
 		frame.getContentPane().add(panel, "name_667309913231400");
 		panel.setLayout(null);
 		
+		String path3 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\홈버튼.png";
+		ImageIcon home = new ImageIcon(path3);
+		Image originImg5 = home.getImage(); 
+		//추출된 Image의 크기를 조절하여 새로운 Image객체 생성
+		Image changedImg4= originImg5.getScaledInstance(75, 73, Image.SCALE_SMOOTH );
+		//새로운 Image로 ImageIcon객체를 생성
+		ImageIcon Icon4 = new ImageIcon(changedImg4);
+		
+		lbl_home = new JLabel(Icon4);
+		lbl_home.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				MainGUI main = new MainGUI();
+				
+			}
+		});
+		lbl_home.setBounds(12, 10, 75, 73);
+		panel.add(lbl_home);
+		
 		JLabel lblNewLabel = new JLabel("My Fest");
 		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setFont(new Font("Georgia", Font.BOLD, 35));
@@ -66,7 +87,7 @@ public class MyPage {
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MyReview join = new MyReview();
-				
+				frame.dispose();
 			}
 		});
 		btn2.setFont(new Font("함초롬돋움", Font.PLAIN, 25));
@@ -163,25 +184,19 @@ public class MyPage {
 		ImageIcon Icon = new ImageIcon(changedImg);
 		
 		JLabel lbl_profile = new JLabel(Icon);
-		lbl_profile.setBounds(22, 123, 100, 100);
+		lbl_profile.setBounds(22, 138, 100, 100);
 		panel.add(lbl_profile);
 		
-		lblNewLabel_1 = new JLabel("\uC990\uAE38\uC904 \uC544\uB294");
-		lblNewLabel_1.setFont(new Font("함초롬돋움", Font.BOLD, 20));
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(134, 153, 128, 70);
-		panel.add(lblNewLabel_1);
-		
-		lblNewLabel_1_1 = new JLabel("\uB2D8!");
+		lblNewLabel_1_1 = new JLabel("\uB2D8 \uD658\uC601\uD569\uB2C8\uB2E4");
 		lblNewLabel_1_1.setFont(new Font("함초롬돋움", Font.BOLD, 20));
-		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel_1_1.setBounds(316, 153, 89, 70);
+		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_1_1.setBounds(274, 173, 148, 70);
 		panel.add(lblNewLabel_1_1);
 		
 		lbl_username = new JLabel("");
 		lbl_username.setFont(new Font("함초롬돋움", Font.PLAIN, 20));
 		lbl_username.setHorizontalAlignment(SwingConstants.RIGHT);
-		lbl_username.setBounds(252, 153, 117, 70);
+		lbl_username.setBounds(156, 173, 117, 70);
 		panel.add(lbl_username);
 		
 		String path2 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\불꽃.png";
@@ -195,6 +210,8 @@ public class MyPage {
 		JLabel lbl_bg = new JLabel(Icon2);
 		lbl_bg.setBounds(0, 0, 434, 661);
 		panel.add(lbl_bg);
+		
+		
 		
 	}
 }

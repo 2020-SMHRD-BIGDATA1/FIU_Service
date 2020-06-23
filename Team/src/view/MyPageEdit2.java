@@ -36,7 +36,9 @@ public class MyPageEdit2 {
 	private JPasswordField txt_pw;
 	
 	private Controller controller = LoginGUI.controller;
-	private JComboBox comboBox;
+	private JComboBox comboBox_area;
+	private JRadioButton RB_male;
+	private JRadioButton RB_female;
 
 	public MyPageEdit2() {
 		
@@ -44,13 +46,12 @@ public class MyPageEdit2 {
 		initialize();
 		MemberVO loginUser = controller.getLoginUser();
 		txt_pw.setText(loginUser.getPw());
-		//MemberVO joinMember = controller.getJoinMember();
-		//txt_name.setText(joinMember.getName());
+		
 		MemberVO id = new MemberVO(loginUser.getId());
 		txt_age.setText(controller.select(id).getAge());
 		txt_name.setText(controller.select(id).getName());
 		txt_phone.setText(controller.select(id).getPhone());
-		
+		comboBox_area.setSelectedItem(controller.select(id).getlocation());
 		//comboBox.setSelectedItem(control).toString();
 		
 
@@ -130,12 +131,12 @@ public class MyPageEdit2 {
 		ButtonGroup group;
 		group = new ButtonGroup();
 		
-		JRadioButton RB_male = new JRadioButton("\uB0A8");
+		RB_male = new JRadioButton("\uB0A8");
 		RB_male.setBackground(Color.WHITE);
 		RB_male.setBounds(289, 440, 49, 23);
 		panel.add(RB_male);
 		
-		JRadioButton RB_female = new JRadioButton("\uC5EC");
+		RB_female = new JRadioButton("\uC5EC");
 		RB_female.setBackground(Color.WHITE);
 		RB_female.setBounds(356, 440, 49, 23);
 		panel.add(RB_female);
@@ -161,10 +162,10 @@ public class MyPageEdit2 {
 		
 		String[] items = { "서울특별시", "대전광역시", "부산광역시", "대구광역시", "인천광역시", "울산광역시", "광주광역시", "세종시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도"};
 	
-		comboBox = new JComboBox(items);
-		comboBox.setBackground(Color.WHITE);
-		comboBox.setBounds(82, 436, 116, 30);
-		panel.add(comboBox);
+		comboBox_area = new JComboBox(items);
+		comboBox_area.setBackground(Color.WHITE);
+		comboBox_area.setBounds(82, 436, 116, 30);
+		panel.add(comboBox_area);
 		
 		String path2 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\불꽃.png";
 		ImageIcon bg = new ImageIcon(path2);
