@@ -15,12 +15,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import controller.Controller;
 import model.FestivalVO;
+import javax.swing.JTable;
 
 public class SearchGUI {
 	
@@ -30,6 +32,9 @@ public class SearchGUI {
 	public static Controller controller = new Controller();
 	public ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
 	protected ArrayList<FestivalVO> result;
+	private JTable table;
+	private String[] header = {"축제명","도시명","연락처","기간1","기간2"};
+	private JPanel tpanel;
 
 	public SearchGUI() {
 		initialize();
@@ -78,9 +83,14 @@ public class SearchGUI {
 		btn_list.setBounds(369, 0, 65, 60);
 		panel.add(btn_list);
 
+		
+		
+		
+		
 		JButton btn_search = new JButton("");
 		btn_search.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 				String search = txt_search.getText();
 //				System.out.println(search);
 				result = controller.searchList(search);
@@ -92,9 +102,30 @@ public class SearchGUI {
 					System.out.print("기간 : "+result.get(i).getFest_date1()+"~");
 					System.out.println(result.get(i).getFest_date2());
 				}
-				
+				String[][] values = new String[result.size()][5];
+				for (int i = 0; i < values.length; i++) {
+					values[i][0] = result.get(i).getFest_name();
+					values[i][1] = result.get(i).getCity();
+					values[i][2] = result.get(i).getFest_tel();
+					values[i][3] = result.get(i).getFest_date1();
+					values[i][4] = result.get(i).getFest_date2();
+				}
+				JTable table = new JTable(values, header);
+				tpanel.add(new JScrollPane(table));
+				frame.setVisible(true);
 			}
 		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
 		btn_search.setBorderPainted(false);
 		btn_search.setBackground(Color.WHITE);
@@ -109,10 +140,10 @@ public class SearchGUI {
 		JTabbedPane searchTab = new JTabbedPane(JTabbedPane.TOP);
 		searchTab.setBackground(Color.WHITE);
 
-		JPanel tpanel = new JPanel();
+		tpanel = new JPanel();
 		tpanel.setBackground(Color.WHITE);
 		searchTab.addTab("연령별", tpanel);
-		tpanel.setLayout(null);
+		
 
 		tpanel_1 = new JPanel();
 		tpanel_1.setBackground(Color.WHITE);
@@ -505,5 +536,4 @@ public class SearchGUI {
 		panel.add(searchTab);
 
 	}
-
 }
