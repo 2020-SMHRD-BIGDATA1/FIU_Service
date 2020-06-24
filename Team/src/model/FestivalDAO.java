@@ -50,9 +50,10 @@ public class FestivalDAO {
 		getConnection();
 		ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
 		try {
-			String sql = "SELECT * FROM FESTIVAL_INFORMATION WHERE FEST_NAME LIKE ?";
+			String sql = "SELECT * FROM FESTIVAL_INFORMATION WHERE FEST_NAME LIKE ? OR CITY LIKE ?";
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, '%'+search+'%');
+			pst.setString(2, '%'+search+'%');
 			rs = pst.executeQuery();
 			
 			while (rs.next()) {
@@ -61,7 +62,6 @@ public class FestivalDAO {
 				String fest_tel = rs.getString("fest_tel");
 				String fest_date1 = rs.getString("fest_date1");
 				String fest_date2 = rs.getString("fest_date2");
-				System.out.println(fest_name);
 				FestivalVO vo = new FestivalVO(fest_name, city, fest_tel, fest_date1, fest_date2);
 				
 				list.add(vo);
