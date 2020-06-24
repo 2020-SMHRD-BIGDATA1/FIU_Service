@@ -11,9 +11,9 @@ package view;
 	   public void FontChange(GraphicsEnvironment ge) {
 		   Font Binggrae;
 		   Font Binggrae2;
-	      String path = "‪C:\\Users\\SMHRD\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Binggrae-Bold.ttf"; // 폰트의 경로를 가져오는거
-	      String path2 = "‪C:\\Users\\SMHRD\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Binggrae.ttf";
-	      // font를 새롭게 생성을 할건데, 매개변수로 들어가는 건 (어떤타입으로 폰트를 넣을 건지, 파일)
+	      String path = "C:\\Users\\SMHRD\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Binggrae-Bold.ttf"; 
+	      String path2 = "C:\\Users\\SMHRD\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Binggrae.ttf";
+	     
 	      try {
 	    	  Binggrae = Font.createFont(Font.TRUETYPE_FONT, new File(path)).deriveFont(12f);
 	    	  Binggrae2 = Font.createFont(Font.TRUETYPE_FONT, new File(path2)).deriveFont(12f);
