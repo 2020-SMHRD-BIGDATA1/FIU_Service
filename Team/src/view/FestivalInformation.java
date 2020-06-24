@@ -1,30 +1,31 @@
 package view;
 
-import java.awt.EventQueue;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-
 import java.awt.Color;
-import javax.swing.SpringLayout;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.Font;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerListModel;
-import javax.swing.JTextPane;
+import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
+import model.FestivalInformationDAO;
 import model.MapExecute;
+
+import javax.swing.JTextPane;
 
 public class FestivalInformation {
 
 	private JFrame frame;
 	private JButton btnMore;
-	
+	private String name = "휴애리 수국축제";
 	
 	/**
 	 * Launch the application.
@@ -74,7 +75,7 @@ public class FestivalInformation {
 		springLayout.putConstraint(SpringLayout.WEST, panel, 0, SpringLayout.WEST, frame.getContentPane());
 		springLayout.putConstraint(SpringLayout.SOUTH, panel, 0, SpringLayout.SOUTH, frame.getContentPane());
 		springLayout.putConstraint(SpringLayout.EAST, panel, 734, SpringLayout.WEST, frame.getContentPane());
-		panel.setBackground(Color.WHITE);
+		panel.setBackground(new Color(240, 248, 255));
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -123,12 +124,7 @@ public class FestivalInformation {
 		menu.setBounds(355, 10, 60, 45);
 		panel.add(menu);
 		
-		JTextPane textPane = new JTextPane();
-		textPane.setText("\uC2DC\uC791\uC77C\t2020.03.20\uC885\uB8CC\uC77C\t2020.07.19\r\n\uC804\uD654\uBC88\uD638\t064-732-2114\r\n\uD648\uD398\uC774\uC9C0\thttp://hueree.com\r\n\uC8FC\uCD5C\t\uD734\uC560\uB9AC \uC790\uC5F0\uC0DD\uD65C\uACF5\uC6D0 \uC8FC\uAD00 \uD734\uC560\uB9AC \uC790\uC5F0\uC0DD\uD65C\uACF5\uC6D0\r\n\uC774\uC6A9\uC694\uAE08\t\uC131\uC778:13,000\uC6D0/\uB2E8\uCCB4:11,000\uC6D0/\uB3C4\uBBFC,\uC7A5\uC560\uC778,\r\n\uC720\uACF5\uC790,\uACBD\uB85C\uC6B0\uB300:6,500\uC6D0/\uCCAD\uC18C\uB144:11,000\uC6D0/\uB2E8\uCCB4:9,000\uC6D0\r\n\uB3C4\uBBFC, \uC7A5\uC560\uC778 :5,500\uC6D0/\uC5B4\uB9B0\uC774:10,000\uC6D0/\uB2E8\uCCB4:8,0000\uC6D0\r\n\uB3C4\uBBFC, \uC7A5\uC560\uC778 :5,000\uC6D0\r\n\uB2E8\uCCB4\uB294 30\uC778 \uC774\uC0C1[\uD559\uC0DD\uB2E8\uCCB4(\uC218\uD559\uC5EC\uD589)\uB4F1 \uBC29\uBB38 \uC2DC \uBCC4\uB3C4 \uBB38\uC758 \uC694\uB9DD]\r\n\uACBD\uB85C\uD560\uC778\uC740 \uB9CC 65\uC138 \uC774\uC0C1(\uC2E0\uBD84\uC99D \uC81C\uCD9C)\r\n\uB9CC 24\uAC1C\uC6D4\uAE4C\uC9C0\uB294 \uBB34\uB8CC\uC785\uC7A5\r\n\uC138\uC790\uB140 50%\uD560\uC778(\uC790\uB140\uB9CC \uD560\uC778\uD61C\uD0DD, \uACE0\uB4F1\uD559\uC0DD\uAE4C\uC9C0)\r\n\uC81C\uC8FC\uD2B9\uBCC4\uC790\uCE58\uB3C4\uBBFC, \uC7A5\uC560\uC778, \uAD70\uACBD\uC740 \uBC18\uB4DC\uC2DC \uC2E0\uBD84\uC99D \uBC0F \uC99D\uBA85\uC11C\uB97C \uC81C\uC2DC\uD574\uC57C \uD569\uB2C8\uB2E4.\r\n\uACF5\uC5F0\uC2DC\uAC04\t10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00");
-		textPane.setBounds(10, 315, 405, 258);
-		panel.add(textPane);
-		
-		JLabel lblFestivalName = new JLabel("\uD734\uC560\uB9AC \uC218\uAD6D\uCD95\uC81C");
+		JLabel lblFestivalName = new JLabel(name);
 		lblFestivalName.setFont(new Font("바탕", Font.PLAIN, 20));
 		lblFestivalName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFestivalName.setBounds(33, 279, 362, 33);
@@ -143,5 +139,37 @@ public class FestivalInformation {
 		});
 		btnNewButton.setBounds(168, 576, 97, 23);
 		panel.add(btnNewButton);
+		
+		
+		
+	
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(12, 317, 419, 249);
+		
+		
+		FestivalInformationDAO dao = new FestivalInformationDAO();
+		String list = dao.getList(name);
+		
+		JTextPane txtpnFasdfadf = new JTextPane();
+		txtpnFasdfadf.setBackground(new Color(240, 248, 255));
+		txtpnFasdfadf.setText(list);
+		txtpnFasdfadf.setBounds(12, 310, 419, 257);
+		panel.add(txtpnFasdfadf);
+		
+		
+//		ArrayList<String> list = dao.getList();
+//		
+//		String[] header = {"정보"};
+//		String[][] data = new String[list.size()][1];
+//		for (int i = 0; i < data.length; i++) {
+//			data[i][0] = list.get(i);
+//		}
+//		JTable table = new JTable(data, header);
+//		panel_1.add(new JScrollPane(table));
+//		
+//		panel.add(panel_1);ㄴ
+//		frame.setVisible(true);
 	}
 }
+
