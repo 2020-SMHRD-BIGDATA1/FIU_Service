@@ -90,10 +90,11 @@ public class MyPageEdit {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MemberVO loginUser = controller.getLoginUser();
+				MemberVO id = new MemberVO(loginUser.getId());
 				
 				String pw = String.valueOf(txt_pw.getPassword());
 				
-				if (pw.equals(loginUser.getPw())) {
+				if (pw.equals(controller.select(id).getPw())) {
 					MemberVO password = new MemberVO(pw);
 					frame.dispose();
 					MyPageEdit2 page2 = new MyPageEdit2();
