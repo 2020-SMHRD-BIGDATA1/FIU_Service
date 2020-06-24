@@ -47,11 +47,11 @@ public class MyPageEdit {
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
+		panel.setBackground(new Color(240, 248, 255));
 		frame.getContentPane().add(panel, "name_670626550243000");
 		panel.setLayout(null);
 		
-		String path1 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\뒤로가기.png";
+		String path1 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_back.png";
 		ImageIcon search1 = new ImageIcon(path1);
 		Image originImg1 = search1.getImage(); 
 		//추출된 Image의 크기를 조절하여 새로운 Image객체 생성
@@ -119,6 +119,7 @@ public class MyPageEdit {
 		ImageIcon Icon2 = new ImageIcon(changedImg2);
 		
 		JLabel lbl_bg2 = new JLabel(Icon2);
+		lbl_bg2.setBackground(new Color(240, 248, 255));
 		lbl_bg2.setBounds(0, 0, 434, 661);
 		panel.add(lbl_bg2);
 	
