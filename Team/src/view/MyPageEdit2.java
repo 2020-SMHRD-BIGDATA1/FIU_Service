@@ -194,12 +194,12 @@ public class MyPageEdit2 {
 		group = new ButtonGroup();
 		
 		RB_male = new JRadioButton("\uB0A8");
-		RB_male.setBackground(Color.WHITE);
+		RB_male.setBackground(new Color(240, 248, 255));
 		RB_male.setBounds(289, 410, 49, 23);
 		panel.add(RB_male);
 		
 		RB_female = new JRadioButton("\uC5EC");
-		RB_female.setBackground(Color.WHITE);
+		RB_female.setBackground(new Color(240, 248, 255));
 		RB_female.setBounds(355, 410, 49, 23);
 		panel.add(RB_female);
 		

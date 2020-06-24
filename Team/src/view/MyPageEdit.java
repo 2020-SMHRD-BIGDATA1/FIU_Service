@@ -14,6 +14,7 @@ import controller.Controller;
 import model.MemberVO;
 
 import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 
 import javax.swing.JTextField;
@@ -30,7 +31,7 @@ public class MyPageEdit {
 	private JFrame frame;
 	private JPasswordField txt_pw;
 	private Controller controller = LoginGUI.controller;
-
+	private FontMake fm = new FontMake();
 
 	public MyPageEdit() {
 		initialize();
@@ -69,15 +70,20 @@ public class MyPageEdit {
 		lbl_back.setBounds(27, 564, 74, 68);
 		panel.add(lbl_back);
 		
-		JLabel lblNewLabel = new JLabel("\uD68C\uC6D0 \uC815\uBCF4 \uC218\uC815");
-		lblNewLabel.setFont(new Font("함초롬바탕", Font.BOLD, 30));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(12, 26, 407, 86);
-		panel.add(lblNewLabel);
-		
+		 GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+		 fm.FontChange(ge);
+		 
+		 JLabel lblNewLabel = new JLabel("\uD68C\uC6D0 \uC815\uBCF4 \uC218\uC815");
+			lblNewLabel.setFont(new Font("안동월영교", Font.BOLD, 30));
+			lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+			lblNewLabel.setBounds(12, 26, 407, 86);
+			panel.add(lblNewLabel);
+			
+
 		JLabel lblNewLabel_1 = new JLabel("\uD68C\uC6D0\uC815\uBCF4\uB97C \uC218\uC815\uD558\uC2DC\uB824\uBA74 \uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("함초롬바탕", Font.PLAIN, 16));
+		lblNewLabel_1.setFont(new Font("안동월영교", Font.PLAIN, 16));
 		lblNewLabel_1.setBounds(12, 305, 407, 86);
 		panel.add(lblNewLabel_1);
 		

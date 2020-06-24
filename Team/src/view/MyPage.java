@@ -13,6 +13,7 @@ import controller.Controller;
 import model.MemberVO;
 
 import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -33,6 +34,7 @@ public class MyPage {
 	private JLabel lbl_username;
 	private JLabel lblNewLabel_1_1;
 	private JLabel lbl_home;
+	private FontMake fm = new FontMake();
 
 	public MyPage() {
 		initialize();
@@ -74,10 +76,17 @@ public class MyPage {
 		});
 		lbl_home.setBounds(12, 10, 75, 73);
 		panel.add(lbl_home);
+		
+		
+		 GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+		 fm.FontChange(ge);
+		 
+		 
 
 		JLabel lblNewLabel = new JLabel("My Fest");
 		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setFont(new Font("Georgia", Font.BOLD, 35));
+		lblNewLabel.setFont(new Font("안동월영교", Font.BOLD, 35));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(12, 0, 410, 113);
 		panel.add(lblNewLabel);
@@ -89,9 +98,13 @@ public class MyPage {
 				frame.dispose();
 			}
 		});
-		btn2.setFont(new Font("함초롬돋움", Font.PLAIN, 25));
+		
+		
+		
+		
+		btn2.setFont(new Font("안동월영교", Font.PLAIN, 25));
 		btn2.setHorizontalAlignment(SwingConstants.LEFT);
-		btn2.setBackground(Color.WHITE);
+		btn2.setBackground(new Color(240, 248, 255));
 		btn2.setBounds(12, 335, 410, 73);
 		panel.add(btn2);
 
@@ -103,8 +116,8 @@ public class MyPage {
 
 		});
 		btn1.setHorizontalAlignment(SwingConstants.LEFT);
-		btn1.setFont(new Font("함초롬돋움", Font.PLAIN, 25));
-		btn1.setBackground(Color.WHITE);
+		btn1.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn1.setBackground(new Color(240, 248, 255));
 		btn1.setBounds(12, 255, 410, 73);
 		panel.add(btn1);
 
@@ -116,8 +129,8 @@ public class MyPage {
 			}
 		});
 		btn3.setHorizontalAlignment(SwingConstants.LEFT);
-		btn3.setFont(new Font("함초롬돋움", Font.PLAIN, 25));
-		btn3.setBackground(Color.WHITE);
+		btn3.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn3.setBackground(new Color(240, 248, 255));
 		btn3.setBounds(12, 414, 410, 73);
 		panel.add(btn3);
 
@@ -143,8 +156,8 @@ public class MyPage {
 			}
 		});
 		btn4.setHorizontalAlignment(SwingConstants.LEFT);
-		btn4.setFont(new Font("함초롬돋움", Font.PLAIN, 25));
-		btn4.setBackground(Color.WHITE);
+		btn4.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn4.setBackground(new Color(240, 248, 255));
 		btn4.setBounds(12, 494, 410, 73);
 		panel.add(btn4);
 
@@ -163,8 +176,8 @@ public class MyPage {
 			}
 		});
 		btn5.setHorizontalAlignment(SwingConstants.LEFT);
-		btn5.setFont(new Font("함초롬돋움", Font.PLAIN, 25));
-		btn5.setBackground(Color.WHITE);
+		btn5.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn5.setBackground(new Color(240, 248, 255));
 		btn5.setBounds(12, 573, 410, 73);
 		panel.add(btn5);
 
@@ -187,13 +200,13 @@ public class MyPage {
 		panel.add(lbl_profile);
 
 		lblNewLabel_1_1 = new JLabel("\uB2D8 \uD658\uC601\uD569\uB2C8\uB2E4");
-		lblNewLabel_1_1.setFont(new Font("함초롬돋움", Font.BOLD, 20));
+		lblNewLabel_1_1.setFont(new Font("안동월영교", Font.BOLD, 20));
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_1.setBounds(274, 173, 148, 70);
 		panel.add(lblNewLabel_1_1);
 
 		lbl_username = new JLabel("");
-		lbl_username.setFont(new Font("함초롬돋움", Font.PLAIN, 20));
+		lbl_username.setFont(new Font("안동월영교", Font.PLAIN, 20));
 		lbl_username.setHorizontalAlignment(SwingConstants.RIGHT);
 		lbl_username.setBounds(156, 173, 117, 70);
 		panel.add(lbl_username);
