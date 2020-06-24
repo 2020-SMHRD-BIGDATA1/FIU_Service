@@ -28,7 +28,6 @@ public class MapPanel extends JPanel {
 			e.printStackTrace();
 		}
 		g.drawImage(pic, 0, 0, null);
-//		System.out.println("»£√‚µ ");
 
 	}
 

@@ -55,15 +55,16 @@ public class FestivalDAO {
 			rs = pst.executeQuery();
 			
 			while (rs.next()) {
-				int fest_no = cnt++;
+//				int fest_no = cnt++;
 				String fest_name = rs.getString("fest_name");
 				String city = rs.getString("city");
 				String fest_tel = rs.getString("fest_tel");
 				String fest_date1 = rs.getString("fest_date1");
 				String fest_date2 = rs.getString("fest_date2");
 				
-				FestivalVO vo = new FestivalVO(fest_no, fest_name, city, fest_tel, fest_date1, fest_date2);
-				searchList.add(vo);
+				FestivalVO vo = new FestivalVO(fest_name, city, fest_tel, fest_date1, fest_date2);
+				
+				searchList.add(vo);	
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

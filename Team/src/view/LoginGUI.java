@@ -118,7 +118,7 @@ public class LoginGUI {
 		
 		JLabel lblNewLabel_2 = new JLabel("\uCD95\uC81C \uC5B4\uB54C");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(80, 156, 255, 50);
+		lblNewLabel_2.setBounds(142, 160, 150, 150);
 		panel.add(lblNewLabel_2);
 
 		btn_Login.addActionListener(new ActionListener() {

@@ -29,16 +29,9 @@ public class FestivalVO {
 		this.fest_name = search;
 	}
 	
-	public FestivalVO(int fest_no, String fest_name, String city, String fest_tel, String fest_date1,
-			String fest_date2) {
-		this.fest_no = fest_no;
-		this.fest_name = fest_name;
-		this.city = city;
-		this.fest_tel = fest_tel;
-		this.fest_date1 = fest_date1;
-		this.fest_date2 = fest_date2;
+	public FestivalVO(String fest_name, String city, String fest_tel, String fest_date1, String fest_date2) {
 	}
-	
+
 	public int getFest_no() {
 		return fest_no;
 	}
