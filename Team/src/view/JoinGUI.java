@@ -75,13 +75,13 @@ public class JoinGUI {
 		sl_panel_1.putConstraint(SpringLayout.EAST, lblNewLabel, -100, SpringLayout.EAST, panel_1);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel);
-		
+
 		String path1 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
 		ImageIcon main_logo = new ImageIcon(path1);
 		Image originImg1 = main_logo.getImage();
-		Image changedImg1 = originImg1.getScaledInstance(80, 80, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg1 = originImg1.getScaledInstance(80, 80, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon1 = new ImageIcon(changedImg1);
-		
+
 		JLabel lbl_image = new JLabel(Icon1);
 		sl_panel_1.putConstraint(SpringLayout.NORTH, lbl_image, 0, SpringLayout.NORTH, panel_1);
 		sl_panel_1.putConstraint(SpringLayout.WEST, lbl_image, 10, SpringLayout.WEST, panel_1);
@@ -112,7 +112,7 @@ public class JoinGUI {
 
 		JLabel lb_PW = new JLabel("PW");
 		lb_PW.setBackground(Color.LIGHT_GRAY);
-		lb_PW.setBounds(99, 60, 60, 30);
+		lb_PW.setBounds(60, 60, 60, 30);
 		lb_PW.setHorizontalAlignment(SwingConstants.RIGHT);
 		lb_PW.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
 		panel_2.add(lb_PW);
@@ -122,7 +122,7 @@ public class JoinGUI {
 		panel_2.add(txt_PW);
 
 		JLabel lb_pwCheck = new JLabel("PW\uD655\uC778");
-		lb_pwCheck.setBounds(69, 110, 60, 30);
+		lb_pwCheck.setBounds(60, 110, 60, 30);
 		lb_pwCheck.setHorizontalAlignment(SwingConstants.RIGHT);
 		lb_pwCheck.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
 		panel_2.add(lb_pwCheck);
@@ -211,7 +211,7 @@ public class JoinGUI {
 				String name = txt_Name.getText();
 				String phone = txt_Phone.getText();
 				String location = box_location.getSelectedItem().toString();
-				
+
 				Enumeration<AbstractButton> enums = group.getElements();
 				String sex = null;
 				while (enums.hasMoreElements()) {
@@ -258,92 +258,90 @@ public class JoinGUI {
 		});
 		btn_idCheck.setBounds(295, 10, 90, 30);
 		panel_2.add(btn_idCheck);
-		
-		//C:\\Users\\SMHRD\\git\\repository\\Team\\img\\lb_id.png
-		
-		String path2 = "C:\\Users\\SMHRD\\Desktop\\id.png";
+
+		String path2 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_id.png";
 		ImageIcon id = new ImageIcon(path2);
 		Image originImg2 = id.getImage();
-		Image changedImg2 = originImg2.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg2 = originImg2.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon2 = new ImageIcon(changedImg2);
-		
+
 		JLabel lbl_image_ID = new JLabel(Icon2);
 		lbl_image_ID.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image_ID.setBounds(129, 10, 30, 30);
 		panel_2.add(lbl_image_ID);
-		
-		String path3 = "C:\\Users\\SMHRD\\Desktop\\pw.png";
+
+		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_pw.png";
 		ImageIcon pw = new ImageIcon(path3);
 		Image originImg3 = pw.getImage();
-		Image changedImg3 = originImg3.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg3 = originImg3.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon3 = new ImageIcon(changedImg3);
-		
+
 		JLabel lbl_image_PW = new JLabel(Icon3);
 		lbl_image_PW.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl_image_PW.setBounds(57, 60, 30, 30);
+		lbl_image_PW.setBounds(129, 60, 30, 30);
 		panel_2.add(lbl_image_PW);
 
-		String path4 = "C:\\Users\\SMHRD\\Desktop\\check.png";
+		String path4 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_check.png";
 		ImageIcon pw_Check = new ImageIcon(path4);
 		Image originImg4 = pw_Check.getImage();
-		Image changedImg4 = originImg4.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg4 = originImg4.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
-		
+
 		JLabel lbl_image_pwCheck = new JLabel(Icon4);
 		lbl_image_pwCheck.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image_pwCheck.setBounds(129, 110, 30, 30);
 		panel_2.add(lbl_image_pwCheck);
-		
-		String path5 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\lb_pw.png";
+
+		String path5 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_name.png";
 		ImageIcon name = new ImageIcon(path5);
 		Image originImg5 = name.getImage();
-		Image changedImg5 = originImg5.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg5 = originImg5.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon5 = new ImageIcon(changedImg5);
-		
+
 		JLabel lbl_image_NAME = new JLabel(Icon5);
 		lbl_image_NAME.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image_NAME.setBounds(129, 160, 30, 30);
 		panel_2.add(lbl_image_NAME);
-		
-		String path6 = "C:\\Users\\SMHRD\\Desktop\\phone.png";
+
+		String path6 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_phone.png";
 		ImageIcon phone = new ImageIcon(path6);
 		Image originImg6 = phone.getImage();
-		Image changedImg6 = originImg6.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg6 = originImg6.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon6 = new ImageIcon(changedImg6);
-		
+
 		JLabel lbl_image_PHONE = new JLabel(Icon6);
 		lbl_image_PHONE.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image_PHONE.setBounds(129, 210, 30, 30);
 		panel_2.add(lbl_image_PHONE);
-		
-		String path7 = "C:\\Users\\SMHRD\\Desktop\\phone.png";
+
+		String path7 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_age.png";
 		ImageIcon age = new ImageIcon(path7);
 		Image originImg7 = age.getImage();
-		Image changedImg7 = originImg7.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg7 = originImg7.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon7 = new ImageIcon(changedImg7);
-		
+
 		JLabel lbl_image_AGE = new JLabel(Icon7);
 		lbl_image_AGE.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image_AGE.setBounds(129, 260, 30, 30);
 		panel_2.add(lbl_image_AGE);
-		
-		String path8 = "C:\\Users\\SMHRD\\Desktop\\home.png";
+
+		String path8 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_home.png";
 		ImageIcon home = new ImageIcon(path8);
 		Image originImg8 = home.getImage();
-		Image changedImg8 = originImg8.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg8 = originImg8.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon8 = new ImageIcon(changedImg8);
-		
+
 		JLabel lbl_image_HOME = new JLabel(Icon8);
 		lbl_image_HOME.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image_HOME.setBounds(129, 310, 30, 30);
 		panel_2.add(lbl_image_HOME);
-		
-		String path9 = "C:\\Users\\SMHRD\\Desktop\\sex.png";
+
+		String path9 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\join_sex.png";
 		ImageIcon sex = new ImageIcon(path9);
 		Image originImg9 = sex.getImage();
-		Image changedImg9 = originImg9.getScaledInstance(30, 30, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg9 = originImg9.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon9 = new ImageIcon(changedImg9);
-		
+
 		JLabel lbl_image_SEX = new JLabel(Icon9);
 		lbl_image_SEX.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image_SEX.setBounds(129, 360, 30, 30);
