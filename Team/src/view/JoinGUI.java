@@ -2,6 +2,7 @@ package view;
 
 import java.awt.CardLayout;
 import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,6 +42,8 @@ public class JoinGUI {
 	private JTextField txt_Age;
 	private Controller controller = LoginGUI.controller;
 
+	private FontMake fm = new FontMake();
+
 	public JoinGUI() {
 		initialize();
 		frame.setVisible(true);
@@ -67,8 +70,12 @@ public class JoinGUI {
 		SpringLayout sl_panel_1 = new SpringLayout();
 		panel_1.setLayout(sl_panel_1);
 
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+		fm.FontChange(ge);
+
 		JLabel lblNewLabel = new JLabel("\uD68C\uC6D0\uAC00\uC785 \uD398\uC774\uC9C0");
-		lblNewLabel.setFont(new Font("휴먼편지체", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("빙그레체", Font.PLAIN, 20));
 		sl_panel_1.putConstraint(SpringLayout.NORTH, lblNewLabel, 20, SpringLayout.NORTH, panel_1);
 		sl_panel_1.putConstraint(SpringLayout.WEST, lblNewLabel, 100, SpringLayout.WEST, panel_1);
 		sl_panel_1.putConstraint(SpringLayout.SOUTH, lblNewLabel, 60, SpringLayout.NORTH, panel_1);
@@ -101,7 +108,7 @@ public class JoinGUI {
 
 		JLabel lb_ID = new JLabel("ID");
 		lb_ID.setBounds(60, 10, 60, 30);
-		lb_ID.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_ID.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		lb_ID.setHorizontalAlignment(SwingConstants.RIGHT);
 		panel_2.add(lb_ID);
 
@@ -114,7 +121,7 @@ public class JoinGUI {
 		lb_PW.setBackground(Color.LIGHT_GRAY);
 		lb_PW.setBounds(60, 60, 60, 30);
 		lb_PW.setHorizontalAlignment(SwingConstants.RIGHT);
-		lb_PW.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_PW.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		panel_2.add(lb_PW);
 
 		txt_PW = new JPasswordField();
@@ -124,7 +131,7 @@ public class JoinGUI {
 		JLabel lb_pwCheck = new JLabel("PW\uD655\uC778");
 		lb_pwCheck.setBounds(60, 110, 60, 30);
 		lb_pwCheck.setHorizontalAlignment(SwingConstants.RIGHT);
-		lb_pwCheck.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_pwCheck.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		panel_2.add(lb_pwCheck);
 
 		txt_pwCheck = new JPasswordField();
@@ -134,7 +141,7 @@ public class JoinGUI {
 		JLabel lb_Name = new JLabel("\uC774\uB984");
 		lb_Name.setBounds(60, 160, 60, 30);
 		lb_Name.setHorizontalAlignment(SwingConstants.RIGHT);
-		lb_Name.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_Name.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		panel_2.add(lb_Name);
 
 		txt_Name = new JTextField();
@@ -145,7 +152,7 @@ public class JoinGUI {
 		JLabel lb_Phone = new JLabel("\uC804\uD654\uBC88\uD638");
 		lb_Phone.setBounds(60, 210, 60, 30);
 		lb_Phone.setHorizontalAlignment(SwingConstants.RIGHT);
-		lb_Phone.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_Phone.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		panel_2.add(lb_Phone);
 
 		txt_Phone = new JTextField();
@@ -155,19 +162,19 @@ public class JoinGUI {
 
 		JLabel lb_Age = new JLabel("\uB098\uC774");
 		lb_Age.setHorizontalAlignment(SwingConstants.RIGHT);
-		lb_Age.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_Age.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		lb_Age.setBounds(60, 260, 60, 30);
 		panel_2.add(lb_Age);
 
 		JLabel lb_location = new JLabel("\uC9C0\uC5ED");
 		lb_location.setHorizontalAlignment(SwingConstants.RIGHT);
-		lb_location.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_location.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		lb_location.setBounds(60, 310, 60, 30);
 		panel_2.add(lb_location);
 
 		JLabel lb_Sex = new JLabel("\uC131\uBCC4");
 		lb_Sex.setHorizontalAlignment(SwingConstants.RIGHT);
-		lb_Sex.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		lb_Sex.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		lb_Sex.setBounds(60, 360, 60, 30);
 		panel_2.add(lb_Sex);
 
@@ -179,7 +186,7 @@ public class JoinGUI {
 		String[] x = { "서울특별시", "대전광역시", "부산광역시", "대구광역시", "인천광역시", "울산광역시", "광주광역시", "세종시", "경기도", "강원도", "충청북도",
 				"충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도" };
 		JComboBox box_location = new JComboBox(x);
-		box_location.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		box_location.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		box_location.setBounds(160, 310, 110, 30);
 		panel_2.add(box_location);
 
@@ -187,13 +194,13 @@ public class JoinGUI {
 
 		JRadioButton RB_male = new JRadioButton("\uB0A8");
 		RB_male.setBackground(new Color(240, 248, 255));
-		RB_male.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		RB_male.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		RB_male.setBounds(160, 360, 50, 30);
 		panel_2.add(RB_male);
 
 		JRadioButton RB_female = new JRadioButton("\uC5EC");
 		RB_female.setBackground(new Color(240, 248, 255));
-		RB_female.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		RB_female.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		RB_female.setBounds(215, 360, 50, 30);
 		panel_2.add(RB_female);
 		panel.add(panel_3);
@@ -203,7 +210,7 @@ public class JoinGUI {
 		group.add(RB_female);
 
 		btn_Join = new JButton("\uD68C\uC6D0\uAC00\uC785");
-		btn_Join.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		btn_Join.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		btn_Join.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String id = txt_ID.getText();
@@ -244,7 +251,7 @@ public class JoinGUI {
 		panel_3.add(btn_Join);
 
 		JButton btn_idCheck = new JButton("\uC911\uBCF5\uD655\uC778");
-		btn_idCheck.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		btn_idCheck.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		btn_idCheck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String id = txt_ID.getText();
@@ -348,7 +355,7 @@ public class JoinGUI {
 		panel_2.add(lbl_image_SEX);
 
 		btn_Cancle = new JButton("\uCDE8\uC18C");
-		btn_Cancle.setFont(new Font("휴먼편지체", Font.PLAIN, 15));
+		btn_Cancle.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		btn_Cancle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.dispose();

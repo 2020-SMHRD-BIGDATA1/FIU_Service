@@ -19,6 +19,7 @@ import controller.Controller;
 import model.MemberVO;
 import javax.swing.JPasswordField;
 import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.Color;
 import javax.swing.ImageIcon;
@@ -31,6 +32,8 @@ public class LoginGUI {
 	private JButton btn_Join;
 	private JPasswordField txt_PW;
 	public static Controller controller = new Controller();
+
+	private FontMake fm = new FontMake();
 
 	/**
 	 * Launch the application.
@@ -68,13 +71,13 @@ public class LoginGUI {
 		panel.setBackground(new Color(240, 248, 255));
 		frame.getContentPane().add(panel, "name_165020780607700");
 		panel.setLayout(null);
-		
+
 		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
 		ImageIcon home = new ImageIcon(path3);
 		Image originImg5 = home.getImage();
-		Image changedImg4 = originImg5.getScaledInstance(250, 250, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg4 = originImg5.getScaledInstance(250, 250, Image.SCALE_SMOOTH); // 사이즈조절
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
-		
+
 		JLabel lbl_image = new JLabel(Icon4);
 		lbl_image.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_image.setBounds(92, 90, 250, 250);
@@ -85,6 +88,10 @@ public class LoginGUI {
 		panel_2.setBounds(11, 434, 412, 116);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
+
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+		fm.FontChange(ge);
 
 		JLabel lblNewLabel = new JLabel("ID");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\lb_id.PNG"));
@@ -99,7 +106,7 @@ public class LoginGUI {
 		panel_2.add(lblNewLabel_1);
 
 		txt_ID = new JTextField();
-		txt_ID.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		txt_ID.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		txt_ID.setHorizontalAlignment(SwingConstants.CENTER);
 		txt_ID.setBounds(108, 24, 135, 35);
 		txt_ID.setBorder(null);
@@ -112,15 +119,13 @@ public class LoginGUI {
 		txt_PW.setBorder(null);
 		panel_2.add(txt_PW);
 
-		btn_Login = new JButton("");
-		btn_Login.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_login.PNG"));
-		btn_Login.setFont(new Font("굴림", Font.PLAIN, 15));
+		btn_Login = new JButton("Login");
+		btn_Login.setFont(new Font("빙그레체", Font.PLAIN, 14));
 		btn_Login.setBounds(269, 24, 75, 35);
 		panel_2.add(btn_Login);
 
-		btn_Join = new JButton("");
-		btn_Join.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_join.PNG"));
-		btn_Join.setFont(new Font("굴림", Font.PLAIN, 15));
+		btn_Join = new JButton("Join");
+		btn_Join.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		btn_Join.setBounds(269, 69, 75, 35);
 		panel_2.add(btn_Join);
 		btn_Join.addActionListener(new ActionListener() {
@@ -128,8 +133,6 @@ public class LoginGUI {
 				JoinGUI join = new JoinGUI();
 			}
 		});
-		
-
 
 		btn_Login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -139,7 +142,8 @@ public class LoginGUI {
 				MemberVO user = new MemberVO(id, pw);
 				boolean isSuccess = controller.login(user);
 				if (isSuccess == true) {
-					//JOptionPane.showMessageDialog(frame, "로그인 성공", "로그인 결과", JOptionPane.PLAIN_MESSAGE);
+					// JOptionPane.showMessageDialog(frame, "로그인 성공", "로그인 결과",
+					// JOptionPane.PLAIN_MESSAGE);
 					MainGUI mainGUI = new MainGUI();
 					frame.dispose();
 				} else {
