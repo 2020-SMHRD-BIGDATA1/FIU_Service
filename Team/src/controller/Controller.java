@@ -37,7 +37,6 @@ public class Controller {
 		}
 	}
 	
-
 	public boolean login(MemberVO user) {
 		loginUser = dao.selectOne(user);
 		if (loginUser != null) {
@@ -80,10 +79,17 @@ public class Controller {
 		return cnt;
 	}
 	
+	public int delete(MemberVO joinUser) {
+		int cnt = dao.delete(joinUser);
+		return cnt;
+	}
+	
+	
 	public ArrayList<FestivalVO> searchList(String search) {
 		ArrayList<FestivalVO> search_list = new ArrayList<FestivalVO>();
 		search_list = fdao.search(search);
 		if (search_list != null) {
+			System.out.println(search_list.get(0).getFest_name());
 			return search_list;
 		}
 		return search_list;

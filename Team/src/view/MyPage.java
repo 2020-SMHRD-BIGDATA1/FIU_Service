@@ -176,6 +176,17 @@ public class MyPage {
 			public void actionPerformed(ActionEvent e) {
 				int result = JOptionPane.showConfirmDialog(null, "Å»Åð ÇÏ½Ã°Ú½À´Ï±î?", "È®ÀÎ", JOptionPane.YES_NO_CANCEL_OPTION);
 				if (result == JOptionPane.YES_OPTION) {
+					
+					MemberVO loginUser = controller.getLoginUser();
+					String id = loginUser.getId();
+					MemberVO deletemember = new MemberVO(id);
+					
+					int cnt = controller.delete(deletemember);
+					if (cnt > 0) {
+						JOptionPane.showMessageDialog(frame, "Å»Åð°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù", "", JOptionPane.PLAIN_MESSAGE);
+						frame.setVisible(false);
+						LoginGUI.main(null);
+					}
 
 				} else if (result == JOptionPane.NO_OPTION) {
 

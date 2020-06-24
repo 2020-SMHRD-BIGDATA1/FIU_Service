@@ -173,6 +173,29 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+	
+	
+	public int delete(MemberVO delete) {
+		int cnt = 0;
+		MemberVO deletemember = null;
+		getConnection();
+		try {
+			String sql = "DELETE FESTIVALMEMBER Where FEST_ID = ? ";
+			pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, delete.getId());
+			
+			cnt = pst.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
+	}
+	
+	
 	}
 	
 	
