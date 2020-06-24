@@ -52,11 +52,11 @@ public class MyPage {
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
+		panel.setBackground(new Color(240, 248, 255));
 		frame.getContentPane().add(panel, "name_667309913231400");
 		panel.setLayout(null);
 
-		String path3 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\홈버튼.png";
+		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_list.png";
 		ImageIcon home = new ImageIcon(path3);
 		Image originImg5 = home.getImage();
 		// 추출된 Image의 크기를 조절하여 새로운 Image객체 생성
