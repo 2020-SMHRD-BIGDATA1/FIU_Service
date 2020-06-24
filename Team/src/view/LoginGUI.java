@@ -19,6 +19,7 @@ import controller.Controller;
 import model.MemberVO;
 import javax.swing.JPasswordField;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
@@ -64,12 +65,23 @@ public class LoginGUI {
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(51, 153, 153));
+		panel.setBackground(new Color(240, 248, 255));
 		frame.getContentPane().add(panel, "name_165020780607700");
 		panel.setLayout(null);
+		
+		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
+		ImageIcon home = new ImageIcon(path3);
+		Image originImg5 = home.getImage();
+		Image changedImg4 = originImg5.getScaledInstance(150, 150, Image.SCALE_SMOOTH);   // ªÁ¿Ã¡Ó¡∂¿˝
+		ImageIcon Icon4 = new ImageIcon(changedImg4);
+		
+		JLabel lbl_image = new JLabel(Icon4);
+		lbl_image.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_image.setBounds(62, 86, 311, 301);
+		panel.add(lbl_image);
 
 		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(new Color(51, 153, 153));
+		panel_2.setBackground(new Color(240, 248, 255));
 		panel_2.setBounds(10, 434, 412, 116);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
@@ -99,13 +111,13 @@ public class LoginGUI {
 		txt_PW.setBorder(null);
 		panel_2.add(txt_PW);
 
-		btn_Login = new JButton("Login");
+		btn_Login = new JButton("");
 		btn_Login.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_login.PNG"));
 		btn_Login.setFont(new Font("±º∏≤", Font.PLAIN, 15));
 		btn_Login.setBounds(269, 24, 75, 35);
 		panel_2.add(btn_Login);
 
-		btn_Join = new JButton("Join");
+		btn_Join = new JButton("");
 		btn_Join.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_join.PNG"));
 		btn_Join.setFont(new Font("±º∏≤", Font.PLAIN, 15));
 		btn_Join.setBounds(269, 69, 75, 35);
@@ -116,10 +128,7 @@ public class LoginGUI {
 			}
 		});
 		
-		JLabel lblNewLabel_2 = new JLabel("\uCD95\uC81C \uC5B4\uB54C");
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(142, 160, 150, 150);
-		panel.add(lblNewLabel_2);
+
 
 		btn_Login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
