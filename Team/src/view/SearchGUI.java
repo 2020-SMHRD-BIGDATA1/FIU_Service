@@ -29,6 +29,7 @@ public class SearchGUI {
 	private JPanel tpanel_1;
 	public static Controller controller = new Controller();
 	public ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
+	protected ArrayList<FestivalVO> result;
 
 	public SearchGUI() {
 		initialize();
@@ -81,8 +82,17 @@ public class SearchGUI {
 		btn_search.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String search = txt_search.getText();
-				System.out.println(search);
-				 ArrayList<FestivalVO> list = controller.searchList(search);
+//				System.out.println(search);
+				result = controller.searchList(search);
+//				System.out.println(result.get(0).getFest_name());
+				for (int i = 0; i < result.size(); i++) {
+					System.out.print(result.get(i).getFest_name()+"(");
+					System.out.print(result.get(i).getCity()+") ");
+					System.out.print(result.get(i).getFest_tel()+"\t");
+					System.out.print("±â°£ : "+result.get(i).getFest_date1()+"~");
+					System.out.println(result.get(i).getFest_date2());
+				}
+				
 			}
 		});
 		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));

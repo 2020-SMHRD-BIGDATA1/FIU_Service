@@ -11,6 +11,7 @@ public class FestivalDAO {
 	private Connection conn;
 	private PreparedStatement pst;
 	private ResultSet rs;
+	private FestivalVO vo;
 
 	public void getConnection() {
 		try {
@@ -45,9 +46,9 @@ public class FestivalDAO {
 	}
 
 	public ArrayList<FestivalVO> search(String search) {
-		ArrayList<FestivalVO> searchList = new ArrayList<FestivalVO>();
 		int cnt = 0;
 		getConnection();
+		ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
 		try {
 			String sql = "SELECT * FROM FESTIVAL_INFORMATION WHERE FEST_NAME LIKE ?";
 			pst = conn.prepareStatement(sql);
@@ -55,23 +56,23 @@ public class FestivalDAO {
 			rs = pst.executeQuery();
 			
 			while (rs.next()) {
-//				int fest_no = cnt++;
 				String fest_name = rs.getString("fest_name");
 				String city = rs.getString("city");
 				String fest_tel = rs.getString("fest_tel");
 				String fest_date1 = rs.getString("fest_date1");
 				String fest_date2 = rs.getString("fest_date2");
-				
+				System.out.println(fest_name);
 				FestivalVO vo = new FestivalVO(fest_name, city, fest_tel, fest_date1, fest_date2);
 				
-				searchList.add(vo);	
+				list.add(vo);
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			close();
 		}
-		return searchList;
+		return list;
 	}
 	
 	

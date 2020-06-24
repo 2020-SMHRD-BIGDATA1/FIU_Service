@@ -11,8 +11,6 @@ public class Controller {
 	private MemberDAO dao = new MemberDAO();
 	private FestivalDAO fdao = new FestivalDAO();
 
-	private ArrayList<FestivalVO> search_list;
-
 	private MemberVO loginUser;
 	private MemberVO joinUser;
 	private MemberVO joinMember;
@@ -83,8 +81,10 @@ public class Controller {
 	}
 	
 	public ArrayList<FestivalVO> searchList(String search) {
+		ArrayList<FestivalVO> search_list = new ArrayList<FestivalVO>();
 		search_list = fdao.search(search);
 		if (search_list != null) {
+			System.out.println(search_list.get(0).getFest_name());
 			return search_list;
 		}
 		return search_list;
