@@ -9,12 +9,16 @@ package view;
 	public class FontMake {
 	
 	   public void FontChange(GraphicsEnvironment ge) {
-		   Font Wol;
-	      String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\Wolyeonggyo.ttf"; // ÆùÆ®ÀÇ °æ·Î¸¦ °¡Á®¿À´Â°Å
-	      // font¸¦ »õ·Ó°Ô »ı¼ºÀ» ÇÒ°Çµ¥, ¸Å°³º¯¼ö·Î µé¾î°¡´Â °Ç (¾î¶²Å¸ÀÔÀ¸·Î ÆùÆ®¸¦ ³ÖÀ» °ÇÁö, ÆÄÀÏ)
+		   Font Binggrae;
+		   Font Binggrae2;
+	      String path = "â€ªC:\\Users\\SMHRD\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Binggrae-Bold.ttf"; // í°íŠ¸ì˜ ê²½ë¡œë¥¼ ê°€ì ¸ì˜¤ëŠ”ê±°
+	      String path2 = "â€ªC:\\Users\\SMHRD\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Binggrae.ttf";
+	      // fontë¥¼ ìƒˆë¡­ê²Œ ìƒì„±ì„ í• ê±´ë°, ë§¤ê°œë³€ìˆ˜ë¡œ ë“¤ì–´ê°€ëŠ” ê±´ (ì–´ë–¤íƒ€ì…ìœ¼ë¡œ í°íŠ¸ë¥¼ ë„£ì„ ê±´ì§€, íŒŒì¼)
 	      try {
-	    	  Wol = Font.createFont(Font.TRUETYPE_FONT, new File(path)).deriveFont(12f);
-	         ge.registerFont(Wol);
+	    	  Binggrae = Font.createFont(Font.TRUETYPE_FONT, new File(path)).deriveFont(12f);
+	    	  Binggrae2 = Font.createFont(Font.TRUETYPE_FONT, new File(path2)).deriveFont(12f);
+	         ge.registerFont(Binggrae);
+	         ge.registerFont(Binggrae2);
 	      } catch (FontFormatException e1) {
 	         // TODO Auto-generated catch block
 	         e1.printStackTrace();

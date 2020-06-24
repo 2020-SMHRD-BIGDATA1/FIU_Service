@@ -71,11 +71,10 @@ public class MyPageEdit {
 		panel.add(lbl_back);
 		
 		 GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-
 		 fm.FontChange(ge);
 		 
 		 JLabel lblNewLabel = new JLabel("\uD68C\uC6D0 \uC815\uBCF4 \uC218\uC815");
-			lblNewLabel.setFont(new Font("안동월영교", Font.BOLD, 30));
+			lblNewLabel.setFont(new Font("빙그레체", Font.BOLD, 30));
 			lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel.setBounds(12, 26, 407, 86);
 			panel.add(lblNewLabel);
@@ -83,7 +82,7 @@ public class MyPageEdit {
 
 		JLabel lblNewLabel_1 = new JLabel("\uD68C\uC6D0\uC815\uBCF4\uB97C \uC218\uC815\uD558\uC2DC\uB824\uBA74 \uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("안동월영교", Font.PLAIN, 16));
+		lblNewLabel_1.setFont(new Font("빙그레체", Font.PLAIN, 16));
 		lblNewLabel_1.setBounds(12, 305, 407, 86);
 		panel.add(lblNewLabel_1);
 		

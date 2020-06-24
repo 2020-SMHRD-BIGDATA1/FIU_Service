@@ -13,6 +13,7 @@ import controller.Controller;
 import model.MemberVO;
 
 import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 
 import javax.swing.JTextField;
@@ -45,12 +46,16 @@ public class MyPageEdit2 {
 	private JRadioButton RB_male;
 	private JRadioButton RB_female;
 	private JTextField txt_id;
+	private FontMake fm = new FontMake();
 
 	public MyPageEdit2() {
 
 		initialize();
 		MemberVO loginUser = controller.getLoginUser();
 		//txt_pw.setText(loginUser.getPw());
+		
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		 fm.FontChange(ge);
 
 		MemberVO id = new MemberVO(loginUser.getId());
 		txt_pw.setText(controller.select(id).getPw());
@@ -88,6 +93,7 @@ public class MyPageEdit2 {
 		panel.setLayout(null);
 		
 		JButton btnNewButton_1 = new JButton("\uCDE8\uC18C");
+		btnNewButton_1.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
@@ -101,13 +107,14 @@ public class MyPageEdit2 {
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
 		JLabel lbl_logo = new JLabel(Icon4);
-		lbl_logo.setBounds(12, 21, 75, 75);
+		lbl_logo.setBounds(12, 20, 75, 75);
 		panel.add(lbl_logo);
 		btnNewButton_1.setBackground(Color.WHITE);
 		btnNewButton_1.setBounds(243, 541, 97, 44);
 		panel.add(btnNewButton_1);
 		
 		JButton btnNewButton = new JButton("\uC218\uC815");
+		btnNewButton.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			
 			@Override
@@ -147,7 +154,7 @@ public class MyPageEdit2 {
 		panel.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("\uD68C\uC6D0 \uC815\uBCF4 \uC218\uC815");
-		lblNewLabel.setFont(new Font("휴먼편지체", Font.BOLD, 30));
+		lblNewLabel.setFont(new Font("빙그레체", Font.BOLD, 30));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(12, 20, 410, 96);
 		panel.add(lblNewLabel);
@@ -156,6 +163,7 @@ public class MyPageEdit2 {
 		//lblNewLabel.setFont(font);
 		
 		JLabel lblNewLabel_1 = new JLabel("\uC774\uB984");
+		lblNewLabel_1.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setBounds(25, 296, 49, 36);
 		panel.add(lblNewLabel_1);
@@ -166,6 +174,7 @@ public class MyPageEdit2 {
 		txt_name.setColumns(10);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("\uB098\uC774");
+		lblNewLabel_1_1.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1.setBounds(232, 296, 49, 36);
 		panel.add(lblNewLabel_1_1);
@@ -176,6 +185,7 @@ public class MyPageEdit2 {
 		panel.add(txt_age);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("\uD734\uB300\uD3F0");
+		lblNewLabel_1_2.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_2.setBounds(232, 351, 49, 36);
 		panel.add(lblNewLabel_1_2);
@@ -186,6 +196,7 @@ public class MyPageEdit2 {
 		panel.add(txt_phone);
 		
 		JLabel lblNewLabel_1_3 = new JLabel("\uC131\uBCC4");
+		lblNewLabel_1_3.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_3.setBounds(232, 403, 49, 36);
 		panel.add(lblNewLabel_1_3);
@@ -194,11 +205,13 @@ public class MyPageEdit2 {
 		group = new ButtonGroup();
 		
 		RB_male = new JRadioButton("\uB0A8");
+		RB_male.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		RB_male.setBackground(new Color(240, 248, 255));
 		RB_male.setBounds(289, 410, 49, 23);
 		panel.add(RB_male);
 		
 		RB_female = new JRadioButton("\uC5EC");
+		RB_female.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		RB_female.setBackground(new Color(240, 248, 255));
 		RB_female.setBounds(355, 410, 49, 23);
 		panel.add(RB_female);
@@ -208,6 +221,7 @@ public class MyPageEdit2 {
 		
 		
 		JLabel lblNewLabel_1_4 = new JLabel("PW");
+		lblNewLabel_1_4.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_1_4.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_4.setBounds(25, 351, 49, 36);
 		panel.add(lblNewLabel_1_4);
@@ -218,6 +232,7 @@ public class MyPageEdit2 {
 		panel.add(txt_pw);
 		
 		JLabel lblNewLabel_1_5 = new JLabel("\uAC70\uC8FC\uC9C0");
+		lblNewLabel_1_5.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_1_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_5.setBounds(25, 403, 49, 36);
 		panel.add(lblNewLabel_1_5);
@@ -225,6 +240,7 @@ public class MyPageEdit2 {
 		String[] items = { "서울특별시", "대전광역시", "부산광역시", "대구광역시", "인천광역시", "울산광역시", "광주광역시", "세종시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주도"};
 	
 		comboBox_area = new JComboBox(items);
+		comboBox_area.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		comboBox_area.setBackground(Color.WHITE);
 		comboBox_area.setBounds(82, 406, 116, 30);
 		panel.add(comboBox_area);
@@ -238,12 +254,14 @@ public class MyPageEdit2 {
 		ImageIcon Icon3 = new ImageIcon(changedImg2);
 		
 		txt_id = new JTextField();
+		txt_id.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		txt_id.setText((String) null);
 		txt_id.setColumns(10);
 		txt_id.setBounds(82, 244, 116, 36);
 		panel.add(txt_id);
 		
 		JLabel lblNewLabel_1_6 = new JLabel("\uC544\uC774\uB514");
+		lblNewLabel_1_6.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_1_6.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_6.setBounds(25, 244, 49, 36);
 		panel.add(lblNewLabel_1_6);

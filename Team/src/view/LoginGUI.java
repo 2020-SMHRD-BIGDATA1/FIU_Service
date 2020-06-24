@@ -99,6 +99,7 @@ public class LoginGUI {
 		panel_2.add(lblNewLabel_1);
 
 		txt_ID = new JTextField();
+		txt_ID.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		txt_ID.setHorizontalAlignment(SwingConstants.CENTER);
 		txt_ID.setBounds(108, 24, 135, 35);
 		txt_ID.setBorder(null);
@@ -138,11 +139,11 @@ public class LoginGUI {
 				MemberVO user = new MemberVO(id, pw);
 				boolean isSuccess = controller.login(user);
 				if (isSuccess == true) {
-					JOptionPane.showMessageDialog(frame, "로그인 성공", "로그인 결과", JOptionPane.PLAIN_MESSAGE);
+					//JOptionPane.showMessageDialog(frame, "로그인 성공", "로그인 결과", JOptionPane.PLAIN_MESSAGE);
 					MainGUI mainGUI = new MainGUI();
 					frame.dispose();
 				} else {
-					JOptionPane.showMessageDialog(frame, "로그인 실패", "로그인 결과", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(frame, "로그인 실패", "로그인 결과", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});

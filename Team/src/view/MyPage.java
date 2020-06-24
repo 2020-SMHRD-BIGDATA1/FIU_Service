@@ -86,7 +86,7 @@ public class MyPage {
 
 		JLabel lblNewLabel = new JLabel("My Fest");
 		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setFont(new Font("안동월영교", Font.BOLD, 35));
+		lblNewLabel.setFont(new Font("빙그레체", Font.BOLD, 35));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(12, 0, 410, 113);
 		panel.add(lblNewLabel);
@@ -99,10 +99,20 @@ public class MyPage {
 			}
 		});
 		
+		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\profile.png";
+		ImageIcon originIcon = new ImageIcon(path);
+		Image originImg = originIcon.getImage();
+		// 추출된 Image의 크기를 조절하여 새로운 Image객체 생성
+		Image changedImg = originImg.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
+		// 새로운 Image로 ImageIcon객체를 생성
+		ImageIcon Icon = new ImageIcon(changedImg);
+
+		JLabel lbl_profile = new JLabel(Icon);
+		lbl_profile.setBounds(22, 138, 100, 100);
+		panel.add(lbl_profile);
 		
 		
-		
-		btn2.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn2.setFont(new Font("빙그레체", Font.PLAIN, 25));
 		btn2.setHorizontalAlignment(SwingConstants.LEFT);
 		btn2.setBackground(new Color(240, 248, 255));
 		btn2.setBounds(12, 335, 410, 73);
@@ -116,7 +126,7 @@ public class MyPage {
 
 		});
 		btn1.setHorizontalAlignment(SwingConstants.LEFT);
-		btn1.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn1.setFont(new Font("빙그레체", Font.PLAIN, 25));
 		btn1.setBackground(new Color(240, 248, 255));
 		btn1.setBounds(12, 255, 410, 73);
 		panel.add(btn1);
@@ -129,7 +139,7 @@ public class MyPage {
 			}
 		});
 		btn3.setHorizontalAlignment(SwingConstants.LEFT);
-		btn3.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn3.setFont(new Font("빙그레체", Font.PLAIN, 25));
 		btn3.setBackground(new Color(240, 248, 255));
 		btn3.setBounds(12, 414, 410, 73);
 		panel.add(btn3);
@@ -156,7 +166,7 @@ public class MyPage {
 			}
 		});
 		btn4.setHorizontalAlignment(SwingConstants.LEFT);
-		btn4.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn4.setFont(new Font("빙그레체", Font.PLAIN, 25));
 		btn4.setBackground(new Color(240, 248, 255));
 		btn4.setBounds(12, 494, 410, 73);
 		panel.add(btn4);
@@ -176,7 +186,7 @@ public class MyPage {
 			}
 		});
 		btn5.setHorizontalAlignment(SwingConstants.LEFT);
-		btn5.setFont(new Font("안동월영교", Font.PLAIN, 25));
+		btn5.setFont(new Font("빙그레체", Font.PLAIN, 25));
 		btn5.setBackground(new Color(240, 248, 255));
 		btn5.setBounds(12, 573, 410, 73);
 		panel.add(btn5);
@@ -187,26 +197,14 @@ public class MyPage {
 		btn4.setBorderPainted(false);
 		btn5.setBorderPainted(false);
 
-		String path = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\푸린.jpeg";
-		ImageIcon originIcon = new ImageIcon(path);
-		Image originImg = originIcon.getImage();
-		// 추출된 Image의 크기를 조절하여 새로운 Image객체 생성
-		Image changedImg = originImg.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
-		// 새로운 Image로 ImageIcon객체를 생성
-		ImageIcon Icon = new ImageIcon(changedImg);
-
-		JLabel lbl_profile = new JLabel(Icon);
-		lbl_profile.setBounds(22, 138, 100, 100);
-		panel.add(lbl_profile);
-
 		lblNewLabel_1_1 = new JLabel("\uB2D8 \uD658\uC601\uD569\uB2C8\uB2E4");
-		lblNewLabel_1_1.setFont(new Font("안동월영교", Font.BOLD, 20));
+		lblNewLabel_1_1.setFont(new Font("빙그레체", Font.PLAIN, 20));
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_1.setBounds(274, 173, 148, 70);
 		panel.add(lblNewLabel_1_1);
 
 		lbl_username = new JLabel("");
-		lbl_username.setFont(new Font("안동월영교", Font.PLAIN, 20));
+		lbl_username.setFont(new Font("빙그레체", Font.BOLD, 20));
 		lbl_username.setHorizontalAlignment(SwingConstants.RIGHT);
 		lbl_username.setBounds(156, 173, 117, 70);
 		panel.add(lbl_username);
