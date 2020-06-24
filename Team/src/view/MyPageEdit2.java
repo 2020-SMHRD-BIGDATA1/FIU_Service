@@ -169,6 +169,7 @@ public class MyPageEdit2 {
 		panel.add(lblNewLabel_1);
 		
 		txt_name = new JTextField();
+		txt_name.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 12));
 		txt_name.setBounds(82, 296, 116, 36);
 		panel.add(txt_name);
 		txt_name.setColumns(10);
@@ -180,6 +181,7 @@ public class MyPageEdit2 {
 		panel.add(lblNewLabel_1_1);
 		
 		txt_age = new JTextField();
+		txt_age.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 12));
 		txt_age.setColumns(10);
 		txt_age.setBounds(289, 296, 116, 36);
 		panel.add(txt_age);
@@ -191,6 +193,7 @@ public class MyPageEdit2 {
 		panel.add(lblNewLabel_1_2);
 		
 		txt_phone = new JTextField();
+		txt_phone.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 12));
 		txt_phone.setColumns(10);
 		txt_phone.setBounds(289, 351, 116, 36);
 		panel.add(txt_phone);
