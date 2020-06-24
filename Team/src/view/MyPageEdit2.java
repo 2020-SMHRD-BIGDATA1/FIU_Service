@@ -50,9 +50,10 @@ public class MyPageEdit2 {
 
 		initialize();
 		MemberVO loginUser = controller.getLoginUser();
-		txt_pw.setText(loginUser.getPw());
+		//txt_pw.setText(loginUser.getPw());
 
 		MemberVO id = new MemberVO(loginUser.getId());
+		txt_pw.setText(controller.select(id).getPw());
 		txt_id.setText(controller.select(id).getId());
 		txt_id.setEnabled(false);
 		txt_age.setText(controller.select(id).getAge());
