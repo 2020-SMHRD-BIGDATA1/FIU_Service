@@ -143,6 +143,10 @@ public class MainGUI {
 		panel_6.setLayout(new GridLayout(0, 5, 0, 0));
 
 		JButton btn_info = new JButton("\uCD95\uC81C");
+		btn_info.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btn_info.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
 		btn_info.setBorderPainted(false);
 		btn_info.setBackground(Color.WHITE);
@@ -153,18 +157,6 @@ public class MainGUI {
 		btn_now.setBorderPainted(false);
 		btn_now.setBackground(Color.WHITE);
 		panel_6.add(btn_now);
-
-		JButton btn_my = new JButton("My FEST");
-		btn_my.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			MyPage mypage = new MyPage();
-			frame.dispose();
-			}
-		});
-		btn_my.setFont(new Font("ºù±×·¹Ã¼", Font.BOLD, 12));
-		btn_my.setBorderPainted(false);
-		btn_my.setBackground(Color.WHITE);
-		panel_6.add(btn_my);
 
 		JButton btn_mark = new JButton("\uCC1C");
 		btn_mark.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
@@ -177,6 +169,18 @@ public class MainGUI {
 		btn_review.setBorderPainted(false);
 		btn_review.setBackground(Color.WHITE);
 		panel_6.add(btn_review);
+		
+				JButton btn_my = new JButton("My FEST");
+				btn_my.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+					MyPage mypage = new MyPage();
+					frame.dispose();
+					}
+				});
+				btn_my.setFont(new Font("ºù±×·¹Ã¼", Font.BOLD, 12));
+				btn_my.setBorderPainted(false);
+				btn_my.setBackground(Color.WHITE);
+				panel_6.add(btn_my);
 
 	}
 }

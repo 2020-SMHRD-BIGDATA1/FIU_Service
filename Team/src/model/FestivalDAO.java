@@ -47,8 +47,9 @@ public class FestivalDAO {
 
 	public ArrayList<FestivalVO> search(String search) {
 		int cnt = 0;
-		getConnection();
 		ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
+		
+		getConnection();
 		try {
 			String sql = "SELECT * FROM FESTIVAL_INFORMATION WHERE FEST_NAME LIKE ? OR CITY LIKE ?";
 			pst = conn.prepareStatement(sql);
@@ -74,6 +75,7 @@ public class FestivalDAO {
 		}
 		return list;
 	}
+
 	
 	
 }
