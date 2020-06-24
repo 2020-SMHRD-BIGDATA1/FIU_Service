@@ -72,17 +72,17 @@ public class LoginGUI {
 		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
 		ImageIcon home = new ImageIcon(path3);
 		Image originImg5 = home.getImage();
-		Image changedImg4 = originImg5.getScaledInstance(150, 150, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg4 = originImg5.getScaledInstance(250, 250, Image.SCALE_SMOOTH);   // 사이즈조절
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
 		JLabel lbl_image = new JLabel(Icon4);
 		lbl_image.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl_image.setBounds(62, 86, 311, 301);
+		lbl_image.setBounds(92, 90, 250, 250);
 		panel.add(lbl_image);
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(240, 248, 255));
-		panel_2.setBounds(10, 434, 412, 116);
+		panel_2.setBounds(11, 434, 412, 116);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
 
