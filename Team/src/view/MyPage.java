@@ -76,13 +76,10 @@ public class MyPage {
 		});
 		lbl_home.setBounds(12, 10, 75, 73);
 		panel.add(lbl_home);
-		
-		
-		 GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 
-		 fm.FontChange(ge);
-		 
-		 
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+		fm.FontChange(ge);
 
 		JLabel lblNewLabel = new JLabel("My Fest");
 		lblNewLabel.setForeground(Color.BLACK);
@@ -98,7 +95,7 @@ public class MyPage {
 				frame.dispose();
 			}
 		});
-		
+
 		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\profile.png";
 		ImageIcon originIcon = new ImageIcon(path);
 		Image originImg = originIcon.getImage();
@@ -110,8 +107,7 @@ public class MyPage {
 		JLabel lbl_profile = new JLabel(Icon);
 		lbl_profile.setBounds(22, 138, 100, 100);
 		panel.add(lbl_profile);
-		
-		
+
 		btn2.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 25));
 		btn2.setHorizontalAlignment(SwingConstants.LEFT);
 		btn2.setBackground(new Color(240, 248, 255));
@@ -174,26 +170,20 @@ public class MyPage {
 		JButton btn5 = new JButton("\uD0C8\uD1F4\uD558\uAE30                               \u3009");
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int result = JOptionPane.showConfirmDialog(null, "Å»Åð ÇÏ½Ã°Ú½À´Ï±î?", "È®ÀÎ", JOptionPane.YES_NO_CANCEL_OPTION);
+				int result = JOptionPane.showConfirmDialog(null, "Å»Åð ÇÏ½Ã°Ú½À´Ï±î?", "È®ÀÎ", JOptionPane.YES_NO_OPTION);
 				if (result == JOptionPane.YES_OPTION) {
-					
+
 					MemberVO loginUser = controller.getLoginUser();
 					String id = loginUser.getId();
 					MemberVO deletemember = new MemberVO(id);
-					
+
 					int cnt = controller.delete(deletemember);
 					if (cnt > 0) {
-						JOptionPane.showMessageDialog(frame, "Å»Åð°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù", "", JOptionPane.PLAIN_MESSAGE);
+						JOptionPane.showMessageDialog(frame, "Å»Åð°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù", "È®ÀÎ", JOptionPane.PLAIN_MESSAGE);
 						frame.setVisible(false);
 						LoginGUI.main(null);
 					}
-
-				} else if (result == JOptionPane.NO_OPTION) {
-
-				} else if (result == JOptionPane.CANCEL_OPTION) {
-
 				}
-
 			}
 		});
 		btn5.setHorizontalAlignment(SwingConstants.LEFT);
