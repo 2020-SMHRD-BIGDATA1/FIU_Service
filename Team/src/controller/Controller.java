@@ -104,7 +104,6 @@ public class Controller {
 	public ArrayList<FestivalVO> getlist() {
 		getList = fdao.getData();
 		if (getList != null) {
-			System.out.println(getList.get(0).getFest_name());
 			return getList;
 		}
 		return getList;
@@ -113,7 +112,6 @@ public class Controller {
 	public ArrayList<FestivalVO> getlist(String city_name) {
 		getList = fdao.getArea(city_name);
 		if (getList != null) {
-			System.out.println(getList.get(0).getFest_name());
 			return getList;
 		}
 		return getList;

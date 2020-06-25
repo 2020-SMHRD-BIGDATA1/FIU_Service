@@ -23,18 +23,17 @@ import model.MapExecute;
 
 import javax.swing.JTextPane;
 
-public class FestivalInformation {
+public class FestivalInformation extends SearchGUI{
 
 	private JFrame frame;
 	private JButton btnMore;
-	String name = "휴애리 수국축제";
 	
-	public FestivalInformation() {
-		initialize();
+	public FestivalInformation(String f_name) {
+		initialize(f_name);
 		frame.setVisible(true);
 	}
 
-	private void initialize() {
+	private void initialize(String f_name) {
 		frame = new JFrame();
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 450, 700);
@@ -63,8 +62,9 @@ public class FestivalInformation {
 		panel.add(btnMore);
 		
 		FestivalInformationDAO dao = new FestivalInformationDAO();
+//		String name = SearchGUI.f_name;
 		
-		String place = dao.getPlace(name);
+		String place = dao.getPlace(f_name);
 		
 		JLabel lblFestivalPlace = new JLabel(place);
 		lblFestivalPlace.setBounds(10, 597, 329, 21);

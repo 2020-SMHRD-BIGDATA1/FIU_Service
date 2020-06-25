@@ -47,8 +47,9 @@ public class SearchGUI {
 	DefaultTableModel model = new DefaultTableModel();
 	private JTable table_1;
 	private JTable table_2;
+	private JScrollPane scrollPane;
 
-	private String word;
+	private String f_name;
 
 	private FestivalInformation FestivalInformation;
 
@@ -105,6 +106,10 @@ public class SearchGUI {
 		panel_1.setLayout(new GridLayout(0, 3, 0, 0));
 
 		JButton btn_area = new JButton("\uC9C0\uC5ED");
+		btn_area.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btn_area.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -178,6 +183,7 @@ public class SearchGUI {
 		
 		JButton btn_1 = new JButton("\uC11C\uC6B8");
 		btn_1.addMouseListener(new MouseAdapter() {
+			
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				map_panel.setVisible(false);
@@ -192,6 +198,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_1.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		
@@ -214,6 +240,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_2.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_2.setBackground(Color.WHITE);
@@ -534,25 +580,6 @@ public class SearchGUI {
 		btn_17.setBackground(Color.WHITE);
 		areaList.add(btn_17);
 		
-//		JPan abc
-
-		// 지역별 출력문
-//		DefaultTableModel model = new DefaultTableModel(header, 0);
-//		
-//		ArrayList<FestivalVO> arr = controller.getlist();
-//		
-//		for (int i = 0; i < arr.size(); i++) {
-//            model.addRow(new Object[]{
-//            				arr.get(i).getFest_name(),
-//            				arr.get(i).getCity(),
-//            				arr.get(i).getFest_tel(),
-//            				arr.get(i).getFest_date1(),
-//            				arr.get(i).getFest_date2()});
-//         }
-//		
-//		table_1 = new JTable(model);
-//		scrollPane.setViewportView(table_1);
-
 		// 날짜별 검색결과
 		calendar = new JPanel();
 		result_panel.add(calendar, "name_61998025331300");
@@ -575,12 +602,12 @@ public class SearchGUI {
 		table_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				FestivalInformation Fest = new FestivalInformation();
 
 				int row = table_1.getSelectedRow();
 				String f_name = table_1.getModel().getValueAt(row, 0).toString();
+				FestivalInformation Fest = new FestivalInformation(f_name);
 				
-				FestivalVO f = new FestivalVO(f_name);
+//				FestivalVO f = new FestivalVO();
 //				System.out.println(f_name);
 //				vo.setFest_name(f_name);
 			}
