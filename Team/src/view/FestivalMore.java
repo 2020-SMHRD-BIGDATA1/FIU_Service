@@ -189,6 +189,7 @@ public class FestivalMore {
 		panel.add(button_back);
 		JTable table = new JTable(data, header);
 		table.setFillsViewportHeight(true);
+		table.setRowHeight(35);
 		table.setSurrendersFocusOnKeystroke(true);
 		table.setFont(new Font("±¼¸²", Font.PLAIN, 20));
 		JScrollPane scrollPane = new JScrollPane(table);
