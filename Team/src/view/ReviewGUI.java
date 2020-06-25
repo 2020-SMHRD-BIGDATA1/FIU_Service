@@ -106,7 +106,7 @@ public class ReviewGUI {
 		lbl_revno1.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno1);
 		
-		String path1 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\한성백제문화제.jpg";
+		String path1 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\한성백제문화제2020.jpg";
 		ImageIcon home1 = new ImageIcon(path1);
 		Image originImg1 = home1.getImage();
 		Image changedImg1 = originImg1.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
