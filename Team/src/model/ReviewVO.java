@@ -21,7 +21,7 @@ public class ReviewVO {
 	}
 
 
-	public ReviewVO(String fest_name2, String age2, String rev_score2, String rev_date2) {
+	public ReviewVO(String fest_name, String age, String rev_score, String rev_date) {
 		this.fest_name = fest_name;
 		this.age = age;
 		this.rev_score = rev_score;

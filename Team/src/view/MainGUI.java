@@ -35,6 +35,7 @@ public class MainGUI {
 
 	private JFrame frame;
 	private FontMake fm = new FontMake();
+	private JTextField textField;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -79,7 +80,7 @@ public class MainGUI {
 		panel.add(lblNewLabel);
 
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(0, 138, 434, 105);
+		panel_1.setBounds(0, 181, 434, 105);
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 
@@ -100,21 +101,14 @@ public class MainGUI {
 		panel_1.add(panel_4_1);
 
 		JPanel panel_5 = new JPanel();
-		panel_5.setBounds(0, 314, 434, 258);
+		panel_5.setBounds(0, 334, 434, 258);
 		panel.add(panel_5);
 
-		JLabel lblNewLabel_1 = new JLabel("  \uCD95\uC81C UP");
+		JLabel lblNewLabel_1 = new JLabel("  \uCD95\uC81C NOW");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1.setFont(new Font("∫˘±◊∑π√º", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(0, 261, 200, 41);
+		lblNewLabel_1.setBounds(0, 124, 200, 31);
 		panel.add(lblNewLabel_1);
-
-		JSpinner spinner = new JSpinner();
-		spinner.setFont(new Font("∫˘±◊∑π√º", Font.PLAIN, 15));
-		spinner.setModel(new SpinnerListModel(
-				new String[] { "2020.06.20 OO√‡¡¶ ≤‹¿Î", "2020.06.20 OO√‡¡¶ ≥Î¿Î", "2020.06.20 OO√‡¡¶ ¿ÁπÊπÆ ¿«ªÁ¿÷¿Ω !!" }));
-		spinner.setBounds(0, 602, 434, 33);
-		panel.add(spinner);
 	
 		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo_default.png";
 		ImageIcon home = new ImageIcon(path3);
@@ -166,6 +160,22 @@ public class MainGUI {
 				btn_my.setBorderPainted(false);
 				btn_my.setBackground(Color.WHITE);
 				panel_6.add(btn_my);
+				
+				JLabel lblNewLabel_2 = new JLabel("\uC9C4\uD589\uC911\uC778 \uC774\uBCA4\uD2B8");
+				lblNewLabel_2.setBounds(13, 155, 131, 15);
+				panel.add(lblNewLabel_2);
+				
+				textField = new JTextField();
+				textField.setFont(new Font("±º∏≤", Font.BOLD, 12));
+				textField.setText("\uACE0\uB798\uC758 \uAFC8! \uBC14\uB2E4\uC758 \uAFC8! \uC6B8\uC0B0\uC758 \uAFC8!");
+				textField.setBounds(0, 592, 434, 31);
+				panel.add(textField);
+				textField.setColumns(10);
+				
+				JLabel lblNewLabel_3 = new JLabel("  \uAC00\uC790! \uD398\uC2A4\uD2F0\uBC1C!");
+				lblNewLabel_3.setFont(new Font("±º∏≤", Font.PLAIN, 20));
+				lblNewLabel_3.setBounds(0, 300, 200, 31);
+				panel.add(lblNewLabel_3);
 
 	}
 }

@@ -1107,9 +1107,12 @@ public class SearchGUI {
 
 		ArrayList<ReviewVO> arr_1 = controller.getAgelist();
 //
+		System.out.println(arr_1.size());
 		for (int j = 0; j < arr_1.size(); j++) {
+			System.out.println(arr_1.get(j).getfest_name());
 			model.addRow(new Object[] { arr_1.get(j).getfest_name(), arr_1.get(j).getAge(), arr_1.get(j).getRev_score(),
 					arr_1.get(j).getRev_date()});
+			System.out.println(j);
 		}
 
 		table_3 = new JTable(model);
@@ -1120,10 +1123,12 @@ public class SearchGUI {
 				int row = table_3.getSelectedRow();
 				String f_name = table_3.getModel().getValueAt(row, 0).toString();
 				FestivalInformation Fest = new FestivalInformation(f_name);
+				System.out.println(arr_1.get(0).getfest_name());
 				frame.setVisible(false);
 			}
 		});
 		scrollPane_2.setViewportView(table_3);
+		
 
 	}
 }
