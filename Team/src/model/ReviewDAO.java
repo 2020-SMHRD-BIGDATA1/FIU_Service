@@ -74,6 +74,31 @@ public class ReviewDAO {
 		return list;
 	}
 
-	
+
+	public ArrayList<ReviewVO> getAgeL() {
+		ArrayList<ReviewVO> list = new ArrayList<ReviewVO>();
+		getConnection();
+		try {
+			String sql = "SELECT * FROM FESTIVAL_REVIEW ORDER BY AGE ASC, REV_SCORE DESC";
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+			
+			while (rs.next()) {
+				String fest_name = rs.getString("fest_name");
+				String age = rs.getString("age");
+				String rev_score = rs.getString("rev_score");
+				String rev_date = rs.getString("rev_date");
+				ReviewVO vo = new ReviewVO(fest_name, age, rev_score,rev_date);
+				
+				list.add(vo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return list;
+	}
 
 }

@@ -21,6 +21,14 @@ public class ReviewVO {
 	}
 
 
+	public ReviewVO(String fest_name2, String age2, String rev_score2, String rev_date2) {
+		this.fest_name = fest_name;
+		this.age = age;
+		this.rev_score = rev_score;
+		this.rev_date = rev_date;
+	}
+
+
 	public String getRev_no() {
 		return rev_no;
 	}
