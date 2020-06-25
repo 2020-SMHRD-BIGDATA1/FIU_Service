@@ -18,7 +18,8 @@ public class Controller {
 	private MemberVO joinUser;
 	private MemberVO joinMember;
 	private ArrayList<FestivalVO> getList;
-	private ArrayList<FestivalVO> getAgelist;
+	private ArrayList<ReviewVO> getAgelist;
+	
 	private ArrayList<ReviewVO> review;
 	
 	
@@ -119,12 +120,12 @@ public class Controller {
 	}
 
 
-	public ArrayList<FestivalVO> getAgelist() {
-		getAgelist = fdao.getAgeL();
+	public ArrayList<ReviewVO> getAgelist() {
+		getAgelist = rdao.getAgeL();
 		if (getAgelist != null) {
-			return getList;
+			return getAgelist;
 		}
-		return getList;
+		return getAgelist;
 	}
 
 }

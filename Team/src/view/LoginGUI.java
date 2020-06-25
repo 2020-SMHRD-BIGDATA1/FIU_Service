@@ -85,7 +85,7 @@ public class LoginGUI {
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(240, 248, 255));
-		panel_2.setBounds(11, 434, 412, 116);
+		panel_2.setBounds(12, 350, 412, 116);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
 
@@ -108,48 +108,48 @@ public class LoginGUI {
 		txt_ID = new JTextField();
 		txt_ID.setFont(new Font("빙그레체", Font.PLAIN, 15));
 		txt_ID.setHorizontalAlignment(SwingConstants.CENTER);
-		txt_ID.setBounds(108, 24, 135, 35);
+		txt_ID.setBounds(108, 24, 223, 35);
 		txt_ID.setBorder(null);
 		panel_2.add(txt_ID);
 		txt_ID.setColumns(10);
 
 		txt_PW = new JPasswordField();
 		txt_PW.setHorizontalAlignment(SwingConstants.CENTER);
-		txt_PW.setBounds(108, 69, 135, 35);
+		txt_PW.setBounds(108, 69, 223, 35);
 		txt_PW.setBorder(null);
 		panel_2.add(txt_PW);
-
-		btn_Login = new JButton("Login");
-		btn_Login.setFont(new Font("빙그레체", Font.PLAIN, 14));
-		btn_Login.setBounds(269, 24, 75, 35);
-		panel_2.add(btn_Login);
-
-		btn_Join = new JButton("Join");
-		btn_Join.setFont(new Font("빙그레체", Font.PLAIN, 15));
-		btn_Join.setBounds(269, 69, 75, 35);
-		panel_2.add(btn_Join);
-		btn_Join.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				JoinGUI join = new JoinGUI();
-			}
-		});
-
-		btn_Login.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				String id = txt_ID.getText();
-				String pw = String.valueOf(txt_PW.getPassword());
-
-				MemberVO user = new MemberVO(id, pw);
-				boolean isSuccess = controller.login(user);
-				if (isSuccess == true) {
-					// JOptionPane.showMessageDialog(frame, "로그인 성공", "로그인 결과",
-					// JOptionPane.PLAIN_MESSAGE);
-					MainGUI mainGUI = new MainGUI();
-					frame.dispose();
-				} else {
-					JOptionPane.showMessageDialog(frame, "로그인 실패", "로그인 결과", JOptionPane.ERROR_MESSAGE);
-				}
-			}
-		});
+		
+				btn_Login = new JButton("Login");
+				btn_Login.setBounds(92, 488, 250, 35);
+				panel.add(btn_Login);
+				btn_Login.setFont(new Font("빙그레체", Font.PLAIN, 14));
+				
+						btn_Join = new JButton("Join");
+						btn_Join.setBounds(92, 533, 250, 20);
+						panel.add(btn_Join);
+						btn_Join.setFont(new Font("빙그레체", Font.PLAIN, 15));
+						btn_Join.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent arg0) {
+								JoinGUI join = new JoinGUI();
+							}
+						});
+				
+						btn_Login.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent arg0) {
+								String id = txt_ID.getText();
+								String pw = String.valueOf(txt_PW.getPassword());
+				
+								MemberVO user = new MemberVO(id, pw);
+								boolean isSuccess = controller.login(user);
+								if (isSuccess == true) {
+									// JOptionPane.showMessageDialog(frame, "로그인 성공", "로그인 결과",
+									// JOptionPane.PLAIN_MESSAGE);
+									MainGUI mainGUI = new MainGUI();
+									frame.dispose();
+								} else {
+									JOptionPane.showMessageDialog(frame, "로그인 실패", "로그인 결과", JOptionPane.ERROR_MESSAGE);
+								}
+							}
+						});
 	}
 }
