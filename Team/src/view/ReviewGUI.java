@@ -18,12 +18,16 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import java.util.ArrayList;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JScrollBar;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Color;
+import javax.swing.border.LineBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.BevelBorder;
 
 public class ReviewGUI {
 
@@ -87,6 +91,7 @@ public class ReviewGUI {
 		frame.getContentPane().add(lbl_logo);
 		
 		JPanel panel = new JPanel();
+		panel.setBorder(BorderFactory.createEmptyBorder(2,2,2,2));
 		panel.setBackground(new Color(255, 255, 255));
 		panel.setBounds(0, 70, 434, 522);
 		frame.getContentPane().add(panel);

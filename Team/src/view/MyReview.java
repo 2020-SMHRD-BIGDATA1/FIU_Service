@@ -2,6 +2,7 @@ package view;
 
 import java.awt.EventQueue;
 
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import java.awt.Color;
@@ -11,6 +12,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
+
+import model.MemberVO;
+
 import java.awt.Font;
 import java.awt.GraphicsEnvironment;
 import java.awt.Image;
@@ -22,12 +26,17 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JScrollBar;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MyReview {
 
 	private JFrame frame;
-	private JTextField txt_search;
 	private FontMake fm = new FontMake();
+	private JTextField txt_age;
+	private JTextField txt_review;
 
 	public MyReview() {
 		initialize();
@@ -77,13 +86,6 @@ public class MyReview {
 		//새로운 Image로 ImageIcon객체를 생성
 		ImageIcon Icon2 = new ImageIcon(img);
 		
-		
-		JLabel review_img1 = new JLabel(Icon2);
-		review_img1.setBackground(Color.PINK);
-		review_img1.setHorizontalAlignment(SwingConstants.CENTER);
-		review_img1.setBounds(24, 208, 142, 142);
-		panel.add(review_img1);
-		
 		String path = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\검색.png";
 		ImageIcon search = new ImageIcon(path);
 		Image originImg2 = search.getImage(); 
@@ -92,58 +94,111 @@ public class MyReview {
 		//새로운 Image로 ImageIcon객체를 생성
 		ImageIcon Icon = new ImageIcon(changedImg2);
 		
-		JLabel lbl_search = new JLabel(Icon);
-		lbl_search.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				JOptionPane.showMessageDialog(frame,
-					    "검색 결과를 찾고 있습니다.",
-					    "검색 결과",
-					    JOptionPane.PLAIN_MESSAGE);
-			}
-		});
-		lbl_search.setBounds(368, 103, 42, 41);
-		panel.add(lbl_search);
-		
-		JLabel lblNewLabel = new JLabel("\uB0B4 \uD6C4\uAE30");
+		JLabel lblNewLabel = new JLabel("\uD6C4\uAE30 \uC791\uC131");
 		lblNewLabel.setFont(new Font("빙그레체", Font.BOLD, 30));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(63, 22, 292, 68);
 		panel.add(lblNewLabel);
 		
-		txt_search = new JTextField();
-		txt_search.setFont(new Font("빙그레체", Font.PLAIN, 12));
-		txt_search.setHorizontalAlignment(SwingConstants.LEFT);
-		txt_search.setText("\uAC80\uC0C9\uD558\uAE30");
-		txt_search.setBounds(259, 103, 108, 42);
-		panel.add(txt_search);
-		txt_search.setColumns(10);
+		JButton btnNewButton = new JButton("\uB4F1\uB85D");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(frame, "후기가 등록되었습니다.", "후기 등록", JOptionPane.PLAIN_MESSAGE);
+				MainGUI maingui = new MainGUI();
+			}
+		});
 		
-		
-		
-		JLabel review_img2 = new JLabel("\uCD95\uC81C\uC0AC\uC9C42");
-		review_img2.setForeground(Color.BLACK);
-		review_img2.setBackground(Color.ORANGE);
-		review_img2.setHorizontalAlignment(SwingConstants.CENTER);
-		review_img2.setBounds(24, 367, 142, 142);
-		panel.add(review_img2);
-		
-		JTextPane txt_review1 = new JTextPane();
-		txt_review1.setFont(new Font("빙그레체", Font.PLAIN, 12));
-		txt_review1.setText("\uC4F8\uC4F8\uD558\uB7B4? \uC5BC\uC74C\uC5D0 \uC2F8\uC778 \uB9CC\uBB3C\uC740 \uC5BC\uC74C\uC774 \uC788\uC744 \uBFD0\uC774\uB2E4 \uADF8\uB4E4\uC5D0\uAC8C \uC0DD\uBA85\uC744 \uBD88\uC5B4 \uB123\uB294 \uAC83\uC740 \uB530\uB73B\uD55C \uBD04\uBC14\uB78C\uC774\uB2E4 \uD480\uBC2D\uC5D0 \uC18D\uC78E\uB098\uACE0 \uAC00\uC9C0\uC5D0 \uC2F9\uC774 \uD2B8\uACE0 \uAF43 \uD53C\uACE0 \uC0C8 \uC6B0\uB294 \uBD04\uB0A0\uC758 \uCC9C\uC9C0\uB294 \uC5BC\uB9C8\uB098 \uAE30\uC058\uBA70 \uC5BC\uB9C8\uB098 \uC544\uB984\uB2E4\uC6B0\uB0D0? ");
-		txt_review1.setBounds(198, 208, 189, 142);
-		panel.add(txt_review1);
-		
-		JTextPane txt_review2 = new JTextPane();
-		txt_review2.setFont(new Font("빙그레체", Font.PLAIN, 12));
-		txt_review2.setText("\uD488\uACE0 \uC788\uB294 \uC774\uC0C1! \uC774\uAC83\uC774\uC57C\uB9D0\uB85C \uBB34\uD55C\uD55C \uAC00\uCE58\uB97C \uAC00\uC9C4 \uAC83\uC774\uB2E4 \uC0AC\uB78C\uC740 \uD06C\uACE0 \uC791\uACE0 \uAC04\uC5D0 \uC774\uC0C1\uC774 \uC788\uC74C\uC73C\uB85C\uC368 \uC6A9\uAC10\uD558\uACE0 \uAD73\uC138\uAC8C \uC0B4 \uC218 \uC788\uB294 \uAC83\uC774\uB2E4 \uC11D\uAC00\uB294 \uBB34\uC5C7\uC744 \uC704\uD558\uC5EC \uC124\uC0B0\uC5D0\uC11C \uACE0\uD589\uC744 \uD558\uC600\uC73C\uBA70 \uC608\uC218\uB294 \uBB34\uC5C7\uC744 \uC704\uD558\uC5EC \uAD11\uC57C\uC5D0\uC11C \uBC29\uD669\uD558\uC600\uC73C\uBA70 \uACF5\uC790\uB294 >??????????????????");
-		txt_review2.setBounds(198, 377, 189, 132);
-		panel.add(txt_review2);
-		
-		JButton btnNewButton = new JButton("\uB2E4\uC74C \uD6C4\uAE30");
 		btnNewButton.setFont(new Font("빙그레체", Font.PLAIN, 12));
-		btnNewButton.setBounds(272, 563, 95, 48);
+		btnNewButton.setBounds(63, 565, 95, 48);
 		panel.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("\uCDE8\uC18C");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				int result = JOptionPane.showConfirmDialog(null, "취소하시겠습니까?", "확인", JOptionPane.YES_NO_OPTION);
+				if (result == JOptionPane.YES_OPTION) {
+					frame.dispose();
+					MyPage mypage = new MyPage();
+				} else if (result == JOptionPane.NO_OPTION) {
+				}}
+		});
+		btnNewButton_1.setFont(new Font("Dialog", Font.PLAIN, 12));
+		btnNewButton_1.setBounds(272, 565, 95, 48);
+		panel.add(btnNewButton_1);
+		
+		String[] y = {"장승마을 빛 축제",
+				"전북관광브랜드공연 뮤지컬 '홍도1589'",
+				"휴애리 수국축제" };
+		
+		JComboBox comboBox = new JComboBox(y);
+		
+		
+		comboBox.setBounds(111, 124, 239, 29);
+		panel.add(comboBox);
+		
+		JLabel lbl_festname = new JLabel("\uCD95\uC81C\uBA85");
+		lbl_festname.setHorizontalAlignment(SwingConstants.RIGHT);
+		lbl_festname.setBounds(12, 124, 87, 29);
+		panel.add(lbl_festname);
+		
+		JLabel lblNewLabel_1 = new JLabel("\uD3C9\uC810");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_1.setBounds(12, 202, 87, 29);
+		panel.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("\uB098\uC774");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_2.setBounds(12, 163, 87, 29);
+		panel.add(lblNewLabel_2);
+		
+		txt_age = new JTextField();
+		txt_age.setBounds(111, 163, 87, 29);
+		panel.add(txt_age);
+		txt_age.setColumns(10);
+		
+		ButtonGroup group = new ButtonGroup();
+		
+		JRadioButton btn_1 = new JRadioButton("1");
+		btn_1.setBackground(new Color(255, 255, 255));
+		btn_1.setBounds(111, 205, 47, 23);
+		panel.add(btn_1);
+		
+		JRadioButton btn2 = new JRadioButton("2");
+		btn2.setBackground(Color.WHITE);
+		btn2.setBounds(162, 205, 47, 23);
+		panel.add(btn2);
+		
+		JRadioButton btn3 = new JRadioButton("3");
+		btn3.setBackground(Color.WHITE);
+		btn3.setBounds(215, 205, 47, 23);
+		panel.add(btn3);
+		
+		JRadioButton btn4 = new JRadioButton("4");
+		btn4.setBackground(Color.WHITE);
+		btn4.setBounds(267, 205, 47, 23);
+		panel.add(btn4);
+		
+		JRadioButton btn5 = new JRadioButton("5");
+		btn5.setBackground(Color.WHITE);
+		btn5.setBounds(318, 205, 47, 23);
+		panel.add(btn5);
+		
+		group.add(btn_1);
+		group.add(btn2);
+		group.add(btn3);
+		group.add(btn4);
+		group.add(btn5);
+		
+		txt_review = new JTextField();
+		txt_review.setBounds(74, 270, 276, 232);
+		panel.add(txt_review);
+		txt_review.setColumns(10);
+		
+		JLabel lbl_review = new JLabel("\uD6C4\uAE30");
+		lbl_review.setHorizontalAlignment(SwingConstants.RIGHT);
+		lbl_review.setBounds(12, 241, 87, 23);
+		panel.add(lbl_review);
 		
 		String path1 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\뒤로가기.png";
 		ImageIcon search1 = new ImageIcon(path1);
