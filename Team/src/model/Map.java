@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 public class Map extends JFrame{
 	
 	private GoogleAPI googleAPI = new GoogleAPI();
-	private String location = "광주광역시청";
+	private String location = "울산고래축제";
 	private JLabel googleMap;
 	
 	public Map() {
