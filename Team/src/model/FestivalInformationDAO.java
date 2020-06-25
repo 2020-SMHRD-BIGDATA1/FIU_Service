@@ -164,5 +164,33 @@ public class FestivalInformationDAO {
 		
 		return list;
 	}
+	
+	public ArrayList<FestivalVO> getArea(String city_name) {
+		ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
+		getConnection();
+		try {
+			String sql = "SELECT * FROM FESTIVAL_INFORMATION WHERE CITY = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, city_name);
+			rs = pst.executeQuery();
+			
+			while (rs.next()) {
+				String fest_name = rs.getString("fest_name");
+				String city = rs.getString("city");
+				String fest_tel = rs.getString("fest_tel");
+				String fest_date1 = rs.getString("fest_date1");
+				String fest_date2 = rs.getString("fest_date2");
+				FestivalVO vo = new FestivalVO(fest_name, city, fest_tel, fest_date1, fest_date2);
+				
+				list.add(vo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return list;
+	}
 
 }
