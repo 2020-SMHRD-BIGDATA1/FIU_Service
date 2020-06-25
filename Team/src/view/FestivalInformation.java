@@ -28,36 +28,11 @@ public class FestivalInformation {
 	private JButton btnMore;
 	String name =  "휴애리 수국축제";
 	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					FestivalInformation window = new FestivalInformation();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
 	public FestivalInformation() {
 		initialize();
-	
+		frame.setVisible(true);
 	}
-	
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);

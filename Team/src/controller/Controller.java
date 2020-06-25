@@ -2,7 +2,7 @@ package controller;
 
 import java.util.ArrayList;
 
-import model.FestivalDAO;
+import model.FestivalInformationDAO;
 import model.FestivalVO;
 import model.MemberDAO;
 import model.MemberVO;
@@ -12,11 +12,12 @@ import model.ReviewVO;
 public class Controller {
 	private MemberDAO dao = new MemberDAO();
 	private ReviewDAO rdao = new ReviewDAO();
-	private FestivalDAO fdao = new FestivalDAO();
+	private FestivalInformationDAO fdao = new FestivalInformationDAO();
 
 	private MemberVO loginUser;
 	private MemberVO joinUser;
 	private MemberVO joinMember;
+	private ArrayList<FestivalVO> getList;
 	private ArrayList<ReviewVO> review;
 	
 	public MemberVO getJoinMember() {
@@ -107,6 +108,15 @@ public class Controller {
 			return search_list;
 		}
 		return search_list;
+	}
+	
+	public ArrayList<FestivalVO> getlist() {
+		getList = fdao.getData();
+		if (getList != null) {
+			System.out.println(getList.get(0).getFest_name());
+			return getList;
+		}
+		return getList;
 	}
 
 
