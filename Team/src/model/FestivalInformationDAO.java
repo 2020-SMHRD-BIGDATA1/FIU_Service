@@ -11,11 +11,11 @@ public class FestivalInformationDAO {
 	private Connection conn;
 	private PreparedStatement pst;
 	private ResultSet rs;
-	
+
 	public void getConnection() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
+
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String user = "hr";
 			String password = "hr";
@@ -27,8 +27,9 @@ public class FestivalInformationDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
+
 	private void close() {
 		try {
 			if (rs != null) {
@@ -44,29 +45,29 @@ public class FestivalInformationDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public String getList(String name) {
 		String list = new String();
 		getConnection();
-		
+
 		try {
 			String sql = "select * from FESTIVAL_INFORMATION WHERE FEST_NAME = ?";
-			pst= conn.prepareStatement(sql);
+			pst = conn.prepareStatement(sql);
 			pst.setString(1, name);
 			rs = pst.executeQuery();
-			
-			if(rs.next()) {
+
+			if (rs.next()) {
 				list = rs.getString("FEST_CONTENTS");
-				
+
 			}
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
 			close();
 		}
-		
-		
+
 //		ArrayList<String> list = new ArrayList<String>();
 //		getConnection();
 //		
@@ -83,9 +84,79 @@ public class FestivalInformationDAO {
 //		}finally {
 //			close();
 //		}
-		
 
 		return list;
 	}
+
+	public String getPlace(String name) {
+		String place = new String();
+		getConnection();
+
+		try {
+			String sql = "select * from FESTIVAL_INFORMATION WHERE FEST_NAME = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, name);
+			rs = pst.executeQuery();
+
+			if (rs.next()) {
+				place = rs.getString("FEST_PLACE");
+
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return place;
+	}
+
+	public String getInfor(String name) {
+		String infor = new String();
+		getConnection();
+
+		try {
+			String sql = "select * from FESTIVAL_INFORMATION WHERE FEST_NAME = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, name);
+			rs = pst.executeQuery();
+
+			if (rs.next()) {
+				infor = rs.getString("FEST_CONTENTS2");
+
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return infor;
+	}
 	
+	
+	public ArrayList<String> getReview(String name) {
+		// TODO Auto-generated method stub
+		ArrayList<String> review = new ArrayList<String>();
+		getConnection();
+		
+		try {
+			String sql = "select * from FESTIVAL_REVIEW WHERE FEST_NAME = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, name);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				review.add(rs.getString(3));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+	
+	return review;
+}
 }

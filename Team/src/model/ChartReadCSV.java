@@ -1,37 +1,67 @@
 package model;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Scanner;
+
+import model.ChartVO;
+
 
 public class ChartReadCSV {
+	private Connection conn;
+	private PreparedStatement pst;
+	private ResultSet rs;
 
+	public void getConnection() {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "hr";
+			String password = "hr";
+			conn = DriverManager.getConnection(url, user, password);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	private void close() {
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+			if (pst != null) {
+				pst.close();
+			}
+			if (conn != null) {
+				conn.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	public ArrayList<ChartVO> getList() {
-		// TODO Auto-generated method stub
 		ArrayList<ChartVO>  list = new ArrayList<ChartVO>();
-		//1. 파일의 정보를 가지고 있는 객체 생성 (위치)
-		File csv = new File("C:\\Users\\SMHRD\\Desktop\\chartlib\\광주광역시 계약구분별 사용량 데이터.csv");
-		//2. 파일을 읽어들이는 Input 스트림 객체 생성
+		getConnection();
 		
 		try {
-			Scanner sc = new Scanner(csv);
-			sc.nextLine();
-			while(sc.hasNext()) {
-				String line = sc.nextLine();
-				// , 기분으로 문자열을 잘라내세요
-				// 건설 11112 1~4
-				String[] value = line.split(",");
-				String division = value[0];
-				int usage =  Integer.parseInt(value[1]);
-				String month = value[2];
-				ChartVO vo = new ChartVO(division, usage, month);
-				list.add(vo);
+			String division = 
+				
+
 			}
-		} catch (FileNotFoundException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			
+			e.printStackTrace();
+		} finally {
+			close();
 		}
-		return list;
 	}
 
 }
