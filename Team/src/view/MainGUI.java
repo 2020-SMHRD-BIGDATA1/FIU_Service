@@ -128,15 +128,15 @@ public class MainGUI {
 				new String[] { "2020.06.20 OO축제 꿀잼", "2020.06.20 OO축제 노잼", "2020.06.20 OO축제 재방문 의사있음 !!" }));
 		spinner.setBounds(0, 602, 434, 33);
 		panel.add(spinner);
-		
+	
 		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo_default.png";
 		ImageIcon home = new ImageIcon(path3);
 		Image originImg5 = home.getImage();
-		Image changedImg4 = originImg5.getScaledInstance(170, 170, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg4 = originImg5.getScaledInstance(155, 175, Image.SCALE_SMOOTH);   // 사이즈조절
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
 		JLabel lbl_logo = new JLabel(Icon4);
-		lbl_logo.setBounds(0, 0, 84, 81);
+		lbl_logo.setBounds(0, 0, 75, 75);
 		panel.add(lbl_logo);
 
 		JPanel panel_6 = new JPanel();

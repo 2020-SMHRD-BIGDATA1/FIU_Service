@@ -18,6 +18,7 @@ import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
 import model.FestivalInformationDAO;
+import model.FestivalVO;
 import model.MapExecute;
 
 import javax.swing.JTextPane;
@@ -26,38 +27,13 @@ public class FestivalInformation {
 
 	private JFrame frame;
 	private JButton btnMore;
-	String name =  "휴애리 수국축제";
+	String name = "휴애리 수국축제";
 	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					FestivalInformation window = new FestivalInformation();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
 	public FestivalInformation() {
 		initialize();
-	
+		frame.setVisible(true);
 	}
-	
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);
@@ -65,11 +41,6 @@ public class FestivalInformation {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		SpringLayout springLayout = new SpringLayout();
 		frame.getContentPane().setLayout(springLayout);
-		
-		
-
-	
-	
 		
 		JPanel panel = new JPanel();
 		springLayout.putConstraint(SpringLayout.NORTH, panel, 0, SpringLayout.NORTH, frame.getContentPane());

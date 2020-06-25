@@ -62,28 +62,10 @@ public class FestivalInformationDAO {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close();
 		}
-
-//		ArrayList<String> list = new ArrayList<String>();
-//		getConnection();
-//		
-//		String sql = "select * from FESTIVAL_INFORMATION";
-//		try {
-//			pst = conn.prepareStatement(sql);
-//			rs = pst.executeQuery();
-//			while(rs.next()) {
-//				list.add(rs.getString(7));
-//			}
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}finally {
-//			close();
-//		}
 
 		return list;
 	}
@@ -100,11 +82,10 @@ public class FestivalInformationDAO {
 
 			if (rs.next()) {
 				place = rs.getString("FEST_PLACE");
-
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		} finally {
 			close();
@@ -128,7 +109,6 @@ public class FestivalInformationDAO {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close();
@@ -138,7 +118,6 @@ public class FestivalInformationDAO {
 	
 	
 	public ArrayList<String> getReview(String name) {
-		// TODO Auto-generated method stub
 		ArrayList<String> review = new ArrayList<String>();
 		getConnection();
 		
@@ -151,12 +130,39 @@ public class FestivalInformationDAO {
 				review.add(rs.getString(3));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
 			close();
 		}
 	
 	return review;
-}
+	}
+	
+	public ArrayList<FestivalVO> getData() {
+		ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
+		getConnection();
+		try {
+			String sql = "SELECT * FROM FESTIVAL_INFORMATION ORDER BY FEST_DATE1 ASC";
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+			
+			while (rs.next()) {
+				String fest_name = rs.getString("fest_name");
+				String city = rs.getString("city");
+				String fest_tel = rs.getString("fest_tel");
+				String fest_date1 = rs.getString("fest_date1");
+				String fest_date2 = rs.getString("fest_date2");
+				FestivalVO vo = new FestivalVO(fest_name, city, fest_tel, fest_date1, fest_date2);
+				
+				list.add(vo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return list;
+	}
+
 }
