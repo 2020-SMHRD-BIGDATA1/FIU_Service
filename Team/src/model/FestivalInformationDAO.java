@@ -117,14 +117,14 @@ public class FestivalInformationDAO {
 	}
 	
 	
-	public ArrayList<String> getReview(String name) {
+	public ArrayList<String> getReview(String f_name) {
 		ArrayList<String> review = new ArrayList<String>();
 		getConnection();
 		
 		try {
 			String sql = "select * from FESTIVAL_REVIEW WHERE FEST_NAME = ?";
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, name);
+			pst.setString(1, f_name);
 			rs = pst.executeQuery();
 			while(rs.next()) {
 				review.add(rs.getString(3));
