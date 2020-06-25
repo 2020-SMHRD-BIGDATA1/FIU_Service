@@ -190,7 +190,7 @@ public class SearchGUI {
 			public void mouseExited(MouseEvent e) {
 				map_panel.setVisible(false);
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\Àü±¹.PNG");
-				map_panel.repaint(); 
+				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
 		});
