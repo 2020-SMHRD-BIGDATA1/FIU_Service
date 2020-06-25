@@ -89,7 +89,7 @@ public class MyPage {
 		lblNewLabel.setBounds(12, 0, 410, 113);
 		panel.add(lblNewLabel);
 
-		JButton btn2 = new JButton("\uD6C4\uAE30 \uAD00\uB9AC                              \u3009");
+		JButton btn2 = new JButton("\uD6C4\uAE30 \uC791\uC131                             \u3009");
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MyReview join = new MyReview();
