@@ -26,10 +26,10 @@ package view;
 	         // TODO Auto-generated catch block
 	         e1.printStackTrace();
 	      }
-	      String[] fonts = ge.getAvailableFontFamilyNames();
-	      for (int i = 0; i < fonts.length; i++) {
-	         System.out.println(fonts[i]);
-	      }
+	      //String[] fonts = ge.getAvailableFontFamilyNames();
+	    //  for (int i = 0; i < fonts.length; i++) {
+	    //     System.out.println(fonts[i]);
+	   //   }
 	   
 
 	   }

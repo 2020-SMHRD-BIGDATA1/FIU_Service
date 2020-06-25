@@ -28,6 +28,8 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MainGUI {
 
@@ -145,6 +147,7 @@ public class MainGUI {
 		JButton btn_info = new JButton("\uCD95\uC81C");
 		btn_info.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		btn_info.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
@@ -165,6 +168,13 @@ public class MainGUI {
 		panel_6.add(btn_mark);
 
 		JButton btn_review = new JButton("\uD6C4\uAE30");
+		btn_review.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ReviewGUI reviewGUI = new ReviewGUI();
+				frame.dispose();
+			}
+		});
+		
 		btn_review.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
 		btn_review.setBorderPainted(false);
 		btn_review.setBackground(Color.WHITE);

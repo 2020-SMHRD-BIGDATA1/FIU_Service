@@ -6,14 +6,18 @@ import model.FestivalDAO;
 import model.FestivalVO;
 import model.MemberDAO;
 import model.MemberVO;
+import model.ReviewDAO;
+import model.ReviewVO;
 
 public class Controller {
 	private MemberDAO dao = new MemberDAO();
+	private ReviewDAO rdao = new ReviewDAO();
 	private FestivalDAO fdao = new FestivalDAO();
 
 	private MemberVO loginUser;
 	private MemberVO joinUser;
 	private MemberVO joinMember;
+	private ArrayList<ReviewVO> review;
 	
 	public MemberVO getJoinMember() {
 		return joinMember;
@@ -27,6 +31,16 @@ public class Controller {
 	public MemberVO getLoginUser() {
 		return loginUser;
 	}
+	
+	public ArrayList<ReviewVO> getReview() {
+		review = rdao.pickOne();
+		return review;
+	}
+	
+	/*
+	 * public boolean pick(ReviewVO user) { review = rdao.pickOne(user); if (review
+	 * != null) { return true; } else { return false; } }
+	 */
 	
 	public boolean member(MemberVO member) {
 		joinMember = dao.select(member);
