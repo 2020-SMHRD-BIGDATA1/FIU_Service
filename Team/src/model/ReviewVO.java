@@ -3,18 +3,18 @@ package model;
 public class ReviewVO {
 	
 	String rev_no;		// 후기번호
-	String city;	// 지역
-	String rev_with;	// 후기
+	String fest_name;	// 지역
+	String rev_con;	// 후기
 	String age;			// 연령
 	String rev_score;	// 평점
 	String rev_date;	//날짜
 	
 	
-	public ReviewVO(String rev_no, String city, String rev_with, String age, String rev_score, String rev_date) {
+	public ReviewVO(String rev_no, String fest_name, String rev_con, String age, String rev_score, String rev_date) {
 		super();
 		this.rev_no = rev_no;
-		this.city = city;
-		this.rev_with = rev_with;
+		this.fest_name = fest_name;
+		this.rev_con = rev_con;
 		this.age = age;
 		this.rev_score = rev_score;
 		this.rev_date = rev_date;
@@ -31,23 +31,23 @@ public class ReviewVO {
 	}
 
 
-	public String getCity() {
-		return city;
+	public String getfest_name() {
+		return fest_name;
 	}
 
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setfest_name(String fest_name) {
+		this.fest_name = fest_name;
 	}
 
 
-	public String getRev_with() {
-		return rev_with;
+	public String getRev_con() {
+		return rev_con;
 	}
 
 
-	public void setRev_with(String rev_with) {
-		this.rev_with = rev_with;
+	public void setRev_con(String rev_con) {
+		this.rev_con = rev_con;
 	}
 
 

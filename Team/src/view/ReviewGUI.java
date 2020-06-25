@@ -105,7 +105,7 @@ public class ReviewGUI {
 		lbl_img1.setBackground(new Color(255, 255, 255));
 		panel.add(lbl_img1);
 		
-		lbl_review1 = new JLabel("<html>"+review.get(0).getRev_date()+"<br>평점 : " +review.get(0).getRev_score()+"점 \t 연령: " + review.get(0).getAge()+"대 <br>" + review.get(0).getRev_with()+"<html>");
+		lbl_review1 = new JLabel("<html>"+review.get(0).getRev_date()+"<br>평점 : " +review.get(0).getRev_score()+"점 \t 연령: " + review.get(0).getAge()+"대 <br>" + review.get(0).getRev_con()+"<html>");
 		lbl_review1.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_review1);
 		
@@ -117,7 +117,7 @@ public class ReviewGUI {
 		lbl_img2 = new JLabel("New label");
 		panel.add(lbl_img2);
 		
-		lbl_review2 = new JLabel("<html>"+review.get(9).getRev_date()+"<br>평점 : " +review.get(9).getRev_score()+"점 \t 연령: " + review.get(9).getAge()+"대 <br>" + review.get(9).getRev_with()+"<html>");
+		lbl_review2 = new JLabel("<html>"+review.get(9).getRev_date()+"<br>평점 : " +review.get(9).getRev_score()+"점 \t 연령: " + review.get(9).getAge()+"대 <br>" + review.get(9).getRev_con()+"<html>");
 		lbl_review2.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_review2);
 		
@@ -129,7 +129,7 @@ public class ReviewGUI {
 		lbl_img3 = new JLabel("New label");
 		panel.add(lbl_img3);
 		
-		lbl_review3 = new JLabel("<html>"+review.get(11).getRev_date()+"<br>평점 : " +review.get(11).getRev_score()+"점 \t 연령: " + review.get(11).getAge()+"대 <br>" + review.get(11).getRev_with()+"<html>");
+		lbl_review3 = new JLabel("<html>"+review.get(11).getRev_date()+"<br>평점 : " +review.get(11).getRev_score()+"점 \t 연령: " + review.get(11).getAge()+"대 <br>" + review.get(11).getRev_con()+"<html>");
 		lbl_review3.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_review3);
 		
@@ -141,7 +141,7 @@ public class ReviewGUI {
 		lbl_img4 = new JLabel("New label");
 		panel.add(lbl_img4);
 		
-		lbl_review4 = new JLabel("<html>"+review.get(16).getRev_date()+"<br>평점 : " +review.get(16).getRev_score()+"점 \t 연령: " + review.get(16).getAge()+"대 <br>" + review.get(16).getRev_with()+"<html>");
+		lbl_review4 = new JLabel("<html>"+review.get(16).getRev_date()+"<br>평점 : " +review.get(16).getRev_score()+"점 \t 연령: " + review.get(16).getAge()+"대 <br>" + review.get(16).getRev_con()+"<html>");
 		lbl_review4.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_review4);
 		

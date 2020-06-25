@@ -57,12 +57,12 @@ public class ReviewDAO {
 
 			while (rs.next()) {
 				String rev_no = rs.getString("rev_no");		// 후기번호
-				String city = rs.getString("city");	// 지역
-				String rev_with = rs.getString("rev_with");	// 후기
+				String fest_name = rs.getString("fest_name");	// 지역
+				String rev_con = rs.getString("rev_con");	// 후기
 				String age = rs.getString("age");			// 연령
 				String rev_score = rs.getString("rev_score");	// 평점
 				String rev_date = rs.getString("rev_date");
-				review = new ReviewVO(rev_no, city, rev_with, age, rev_score, rev_date);
+				review = new ReviewVO(rev_no, fest_name, rev_con, age, rev_score, rev_date);
 				list.add(review);
 			}
 
