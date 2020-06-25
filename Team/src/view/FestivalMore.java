@@ -43,30 +43,17 @@ public class FestivalMore {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					FestivalMore window = new FestivalMore();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
-	/**
-	 * Create the application.
-	 */
-	public FestivalMore() {
-		initialize();
+	
+	public FestivalMore(String f_name) {
+		initialize(f_name);
+		frame.setVisible(true);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(String f_name) {
 		frame = new JFrame();
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 450, 700);
@@ -74,13 +61,11 @@ public class FestivalMore {
 		frame.getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
 
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
+		panel.setBackground(new Color(240, 248, 255));
 		frame.getContentPane().add(panel);
 		
-		name = "센텀맥주축제";
-		
 		ChartReadCSV readCSV = new ChartReadCSV();
-		ArrayList<ChartVO> list = readCSV.getList(name);
+		ArrayList<ChartVO> list = readCSV.getList(f_name);
 		
 		double score10 = 0;
 		double score20 = 0;
@@ -141,7 +126,7 @@ public class FestivalMore {
 		// 1.제목 2.x축 제목 3.y축제목 4.그래프 데이터
 		// 5. 그래프 가로로 할건지 세로로 할건지
 		// 6,7,8 그래프의 기능 넣을것인지
-		JFreeChart barChart = ChartFactory.createBarChart(name,"연령대","평점",dataset1, PlotOrientation.VERTICAL,false,true,true);
+		JFreeChart barChart = ChartFactory.createBarChart(f_name,"연령대","평점",dataset1, PlotOrientation.VERTICAL,false,true,true);
 		
 		//한글을 적용하기 위한 Font 객체 생성
 		// 1.폰트종류 2.폰트타입 3.크기
@@ -155,10 +140,7 @@ public class FestivalMore {
 		plot1.getRangeAxis().setLabelFont(f);
 		plot1.getRangeAxis().setTickLabelFont(f);
 		panel.setLayout(null);
-		//파이차트
-		
-		
-		
+
 		
 		ChartPanel chartPanel = new ChartPanel(barChart);
 		chartPanel.setBounds(10,64,422,300);
@@ -169,7 +151,7 @@ public class FestivalMore {
 		
 		FestivalInformationDAO dao = new FestivalInformationDAO();
 		
-		ArrayList<String> review = dao.getReview(name);
+		ArrayList<String> review = dao.getReview(f_name);
 		
 		String[] header = {"후기"};
 		String[][] data = new String[review.size()][1];
@@ -183,7 +165,7 @@ public class FestivalMore {
 		button_back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.dispose();
-				FestivalInformation info = new FestivalInformation();
+				FestivalInformation info = new FestivalInformation(f_name);
 			}
 		});
 		panel.add(button_back);

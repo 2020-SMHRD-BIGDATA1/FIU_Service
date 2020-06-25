@@ -12,14 +12,14 @@ public class Map extends JFrame {
 	private String location = null;
 	private JLabel googleMap;
 	
-	public Map(String name) {
-		location=dao.getPlace(name);
+	public Map(String f_name) {
+		location=dao.getPlace(f_name);
 		googleAPI.downloadMap(location);
 		googleMap = new JLabel(googleAPI.getMap(location));
 		googleAPI.fileDelete(location);
 		add(googleMap);
 		
-		setTitle(name);
+		setTitle(f_name);
 		setVisible(true);
 		pack();
 	}

@@ -46,7 +46,7 @@ public class ChartReadCSV {
 		}
 	}
 	
-	public ArrayList<ChartVO> getList(String fest_name) {
+	public ArrayList<ChartVO> getList(String f_name) {
 		ArrayList<ChartVO> list = new ArrayList<ChartVO>();
 		getConnection();
 		
@@ -54,7 +54,7 @@ public class ChartReadCSV {
 			String sql = "select * from FESTIVAL_REVIEW where fest_name = ?";
 			
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, fest_name);
+			pst.setString(1, f_name);
 			
 			rs = pst.executeQuery();
 			while (rs.next()) {

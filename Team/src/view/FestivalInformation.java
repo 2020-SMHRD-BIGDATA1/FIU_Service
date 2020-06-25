@@ -56,7 +56,7 @@ public class FestivalInformation{
 		btnMore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
-				FestivalMore.main(null);
+				FestivalMore FestMore = new FestivalMore(f_name);
 			}
 		});
 		panel.add(btnMore);
@@ -80,7 +80,7 @@ public class FestivalInformation{
 		});
 		panel.add(btnMap);
 		
-		String path = "C:\\Users\\SMHRD\\Desktop\\¼ö±¹.jpg";
+		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\"+f_name+".jpg";
 		
 		JLabel lblImage = new JLabel(new ImageIcon(path));
 		springLayout.putConstraint(SpringLayout.WEST, lblImage, 133, SpringLayout.WEST, panel);
@@ -88,11 +88,17 @@ public class FestivalInformation{
 		lblImage.setBounds(10, 65, 405, 212);
 				
 		JButton menu = new JButton("");
+		menu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				SearchGUI sc = new SearchGUI();
+			}
+		});
 		menu.setBorderPainted(false);
 		menu.setBackground(Color.WHITE);
 		menu.setBorderPainted(false);
-		menu.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\menu.png"));
-		menu.setBounds(355, 10, 60, 45);
+		menu.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
+		menu.setBounds(357, 10, 52, 45);
 		
 		panel.add(menu);
 		
@@ -105,7 +111,7 @@ public class FestivalInformation{
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
-				FestivalInformation2.main(null);
+				FestivalInformation2 Fest2 = new FestivalInformation2(f_name);
 			}
 		});
 		btnNewButton.setBounds(168, 576, 97, 23);
