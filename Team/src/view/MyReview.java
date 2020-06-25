@@ -56,11 +56,17 @@ public class MyReview {
 		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
 		ImageIcon home = new ImageIcon(path3);
 		Image originImg5 = home.getImage();
-		Image changedImg4 = originImg5.getScaledInstance(75, 75, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg4 = originImg5.getScaledInstance(60, 60, Image.SCALE_SMOOTH);   // 사이즈조절
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
 		JLabel lbl_logo = new JLabel(Icon4);
-		lbl_logo.setBounds(12, 10, 75, 75);
+		lbl_logo.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				MainGUI mainGUI = new MainGUI();
+			}
+		});
+		lbl_logo.setBounds(12, 10, 60, 60);
 		panel.add(lbl_logo);
 		
 		String path2 = "C:\\Users\\SMHRD\\Desktop\\JavaStudy\\0615GUI\\src\\icon\\불꽃축제.jpg";
