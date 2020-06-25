@@ -105,7 +105,9 @@ public class SearchGUI {
 		panel.add(panel_1);
 		panel_1.setLayout(new GridLayout(0, 3, 0, 0));
 
-		JButton btn_area = new JButton("\uC9C0\uC5ED");
+		JButton btn_area = new JButton("");
+		btn_area.setBackground(Color.WHITE);
+		btn_area.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uC9C0\uC5ED.PNG"));
 		btn_area.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -118,11 +120,22 @@ public class SearchGUI {
 				calendar.setVisible(false);
 				age.setVisible(false);
 			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btn_area.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uC9C0\uC5ED2.PNG"));
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btn_area.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uC9C0\uC5ED.PNG"));
+			}
 		});
  
 		panel_1.add(btn_area);
 
-		JButton btn_date = new JButton("\uB0A0\uC9DC");
+		JButton btn_date = new JButton("");
+		btn_date.setBackground(Color.WHITE);
+		btn_date.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uB0A0\uC9DC.PNG"));
 		btn_date.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -131,11 +144,22 @@ public class SearchGUI {
 				calendar.setVisible(true);
 				age.setVisible(false);
 			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btn_date.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uB0A0\uC9DC2.PNG"));
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btn_date.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uB0A0\uC9DC.PNG"));
+			}
 		});
 
 		panel_1.add(btn_date);
 
-		JButton btn_age = new JButton("\uC5F0\uB839");
+		JButton btn_age = new JButton("");
+		btn_age.setBackground(null);
+		btn_age.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uC5F0\uB839.PNG"));
 		btn_age.addMouseListener(new MouseAdapter() {
 
 			@Override
@@ -144,6 +168,15 @@ public class SearchGUI {
 				area.setVisible(false);
 				calendar.setVisible(false);
 				age.setVisible(true);
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btn_age.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uC5F0\uB8392.PNG"));
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btn_age.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uC5F0\uB839.PNG"));
 			}
 		});
 
@@ -997,6 +1030,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
