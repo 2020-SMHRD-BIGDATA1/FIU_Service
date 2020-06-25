@@ -136,6 +136,7 @@ public class ReviewGUI2 {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				MainGUI mainGUI = new MainGUI();
+				frame.dispose();
 			}
 		});
 		lbl_logo.setBounds(0, 0, 60, 60);
