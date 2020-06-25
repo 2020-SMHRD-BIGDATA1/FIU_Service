@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -25,7 +26,7 @@ public class FestivalInformation {
 
 	private JFrame frame;
 	private JButton btnMore;
-	private String name = "휴애리 수국축제";
+	String name =  "휴애리수국축제";
 	
 	/**
 	 * Launch the application.
@@ -79,7 +80,7 @@ public class FestivalInformation {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		btnMore = new JButton("\uD6C4\uAE30 \uB354\uBCF4\uAE30");
+		btnMore = new JButton("\uD6C4\uAE30 \uBCF4\uAE30");
 		btnMore.setBounds(345, 628, 86, 33);
 		btnMore.setFont(new Font("굴림", Font.PLAIN, 10));
 		btnMore.addActionListener(new ActionListener() {
@@ -90,7 +91,11 @@ public class FestivalInformation {
 		});
 		panel.add(btnMore);
 		
-		JLabel lblFestivalPlace = new JLabel("\uC81C\uC8FC\uD2B9\uBCC4\uC790\uCE58\uB3C4 \uC11C\uADC0\uD3EC\uC2DC \uB0A8\uC6D0\uC74D \uC2E0\uB840\uB3D9\uB85C 256");
+		FestivalInformationDAO dao = new FestivalInformationDAO();
+		
+		String place = dao.getPlace(name);
+		
+		JLabel lblFestivalPlace = new JLabel(place);
 		lblFestivalPlace.setBounds(10, 597, 329, 21);
 		lblFestivalPlace.setFont(new Font("굴림", Font.PLAIN, 11));
 		panel.add(lblFestivalPlace);
@@ -99,7 +104,7 @@ public class FestivalInformation {
 		btnMap.setBounds(345, 597, 86, 17);
 		btnMap.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				MapExecute.main(null);
+				MapExecute.main(name);
 			}
 		});
 		panel.add(btnMap);
@@ -111,17 +116,13 @@ public class FestivalInformation {
 		panel.add(lblImage);
 		lblImage.setBounds(10, 65, 405, 212);
 				
-		JSpinner spinner = new JSpinner();
-		spinner.setBounds(10, 638, 321, 22);
-		spinner.setModel(new SpinnerListModel(new String[] {"참 이쁘네여","수국이 별로 없어서 실망이었어요"}));
-		panel.add(spinner);
-		
 		JButton menu = new JButton("");
 		menu.setBorderPainted(false);
 		menu.setBackground(Color.WHITE);
 		menu.setBorderPainted(false);
 		menu.setIcon(new ImageIcon("C:\\Users\\SMHRD\\Desktop\\menu.png"));
 		menu.setBounds(355, 10, 60, 45);
+		
 		panel.add(menu);
 		
 		JLabel lblFestivalName = new JLabel(name);
@@ -129,7 +130,6 @@ public class FestivalInformation {
 		lblFestivalName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFestivalName.setBounds(33, 279, 362, 33);
 		panel.add(lblFestivalName);
-		
 		JButton btnNewButton = new JButton("\u25BD");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -147,15 +147,13 @@ public class FestivalInformation {
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(12, 317, 419, 249);
 		
-		
-		FestivalInformationDAO dao = new FestivalInformationDAO();
 		String list = dao.getList(name);
 		
-		JTextPane txtpnFasdfadf = new JTextPane();
-		txtpnFasdfadf.setBackground(new Color(240, 248, 255));
-		txtpnFasdfadf.setText(list);
-		txtpnFasdfadf.setBounds(12, 310, 419, 257);
-		panel.add(txtpnFasdfadf);
+		JTextPane txtpnInfo = new JTextPane();
+		txtpnInfo.setBackground(new Color(240, 248, 255));
+		txtpnInfo.setText(list);
+		txtpnInfo.setBounds(12, 310, 419, 257);
+		panel.add(txtpnInfo);
 		
 		
 //		ArrayList<String> list = dao.getList();
@@ -168,7 +166,7 @@ public class FestivalInformation {
 //		JTable table = new JTable(data, header);
 //		panel_1.add(new JScrollPane(table));
 //		
-//		panel.add(panel_1);ㄴ
+//		panel.add(panel_1);
 //		frame.setVisible(true);
 	}
 }
