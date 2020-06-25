@@ -108,7 +108,7 @@ public class MyReview {
 		lblNewLabel.setBounds(63, 22, 292, 68);
 		panel.add(lblNewLabel);
 
-		String[] y = { "장승마을 빛 축제", "전북관광브랜드공연 뮤지컬 '홍도1589'", "휴애리 수국축제" };
+		String[] y = { "축제 선택", "장승마을 빛 축제", "전북관광브랜드공연 뮤지컬 '홍도1589'", "휴애리 수국축제" };
 
 		JComboBox comboBox = new JComboBox(y);
 
@@ -163,10 +163,10 @@ public class MyReview {
 					result = 20112006;
 					result++;
 				} else if (comboBox.getSelectedItem().toString().equals("전북관광브랜드공연 뮤지컬 '홍도1589'")) {
-					int result = 20115006;
+					result = 20115006;
 					result++;
 				} else if (comboBox.getSelectedItem(). toString().equals("휴애리 수국축제")) {
-					int result = 20117006;
+					result = 20117006;
 					result++;
 				}
 				String num = String.valueOf(result);
