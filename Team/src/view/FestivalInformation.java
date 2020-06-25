@@ -23,7 +23,7 @@ import model.MapExecute;
 
 import javax.swing.JTextPane;
 
-public class FestivalInformation extends SearchGUI{
+public class FestivalInformation{
 
 	private JFrame frame;
 	private JButton btnMore;
@@ -75,7 +75,7 @@ public class FestivalInformation extends SearchGUI{
 		btnMap.setBounds(345, 597, 86, 17);
 		btnMap.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				MapExecute.main(name);
+				MapExecute.main(f_name);
 			}
 		});
 		panel.add(btnMap);
@@ -96,7 +96,7 @@ public class FestivalInformation extends SearchGUI{
 		
 		panel.add(menu);
 		
-		JLabel lblFestivalName = new JLabel(name);
+		JLabel lblFestivalName = new JLabel(f_name);
 		lblFestivalName.setFont(new Font("πŸ≈¡", Font.PLAIN, 20));
 		lblFestivalName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFestivalName.setBounds(33, 279, 362, 33);
@@ -111,21 +111,16 @@ public class FestivalInformation extends SearchGUI{
 		btnNewButton.setBounds(168, 576, 97, 23);
 		panel.add(btnNewButton);
 		
-		
-		
-	
-		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(12, 317, 419, 249);
 		
-		String list = dao.getList(name);
+		String list = dao.getList(f_name);
 		
 		JTextPane txtpnInfo = new JTextPane();
 		txtpnInfo.setBackground(new Color(240, 248, 255));
 		txtpnInfo.setText(list);
 		txtpnInfo.setBounds(12, 310, 419, 257);
 		panel.add(txtpnInfo);
-		
 		
 //		ArrayList<String> list = dao.getList();
 //		

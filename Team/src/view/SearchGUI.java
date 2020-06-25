@@ -212,6 +212,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -254,6 +262,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -295,6 +311,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -336,6 +360,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -377,6 +409,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -418,6 +458,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -459,6 +507,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -500,6 +556,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -541,6 +605,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -582,6 +654,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -623,6 +703,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -664,6 +752,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -705,6 +801,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -746,6 +850,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -787,6 +899,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
@@ -828,6 +948,14 @@ public class SearchGUI {
 				}
 				
 				table_2 = new JTable(model);
+				table_2.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int row = table_2.getSelectedRow();
+						String f_name = table_2.getModel().getValueAt(row, 0).toString();
+						FestivalInformation Fest = new FestivalInformation(f_name);
+					}
+				});
 				scrollPane_1.setViewportView(table_2);
 				
 				area.setVisible(false);
