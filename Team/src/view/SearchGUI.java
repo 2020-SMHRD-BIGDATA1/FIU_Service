@@ -282,6 +282,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_3.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_3.setBackground(Color.WHITE);
 		areaList.add(btn_3);
@@ -302,6 +322,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_4.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_4.setBackground(Color.WHITE);
@@ -324,6 +364,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_5.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_5.setBackground(Color.WHITE);
 		areaList.add(btn_5);
@@ -344,6 +404,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_6.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_6.setBackground(Color.WHITE);
@@ -366,6 +446,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_7.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_7.setBackground(Color.WHITE);
 		areaList.add(btn_7);
@@ -386,6 +486,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_8.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_8.setBackground(Color.WHITE);
@@ -408,6 +528,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_9.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_9.setBackground(Color.WHITE);
 		areaList.add(btn_9);
@@ -428,6 +568,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_10.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_10.setBackground(Color.WHITE);
@@ -450,6 +610,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_11.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_11.setBackground(Color.WHITE);
 		areaList.add(btn_11);
@@ -470,6 +650,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_12.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_12.setBackground(Color.WHITE);
@@ -492,6 +692,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_13.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_13.setBackground(Color.WHITE);
 		areaList.add(btn_13);
@@ -512,6 +732,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_14.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_14.setBackground(Color.WHITE);
@@ -534,6 +774,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_15.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_15.setBackground(Color.WHITE);
 		areaList.add(btn_15);
@@ -555,6 +815,26 @@ public class SearchGUI {
 				map_panel.repaint();
 				map_panel.setVisible(true);
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_16.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
+			}
 		});
 		btn_16.setBackground(Color.WHITE);
 		areaList.add(btn_16);
@@ -575,6 +855,26 @@ public class SearchGUI {
 				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
 				map_panel.repaint();
 				map_panel.setVisible(true);
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			
+				model = new DefaultTableModel(header, 0);
+				
+				ArrayList<FestivalVO> arr = controller.getlist(btn_17.getText());
+				System.out.println(btn_1.getText() );
+
+				for (int i = 0; i < arr.size(); i++) {
+				model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+				}
+				
+				table_2 = new JTable(model);
+				scrollPane_1.setViewportView(table_2);
+				
+				area.setVisible(false);
+				calendar.setVisible(false);
+				age.setVisible(false);
+				search.setVisible(true);
 			}
 		});
 		btn_17.setBackground(Color.WHITE);
@@ -606,10 +906,6 @@ public class SearchGUI {
 				int row = table_1.getSelectedRow();
 				String f_name = table_1.getModel().getValueAt(row, 0).toString();
 				FestivalInformation Fest = new FestivalInformation(f_name);
-				
-//				FestivalVO f = new FestivalVO();
-//				System.out.println(f_name);
-//				vo.setFest_name(f_name);
 			}
 		});
 		scrollPane.setViewportView(table_1);
