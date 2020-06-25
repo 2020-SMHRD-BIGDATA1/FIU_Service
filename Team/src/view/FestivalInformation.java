@@ -26,7 +26,7 @@ public class FestivalInformation {
 
 	private JFrame frame;
 	private JButton btnMore;
-	String name =  "휴애리수국축제";
+	String name =  "휴애리 수국축제";
 	
 	/**
 	 * Launch the application.
