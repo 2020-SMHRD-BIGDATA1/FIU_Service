@@ -78,19 +78,6 @@ public class MainGUI {
 		lblNewLabel.setBounds(117, 10, 200, 50);
 		panel.add(lblNewLabel);
 
-		JButton btn_search = new JButton("");
-		btn_search.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				SearchGUI searchGUI = new SearchGUI();
-				frame.dispose();
-			}
-		});
-		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
-		btn_search.setBorderPainted(false);
-		btn_search.setBackground(Color.WHITE);
-		btn_search.setBounds(369, 0, 65, 60);
-		panel.add(btn_search);
-
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 138, 434, 105);
 		panel.add(panel_1);
@@ -142,30 +129,7 @@ public class MainGUI {
 		JPanel panel_6 = new JPanel();
 		panel_6.setBounds(0, 83, 434, 33);
 		panel.add(panel_6);
-		panel_6.setLayout(new GridLayout(0, 5, 0, 0));
-
-		JButton btn_info = new JButton("\uCD95\uC81C");
-		btn_info.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btn_info.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
-		btn_info.setBorderPainted(false);
-		btn_info.setBackground(Color.WHITE);
-		panel_6.add(btn_info);
-
-		JButton btn_now = new JButton("NOW");
-		btn_now.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
-		btn_now.setBorderPainted(false);
-		btn_now.setBackground(Color.WHITE);
-		panel_6.add(btn_now);
-
-		JButton btn_mark = new JButton("\uCC1C");
-		btn_mark.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
-		btn_mark.setBorderPainted(false);
-		btn_mark.setBackground(Color.WHITE);
-		panel_6.add(btn_mark);
+		panel_6.setLayout(new GridLayout(0, 3, 0, 0));
 
 		JButton btn_review = new JButton("\uD6C4\uAE30");
 		btn_review.addActionListener(new ActionListener() {
@@ -174,6 +138,17 @@ public class MainGUI {
 				frame.dispose();
 			}
 		});
+		
+				JButton btn_search = new JButton("\uAC80\uC0C9");
+				panel_6.add(btn_search);
+				btn_search.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						SearchGUI searchGUI = new SearchGUI();
+						frame.dispose();
+					}
+				});
+				btn_search.setBorderPainted(false);
+				btn_search.setBackground(Color.WHITE);
 		
 		btn_review.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
 		btn_review.setBorderPainted(false);

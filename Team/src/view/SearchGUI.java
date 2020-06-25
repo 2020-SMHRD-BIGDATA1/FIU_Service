@@ -166,64 +166,375 @@ public class SearchGUI {
 		area.setLayout(null);
 		
 		JPanel areaList = new JPanel();
-		areaList.setBounds(0, 0, 100, 452);
+		areaList.setBounds(0, 0, 76, 452);
 		area.add(areaList);
 		areaList.setLayout(new GridLayout(17, 1, 0, 0));
 		
+		MapPanel map_panel = new MapPanel();
+		map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+		map_panel.setBackground(Color.WHITE);
+		map_panel.setBounds(77, 0, 352, 450);
+		area.add(map_panel);
+		
 		JButton btn_1 = new JButton("\uC11C\uC6B8");
+		btn_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\서울.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		
+		btn_1.setBackground(Color.WHITE);
 		areaList.add(btn_1);
 		
 		JButton btn_2 = new JButton("\uACBD\uAE30");
+		btn_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\경기.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_2.setBackground(Color.WHITE);
 		areaList.add(btn_2);
 		
 		JButton btn_3 = new JButton("\uC778\uCC9C");
+		btn_3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\인천.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_3.setBackground(Color.WHITE);
 		areaList.add(btn_3);
 		
 		JButton btn_4 = new JButton("\uC138\uC885");
+		btn_4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\세종.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_4.setBackground(Color.WHITE);
 		areaList.add(btn_4);
 		
 		JButton btn_5 = new JButton("\uB300\uC804");
+		btn_5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\대전.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_5.setBackground(Color.WHITE);
 		areaList.add(btn_5);
 		
 		JButton btn_6 = new JButton("\uB300\uAD6C");
+		btn_6.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\대구.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_6.setBackground(Color.WHITE);
 		areaList.add(btn_6);
 		
 		JButton btn_7 = new JButton("\uAD11\uC8FC");
+		btn_7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\광주.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_7.setBackground(Color.WHITE);
 		areaList.add(btn_7);
 		
 		JButton btn_8 = new JButton("\uC6B8\uC0B0");
+		btn_8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\울산.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_8.setBackground(Color.WHITE);
 		areaList.add(btn_8);
 		
 		JButton btn_9 = new JButton("\uBD80\uC0B0");
+		btn_9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\부산.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_9.setBackground(Color.WHITE);
 		areaList.add(btn_9);
 		
 		JButton btn_10 = new JButton("\uAC15\uC6D0");
+		btn_10.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\강원.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_10.setBackground(Color.WHITE);
 		areaList.add(btn_10);
 		
 		JButton btn_11 = new JButton("\uCDA9\uBD81");
+		btn_11.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\충북.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_11.setBackground(Color.WHITE);
 		areaList.add(btn_11);
 		
 		JButton btn_12 = new JButton("\uCDA9\uB0A8");
+		btn_12.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\충남.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_12.setBackground(Color.WHITE);
 		areaList.add(btn_12);
 		
 		JButton btn_13 = new JButton("\uACBD\uBD81");
+		btn_13.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\경북.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_13.setBackground(Color.WHITE);
 		areaList.add(btn_13);
 		
 		JButton btn_14 = new JButton("\uACBD\uB0A8");
+		btn_14.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\경남.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_14.setBackground(Color.WHITE);
 		areaList.add(btn_14);
 		
 		JButton btn_15 = new JButton("\uC804\uBD81");
+		btn_15.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전북.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_15.setBackground(Color.WHITE);
 		areaList.add(btn_15);
 		
 		JButton btn_16 = new JButton("\uC804\uB0A8");
+		btn_16.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전남.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_16.setBackground(Color.WHITE);
 		areaList.add(btn_16);
 		
 		JButton btn_17 = new JButton("\uC81C\uC8FC");
+		btn_17.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\제주.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				map_panel.setVisible(false);
+				map_panel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+				map_panel.repaint();
+				map_panel.setVisible(true);
+			}
+		});
+		btn_17.setBackground(Color.WHITE);
 		areaList.add(btn_17);
 		
-		JPanel mapPanel = new JPanel();
-		mapPanel.setBounds(98, 0, 312, 452);
-		area.add(mapPanel);
+//		JPan abc
 
 		// 지역별 출력문
 //		DefaultTableModel model = new DefaultTableModel(header, 0);
