@@ -160,13 +160,13 @@ public class MyReview {
 			public void actionPerformed(ActionEvent e) {
 
 				if (comboBox.getSelectedItem().toString().equals("장승마을 빛 축제")) {
-					result = 20112006;
+					result = 20112005;
 					result++;
 				} else if (comboBox.getSelectedItem().toString().equals("전북관광브랜드공연 뮤지컬 '홍도1589'")) {
-					result = 20115006;
+					result = 20115005;
 					result++;
 				} else if (comboBox.getSelectedItem(). toString().equals("휴애리 수국축제")) {
-					result = 20117006;
+					result = 20117005;
 					result++;
 				}
 				String num = String.valueOf(result);
