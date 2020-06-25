@@ -1,39 +1,33 @@
 package model;
 
 public class ChartVO {
-	private String division;
-	private int usage;
-	private String month;
+
 	
-	public ChartVO(String division, int usage, String month) {
+
+	private int rating;
+	public ChartVO(int age, int rating) {
 		super();
-		this.division = division;
-		this.usage = usage;
-		this.month = month;
+		this.rating = rating;
+		this.age = age;
+	}
+	private int age;
+	
+	
+	public int getRating() {
+		return rating;
+	}
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 
-	public String getDivision() {
-		return division;
-	}
 
-	public void setDivision(String division) {
-		this.division = division;
-	}
 
-	public int getUsage() {
-		return usage;
-	}
 
-	public void setUsage(int usage) {
-		this.usage = usage;
-	}
-
-	public String getMonth() {
-		return month;
-	}
-
-	public void setMonth(String month) {
-		this.month = month;
-	}
 	
 }

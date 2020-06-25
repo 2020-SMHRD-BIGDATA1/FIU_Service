@@ -22,14 +22,12 @@ public class ChartReadCSV {
 			String user = "hr";
 			String password = "hr";
 			conn = DriverManager.getConnection(url, user, password);
+
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	private void close() {
@@ -47,14 +45,24 @@ public class ChartReadCSV {
 			e.printStackTrace();
 		}
 	}
-	public ArrayList<ChartVO> getList() {
-		ArrayList<ChartVO>  list = new ArrayList<ChartVO>();
+	
+	public ArrayList<ChartVO> getList(String fest_name) {
+		ArrayList<ChartVO> list = new ArrayList<ChartVO>();
 		getConnection();
 		
 		try {
-			String division = 
+			String sql = "select * from FESTIVAL_REVIEW where fest_name = ?";
+			
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, fest_name);
+			
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				int age = rs.getInt(4);
+				int rating = rs.getInt(5);
+				ChartVO vo = new ChartVO(age,rating);
 				
-
+				list.add(vo);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -62,6 +70,7 @@ public class ChartReadCSV {
 		} finally {
 			close();
 		}
+		return list;
 	}
 
 }
