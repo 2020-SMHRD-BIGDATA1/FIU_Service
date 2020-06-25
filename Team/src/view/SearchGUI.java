@@ -98,7 +98,6 @@ public class SearchGUI {
 		btn_list.setBackground(Color.WHITE);
 		btn_list.setBounds(369, 0, 65, 60);
 		panel.add(btn_list);
-		// 검색버튼 끝
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(12, 108, 410, 45);
@@ -108,10 +107,6 @@ public class SearchGUI {
 		JButton btn_area = new JButton("");
 		btn_area.setBackground(Color.WHITE);
 		btn_area.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uC9C0\uC5ED.PNG"));
-		btn_area.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btn_area.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -251,6 +246,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -301,6 +297,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -350,6 +347,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -399,6 +397,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -448,6 +447,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -497,6 +497,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -546,6 +547,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -595,6 +597,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -644,6 +647,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -693,6 +697,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -742,6 +747,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -791,6 +797,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -840,6 +847,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -889,6 +897,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -938,6 +947,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -987,6 +997,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -1036,6 +1047,7 @@ public class SearchGUI {
 						int row = table_2.getSelectedRow();
 						String f_name = table_2.getModel().getValueAt(row, 0).toString();
 						FestivalInformation Fest = new FestivalInformation(f_name);
+						frame.setVisible(false);
 					}
 				});
 				scrollPane_1.setViewportView(table_2);
@@ -1075,6 +1087,7 @@ public class SearchGUI {
 				int row = table_1.getSelectedRow();
 				String f_name = table_1.getModel().getValueAt(row, 0).toString();
 				FestivalInformation Fest = new FestivalInformation(f_name);
+				frame.setVisible(false);
 			}
 		});
 		scrollPane.setViewportView(table_1);
@@ -1086,6 +1099,28 @@ public class SearchGUI {
 
 		JLabel lblNewLabel_2 = new JLabel("age");
 		age.add(lblNewLabel_2, "name_68883418327099");
+		
+//		//수정중
+//		model = new DefaultTableModel(header, 0);
+//
+//		ArrayList<FestivalVO> arr = controller.getlist();
+//
+//		for (int i = 0; i < arr.size(); i++) {
+//			model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),
+//					arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
+//		}
+//
+//		table_1 = new JTable(model);
+//		table_1.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mouseClicked(MouseEvent e) {
+//
+//				int row = table_1.getSelectedRow();
+//				String f_name = table_1.getModel().getValueAt(row, 0).toString();
+//				FestivalInformation Fest = new FestivalInformation(f_name);
+//			}
+//		});
+//		scrollPane.setViewportView(table_1);
 
 //		table_1 = new JTable();
 //		age.add(table_1);

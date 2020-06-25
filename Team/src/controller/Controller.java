@@ -100,7 +100,6 @@ public class Controller {
 	}
 	
 	
-	
 	public ArrayList<FestivalVO> getlist() {
 		getList = fdao.getData();
 		if (getList != null) {
