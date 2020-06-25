@@ -106,7 +106,7 @@ public class MainGUI {
 
 		JLabel lblNewLabel_1 = new JLabel("  \uCD95\uC81C NOW");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 20));
+		lblNewLabel_1.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 20));
 		lblNewLabel_1.setBounds(0, 124, 200, 31);
 		panel.add(lblNewLabel_1);
 	
@@ -134,6 +134,7 @@ public class MainGUI {
 		});
 		
 				JButton btn_search = new JButton("\uAC80\uC0C9");
+				btn_search.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 15));
 				panel_6.add(btn_search);
 				btn_search.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -144,7 +145,7 @@ public class MainGUI {
 				btn_search.setBorderPainted(false);
 				btn_search.setBackground(Color.WHITE);
 		
-		btn_review.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
+		btn_review.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 15));
 		btn_review.setBorderPainted(false);
 		btn_review.setBackground(Color.WHITE);
 		panel_6.add(btn_review);
@@ -156,12 +157,13 @@ public class MainGUI {
 					frame.dispose();
 					}
 				});
-				btn_my.setFont(new Font("ºù±×·¹Ã¼", Font.BOLD, 12));
+				btn_my.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.BOLD, 15));
 				btn_my.setBorderPainted(false);
 				btn_my.setBackground(Color.WHITE);
 				panel_6.add(btn_my);
 				
 				JLabel lblNewLabel_2 = new JLabel("\uC9C4\uD589\uC911\uC778 \uC774\uBCA4\uD2B8");
+				lblNewLabel_2.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 12));
 				lblNewLabel_2.setBounds(13, 155, 131, 15);
 				panel.add(lblNewLabel_2);
 				
@@ -173,7 +175,7 @@ public class MainGUI {
 				textField.setColumns(10);
 				
 				JLabel lblNewLabel_3 = new JLabel("  \uAC00\uC790! \uD398\uC2A4\uD2F0\uBC1C!");
-				lblNewLabel_3.setFont(new Font("±¼¸²", Font.PLAIN, 20));
+				lblNewLabel_3.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 20));
 				lblNewLabel_3.setBounds(0, 300, 200, 31);
 				panel.add(lblNewLabel_3);
 

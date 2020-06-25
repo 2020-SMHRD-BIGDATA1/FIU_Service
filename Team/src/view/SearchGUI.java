@@ -75,7 +75,7 @@ public class SearchGUI {
 		JLabel lb_logo = new JLabel("\uCD95\uC81C\uC5B4\uB54C");
 		lb_logo.setForeground(new Color(255, 69, 0));
 		lb_logo.setBackground(Color.WHITE);
-		lb_logo.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 30));
+		lb_logo.setFont(new Font("ºù±×·¹Ã¼", Font.BOLD, 30));
 		lb_logo.setHorizontalAlignment(SwingConstants.CENTER);
 		lb_logo.setBounds(117, 5, 200, 50);
 		panel.add(lb_logo);
