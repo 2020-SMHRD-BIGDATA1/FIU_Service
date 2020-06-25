@@ -4,6 +4,7 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -29,7 +30,6 @@ import model.FestivalVO;
 public class SearchGUI {
 
 	private JFrame frame;
-	public JTextField txt_search;
 
 	public static Controller controller = new Controller();
 	private ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
@@ -98,38 +98,10 @@ public class SearchGUI {
 		btn_list.setBackground(Color.WHITE);
 		btn_list.setBounds(369, 0, 65, 60);
 		panel.add(btn_list);
-
-		// 키워드 검색 텍스트필드
-		txt_search = new JTextField();
-		txt_search.setBounds(12, 84, 363, 50);
-		panel.add(txt_search);
-		txt_search.setColumns(10);
-
-		// 키워드 검색 버튼
-		JButton btn_search = new JButton("");
-		btn_search.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if (word != null) {
-					word = txt_search.getText();
-				}
-
-				search.setVisible(true);
-				area.setVisible(false);
-				calendar.setVisible(false);
-				age.setVisible(false);
-			}
-		});
-
-		btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
-		btn_search.setBorderPainted(false);
-		btn_search.setBackground(Color.WHITE);
-		btn_search.setBounds(375, 84, 45, 50);
-		panel.add(btn_search);
 		// 검색버튼 끝
 
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(12, 144, 410, 45);
+		panel_1.setBounds(12, 95, 410, 45);
 		panel.add(panel_1);
 		panel_1.setLayout(new GridLayout(0, 3, 0, 0));
 
@@ -174,42 +146,117 @@ public class SearchGUI {
 		panel_1.add(btn_age);
 
 		result_panel = new JPanel();
-		result_panel.setBounds(12, 199, 410, 452);
+		result_panel.setBounds(12, 174, 410, 452);
 		panel.add(result_panel);
 		result_panel.setLayout(cl_result_panel);
-
-		// 축제명 검색결과
-		search = new JPanel();
-		result_panel.add(search, "name_65526670868800");
-		search.setLayout(new CardLayout(0, 0));
-
-		JScrollPane scrollPane_1 = new JScrollPane();
-		search.add(scrollPane_1, "name_71518854043800");
-//		if(word != null) {
-//		DefaultTableModel model = new DefaultTableModel(header, 0);
-//		System.out.println(word);
-//		ArrayList<FestivalVO> k_arr = controller.searchList(word);
-//		
-//		for (int i = 0; i < k_arr.size(); i++) {
-//            model.addRow(new Object[]{
-//            				k_arr.get(i).getFest_name(),
-//            				k_arr.get(i).getCity(),
-//            				k_arr.get(i).getFest_tel(),
-//            				k_arr.get(i).getFest_date1(),
-//            				k_arr.get(i).getFest_date2()});
-//         }
-//		 
-//		}
-		table_2 = new JTable();
-		scrollPane_1.setViewportView(table_2);
 
 		// 지역별 검색결과
 		area = new JPanel();
 		result_panel.add(area, "name_61996813277100");
-		area.setLayout(new CardLayout(0, 0));
-
-		JLabel lblNewLabel = new JLabel("area");
-		area.add(lblNewLabel, "name_67706461923300");
+		area.setLayout(null);
+		
+		JPanel areaList = new JPanel();
+		areaList.setBounds(0, 0, 100, 452);
+		area.add(areaList);
+		areaList.setLayout(new GridLayout(17, 1, 0, 0));
+		
+//		MapPanel mapPanel = new MapPanel();
+//		mapPanel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+		 
+		JButton btn_1 = new JButton("\uC11C\uC6B8");
+//		btn_1.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mouseEntered(MouseEvent e) {
+//				mapPanel.setVisible(false);
+//				mapPanel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\서울.PNG");
+//				mapPanel.repaint();
+//				mapPanel.setVisible(true);
+//			}
+//
+//			@Override
+//			public void mouseExited(MouseEvent e) {
+//				mapPanel.setVisible(false);
+//				mapPanel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+//				mapPanel.repaint();
+//				mapPanel.setVisible(true);
+//			}
+//		});
+		btn_1.setBackground(Color.WHITE);
+		areaList.add(btn_1);
+		
+		JButton btn_2 = new JButton("\uACBD\uAE30");
+		btn_2.setBackground(Color.WHITE);
+		areaList.add(btn_2);
+		
+		JButton btn_3 = new JButton("\uC778\uCC9C");
+		btn_3.setBackground(Color.WHITE);
+		areaList.add(btn_3);
+		
+		JButton btn_4 = new JButton("\uC138\uC885");
+		btn_4.setBackground(Color.WHITE);
+		areaList.add(btn_4);
+		
+		JButton btn_5 = new JButton("\uB300\uC804");
+		btn_5.setBackground(Color.WHITE);
+		areaList.add(btn_5);
+		
+		JButton btn_6 = new JButton("\uB300\uAD6C");
+		btn_6.setBackground(Color.WHITE);
+		areaList.add(btn_6);
+		
+		JButton btn_7 = new JButton("\uAD11\uC8FC");
+		btn_7.setBackground(Color.WHITE);
+		areaList.add(btn_7);
+		
+		JButton btn_8 = new JButton("\uC6B8\uC0B0");
+		btn_8.setBackground(Color.WHITE);
+		areaList.add(btn_8);
+		
+		JButton btn_9 = new JButton("\uBD80\uC0B0");
+		btn_9.setBackground(Color.WHITE);
+		areaList.add(btn_9);
+		
+		JButton btn_10 = new JButton("\uAC15\uC6D0");
+		btn_10.setBackground(Color.WHITE);
+		areaList.add(btn_10);
+		
+		JButton btn_11 = new JButton("\uCDA9\uBD81");
+		btn_11.setBackground(Color.WHITE);
+		areaList.add(btn_11);
+		
+		JButton btn_12 = new JButton("\uCDA9\uB0A8");
+		btn_12.setBackground(Color.WHITE);
+		areaList.add(btn_12);
+		
+		JButton btn_13 = new JButton("\uACBD\uBD81");
+		btn_13.setBackground(Color.WHITE);
+		areaList.add(btn_13);
+		
+		JButton btn_14 = new JButton("\uACBD\uB0A8");
+		btn_14.setBackground(Color.WHITE);
+		areaList.add(btn_14);
+		
+		JButton btn_15 = new JButton("\uC804\uBD81");
+		btn_15.setBackground(Color.WHITE);
+		areaList.add(btn_15);
+		
+		JButton btn_16 = new JButton("\uC804\uB0A8");
+		btn_16.setBackground(Color.WHITE);
+		areaList.add(btn_16);
+		
+		JButton btn_17 = new JButton("\uC81C\uC8FC");
+		btn_17.setBackground(Color.WHITE);
+		areaList.add(btn_17);
+		
+		JPanel mapPanel = new JPanel();
+		
+		mapPanel.setBounds(98, 0, 312, 452);
+		area.add(mapPanel);
+		
+//		MapPanel map_panel = new MapPanel();
+		
+//		mapPanel.setPath("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\전국.PNG");
+		
 
 		// 지역별 출력문
 //		DefaultTableModel model = new DefaultTableModel(header, 0);
