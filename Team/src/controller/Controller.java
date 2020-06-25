@@ -18,7 +18,9 @@ public class Controller {
 	private MemberVO joinUser;
 	private MemberVO joinMember;
 	private ArrayList<FestivalVO> getList;
+	private ArrayList<FestivalVO> getAgelist;
 	private ArrayList<ReviewVO> review;
+	
 	
 	public MemberVO getJoinMember() {
 		return joinMember;
@@ -111,6 +113,15 @@ public class Controller {
 	public ArrayList<FestivalVO> getlist(String city_name) {
 		getList = fdao.getArea(city_name);
 		if (getList != null) {
+			return getList;
+		}
+		return getList;
+	}
+
+
+	public ArrayList<FestivalVO> getAgelist() {
+		getAgelist = fdao.getAgeL();
+		if (getAgelist != null) {
 			return getList;
 		}
 		return getList;

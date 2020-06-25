@@ -52,6 +52,7 @@ public class SearchGUI {
 	private String f_name;
 
 	private FestivalInformation FestivalInformation;
+	private JTable table_3;
 
 	public SearchGUI() {
 		initialize();
@@ -1100,39 +1101,35 @@ public class SearchGUI {
 		JLabel lblNewLabel_2 = new JLabel("age");
 		age.add(lblNewLabel_2, "name_68883418327099");
 		
-//		//수정중
-//		model = new DefaultTableModel(header, 0);
-//
-//		ArrayList<FestivalVO> arr = controller.getlist();
-//
-//		for (int i = 0; i < arr.size(); i++) {
-//			model.addRow(new Object[] { arr.get(i).getFest_name(), arr.get(i).getCity(), arr.get(i).getFest_tel(),
-//					arr.get(i).getFest_date1(), arr.get(i).getFest_date2() });
-//		}
-//
-//		table_1 = new JTable(model);
-//		table_1.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//
-//				int row = table_1.getSelectedRow();
-//				String f_name = table_1.getModel().getValueAt(row, 0).toString();
-//				FestivalInformation Fest = new FestivalInformation(f_name);
-//			}
-//		});
-//		scrollPane.setViewportView(table_1);
+		JScrollPane scrollPane_2 = new JScrollPane();
+		age.add(scrollPane_2, "name_101593032040500");
+		
+		table_3 = new JTable();
+		
+		model = new DefaultTableModel(header, 0);
 
-//		table_1 = new JTable();
-//		age.add(table_1);
+		ArrayList<FestivalVO> arr_1 = controller.getAgelist();
+//
+		for (int i = 0; i < arr_1.size(); i++) {
+			model.addRow(new Object[] { arr_1.get(i).getFest_name(), arr_1.get(i).getCity(), arr.get(i).getFest_tel(),
+					arr_1.get(i).getFest_date1(), arr_1.get(i).getFest_date2() });
+		}
 
-//		//테이블 넣기
-//        DefaultTableModel model = new DefaultTableModel(header, 0);
-//        
-//        table_1 = new JTable(model);
-//        
-//        JScrollPane scrollPane = new JScrollPane(table_1);
-//        scrollPane.setBounds(26, 80, 580, 323);
-//        frame.getContentPane().add(scrollPane);
+		table_3 = new JTable(model);
+		table_3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
 
+				int row = table_3.getSelectedRow();
+				String f_name = table_3.getModel().getValueAt(row, 0).toString();
+				FestivalInformation Fest = new FestivalInformation(f_name);
+			}
+		});
+		scrollPane_2.setViewportView(table_3);
+		table_3 = new JTable();
+		age.add(table_3);
+
+		scrollPane_2.setViewportView(table_3);
+		
 	}
 }

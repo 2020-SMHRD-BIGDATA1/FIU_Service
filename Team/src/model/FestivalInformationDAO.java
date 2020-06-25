@@ -193,4 +193,31 @@ public class FestivalInformationDAO {
 		return list;
 	}
 
+	public ArrayList<FestivalVO> getAgeL() {
+		ArrayList<FestivalVO> list = new ArrayList<FestivalVO>();
+		getConnection();
+		try {
+			String sql = "SELECT * FROM FESTIVAL_REVIEW ORDER BY AGE AND REV_SCORE DESC";
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+			
+			while (rs.next()) {
+				String fest_name = rs.getString("fest_name");
+				String city = rs.getString("city");
+				String fest_tel = rs.getString("fest_tel");
+				String fest_date1 = rs.getString("fest_date1");
+				String fest_date2 = rs.getString("fest_date2");
+				FestivalVO vo = new FestivalVO(fest_name, city, fest_tel, fest_date1, fest_date2);
+				
+				list.add(vo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return list;
+	}
+
 }
