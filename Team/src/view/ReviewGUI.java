@@ -69,13 +69,13 @@ public class ReviewGUI {
 		lblNewLabel.setBounds(71, 0, 289, 70);
 		frame.getContentPane().add(lblNewLabel, BorderLayout.NORTH);
 		
-		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
-		ImageIcon home = new ImageIcon(path3);
-		Image originImg5 = home.getImage();
-		Image changedImg4 = originImg5.getScaledInstance(75, 75, Image.SCALE_SMOOTH);   // 사이즈조절
-		ImageIcon Icon4 = new ImageIcon(changedImg4);
+		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
+		ImageIcon home = new ImageIcon(path);
+		Image originImg = home.getImage();
+		Image changedImg = originImg.getScaledInstance(75, 75, Image.SCALE_SMOOTH);   // 사이즈조절
+		ImageIcon Icon = new ImageIcon(changedImg);
 		
-		lbl_logo = new JLabel(Icon4);
+		lbl_logo = new JLabel(Icon);
 		lbl_logo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -101,7 +101,13 @@ public class ReviewGUI {
 		lbl_revno1.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno1);
 		
-		lbl_img1 = new JLabel("");
+		String path1 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\한성백제문화제.jpg";
+		ImageIcon home1 = new ImageIcon(path1);
+		Image originImg1 = home1.getImage();
+		Image changedImg1 = originImg1.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+		ImageIcon Icon1 = new ImageIcon(changedImg1);
+		
+		lbl_img1 = new JLabel(Icon1);
 		lbl_img1.setBackground(new Color(255, 255, 255));
 		panel.add(lbl_img1);
 		
@@ -114,7 +120,13 @@ public class ReviewGUI {
 		lbl_revno2.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno2);
 		
-		lbl_img2 = new JLabel("New label");
+		String path2 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\시흥갯골축제2020.jpg";
+		ImageIcon home2 = new ImageIcon(path2);
+		Image originImg2 = home2.getImage();
+		Image changedImg2 = originImg2.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+		ImageIcon Icon2 = new ImageIcon(changedImg2);
+		
+		lbl_img2 = new JLabel(Icon2);
 		panel.add(lbl_img2);
 		
 		lbl_review2 = new JLabel("<html>"+review.get(9).getRev_date()+"<br>평점 : " +review.get(9).getRev_score()+"점 \t 연령: " + review.get(9).getAge()+"대 <br>" + review.get(9).getRev_con()+"<html>");
@@ -126,7 +138,13 @@ public class ReviewGUI {
 		lbl_revno3.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno3);
 		
-		lbl_img3 = new JLabel("New label");
+		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\인천소래포구축제2020.jpg";
+		ImageIcon home3 = new ImageIcon(path3);
+		Image originImg3 = home3.getImage();
+		Image changedImg3 = originImg3.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+		ImageIcon Icon3 = new ImageIcon(changedImg3);
+		
+		lbl_img3 = new JLabel(Icon3);
 		panel.add(lbl_img3);
 		
 		lbl_review3 = new JLabel("<html>"+review.get(11).getRev_date()+"<br>평점 : " +review.get(11).getRev_score()+"점 \t 연령: " + review.get(11).getAge()+"대 <br>" + review.get(11).getRev_con()+"<html>");
@@ -138,7 +156,13 @@ public class ReviewGUI {
 		lbl_revno4.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno4);
 		
-		lbl_img4 = new JLabel("New label");
+		String path4 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\베어트리파크 철쭉제.jpg";
+		ImageIcon home4 = new ImageIcon(path4);
+		Image originImg4 = home4.getImage();
+		Image changedImg4 = originImg4.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+		ImageIcon Icon4 = new ImageIcon(changedImg4);
+		
+		lbl_img4 = new JLabel(Icon4);
 		panel.add(lbl_img4);
 		
 		lbl_review4 = new JLabel("<html>"+review.get(16).getRev_date()+"<br>평점 : " +review.get(16).getRev_score()+"점 \t 연령: " + review.get(16).getAge()+"대 <br>" + review.get(16).getRev_con()+"<html>");
