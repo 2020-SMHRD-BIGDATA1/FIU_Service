@@ -82,7 +82,6 @@ public class FestivalInformationDAO {
 
 			if (rs.next()) {
 				place = rs.getString("FEST_PLACE");
-
 			}
 
 		} catch (SQLException e) {
@@ -165,4 +164,5 @@ public class FestivalInformationDAO {
 		
 		return list;
 	}
+
 }

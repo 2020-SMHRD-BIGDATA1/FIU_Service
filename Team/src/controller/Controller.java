@@ -100,15 +100,6 @@ public class Controller {
 	}
 	
 	
-	public ArrayList<FestivalVO> searchList(String search) {
-		ArrayList<FestivalVO> search_list = new ArrayList<FestivalVO>();
-		search_list = fdao.search(search);
-		if (search_list != null) {
-			System.out.println(search_list.get(0).getFest_name());
-			return search_list;
-		}
-		return search_list;
-	}
 	
 	public ArrayList<FestivalVO> getlist() {
 		getList = fdao.getData();

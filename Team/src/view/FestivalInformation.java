@@ -18,6 +18,7 @@ import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
 import model.FestivalInformationDAO;
+import model.FestivalVO;
 import model.MapExecute;
 
 import javax.swing.JTextPane;
@@ -26,7 +27,7 @@ public class FestivalInformation {
 
 	private JFrame frame;
 	private JButton btnMore;
-	String name =  "휴애리 수국축제";
+	String name = "휴애리 수국축제";
 	
 	public FestivalInformation() {
 		initialize();
@@ -40,11 +41,6 @@ public class FestivalInformation {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		SpringLayout springLayout = new SpringLayout();
 		frame.getContentPane().setLayout(springLayout);
-		
-		
-
-	
-	
 		
 		JPanel panel = new JPanel();
 		springLayout.putConstraint(SpringLayout.NORTH, panel, 0, SpringLayout.NORTH, frame.getContentPane());

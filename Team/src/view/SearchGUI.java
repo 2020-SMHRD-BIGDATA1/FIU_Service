@@ -255,6 +255,7 @@ public class SearchGUI {
 				int row = table_1.getSelectedRow();
 				String f_name = table_1.getModel().getValueAt(row, 0).toString();
 				
+				FestivalVO f = new FestivalVO(f_name);
 //				System.out.println(f_name);
 //				vo.setFest_name(f_name);
 			}

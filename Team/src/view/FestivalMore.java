@@ -114,7 +114,7 @@ public class FestivalMore {
 		button_back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.setVisible(false);
-				FestivalInformation.main(null);
+//				FestivalInformation.main(null);
 			}
 		});
 		sl_panel.putConstraint(SpringLayout.NORTH, button_back, 10, SpringLayout.NORTH, panel);

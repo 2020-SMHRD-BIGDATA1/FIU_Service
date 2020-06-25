@@ -88,7 +88,7 @@ public class FestivalInformation2 extends FestivalInformation{
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.setVisible(false);
-				FestivalInformation.main(null);
+//				FestivalInformation.main(null);
 			}
 		});		
 		btnNewButton.setBounds(12, 10, 62, 38);
