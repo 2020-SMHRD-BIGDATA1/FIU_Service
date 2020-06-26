@@ -73,7 +73,9 @@ public class FestivalInformation2 {
 		textArea.setBounds(12, 62, 420, 599);
 		panel.add(textArea);
 		
-		JButton btnNewButton = new JButton("\u25C0");
+		JButton btnNewButton = new JButton("");
+		btnNewButton.setBackground(new Color(240, 248, 255));
+		btnNewButton.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_back.png"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frame.setVisible(false);
@@ -81,6 +83,7 @@ public class FestivalInformation2 {
 			}
 		});		
 		btnNewButton.setBounds(12, 10, 62, 38);
+		btnNewButton.setBorderPainted(false);
 		panel.add(btnNewButton);
 
 		
