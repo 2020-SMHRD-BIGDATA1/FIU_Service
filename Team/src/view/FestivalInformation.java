@@ -3,6 +3,7 @@ package view;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class FestivalInformation{
 
 	private JFrame frame;
 	private JButton btnMore;
+	private FontMake fm = new FontMake();
 	
 	public FestivalInformation(String f_name) {
 		initialize(f_name);
@@ -52,7 +54,7 @@ public class FestivalInformation{
 		
 		btnMore = new JButton("\uD6C4\uAE30 \uBCF4\uAE30");
 		btnMore.setBounds(345, 628, 86, 33);
-		btnMore.setFont(new Font("±¼¸²", Font.PLAIN, 10));
+		btnMore.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 13));
 		btnMore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
@@ -66,13 +68,17 @@ public class FestivalInformation{
 		
 		String place = dao.getPlace(f_name);
 		
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		fm.FontChange(ge);
+		
 		JLabel lblFestivalPlace = new JLabel(place);
 		lblFestivalPlace.setBounds(10, 597, 329, 21);
-		lblFestivalPlace.setFont(new Font("±¼¸²", Font.PLAIN, 11));
+		lblFestivalPlace.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 11));
 		panel.add(lblFestivalPlace);
 		
 		JButton btnMap = new JButton("\uC9C0\uB3C4");
-		btnMap.setBounds(345, 597, 86, 17);
+		btnMap.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 13));
+		btnMap.setBounds(345, 591, 86, 23);
 		btnMap.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MapExecute.main(f_name);
@@ -95,7 +101,7 @@ public class FestivalInformation{
 			}
 		});
 		menu.setBorderPainted(false);
-		menu.setBackground(Color.WHITE);
+		menu.setBackground(new Color(240, 248, 255));
 		menu.setBorderPainted(false);
 		menu.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_search.png"));
 		menu.setBounds(357, 10, 52, 45);
@@ -103,18 +109,19 @@ public class FestivalInformation{
 		panel.add(menu);
 		
 		JLabel lblFestivalName = new JLabel(f_name);
-		lblFestivalName.setFont(new Font("¹ÙÅÁ", Font.PLAIN, 20));
+		lblFestivalName.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 20));
 		lblFestivalName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFestivalName.setBounds(33, 279, 362, 33);
 		panel.add(lblFestivalName);
-		JButton btnNewButton = new JButton("\u25BD");
+		JButton btnNewButton = new JButton("\uB354\uBCF4\uAE30");
+		btnNewButton.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 13));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
 				FestivalInformation2 Fest2 = new FestivalInformation2(f_name);
 			}
 		});
-		btnNewButton.setBounds(168, 576, 97, 23);
+		btnNewButton.setBounds(168, 566, 97, 33);
 		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
