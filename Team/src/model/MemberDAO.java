@@ -54,7 +54,7 @@ public class MemberDAO {
 			pst.setString(2, user.getPw());
 			rs = pst.executeQuery();
 
-			if (rs.next()) {
+			while (rs.next()) {
 				String id = rs.getString("FEST_ID");
 				String pw = rs.getString("FEST_PW");
 				loginuser = new MemberVO(id, pw);

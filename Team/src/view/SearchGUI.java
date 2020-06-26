@@ -1122,6 +1122,7 @@ public class SearchGUI {
 
 				int row = table_3.getSelectedRow();
 				String f_name = table_3.getModel().getValueAt(row, 0).toString();
+				frame.setVisible(false);
 				FestivalInformation Fest = new FestivalInformation(f_name);
 				System.out.println(arr_1.get(0).getfest_name());
 				frame.setVisible(false);

@@ -67,7 +67,7 @@ public class ReviewGUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("추천 후기 목록");
+		JLabel lblNewLabel = new JLabel("\uB9CC\uC810 \uD6C4\uAE30 \uBAA9\uB85D");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("빙그레체", Font.PLAIN, 30));
 		lblNewLabel.setBounds(71, 0, 289, 70);
@@ -100,7 +100,7 @@ public class ReviewGUI {
 		ArrayList<ReviewVO> review = controller.getReview();
 		
 		
-		lbl_revno1 = new JLabel("<html>"+"1."+"<br>"+review.get(0).getRev_no()+"<br>" +"한성백제문화제"+"<html>");
+		lbl_revno1 = new JLabel("<html>"+"1."+"<br>"+review.get(2).getRev_no()+"<br>" +"한성백제문화제"+"<html>");
 		lbl_revno1.setBackground(new Color(255, 255, 255));
 		lbl_revno1.setHorizontalAlignment(SwingConstants.LEFT);
 		lbl_revno1.setFont(new Font("빙그레체", Font.PLAIN, 13));
@@ -112,12 +112,13 @@ public class ReviewGUI {
 		Image changedImg1 = originImg1.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon1 = new ImageIcon(changedImg1);
 		
-		lbl_img1 = new JLabel(Icon1);
+		lbl_img1 = new JLabel("<html>"+review.get(1).getRev_date()+"<br>평점 : " +review.get(1).getRev_score()+"점 \t 연령: " + review.get(1).getAge()+"대 <br>" + review.get(1).getRev_con()+"<html>");
 		lbl_img1.setBackground(new Color(255, 255, 255));
+		lbl_img1.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img1);
 		
-		lbl_review1 = new JLabel("<html>"+review.get(0).getRev_date()+"<br>평점 : " +review.get(0).getRev_score()+"점 \t 연령: " + review.get(0).getAge()+"대 <br>" + review.get(0).getRev_con()+"<html>");
-		lbl_review1.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		lbl_review1 = new JLabel(Icon1);
+		
 		panel.add(lbl_review1);
 		
 		lbl_revno2 = new JLabel("<html>"+"2."+"<br>"+review.get(9).getRev_no()+"<br>"+"시흥갯골축제"+"<html>");
@@ -131,14 +132,14 @@ public class ReviewGUI {
 		Image changedImg2 = originImg2.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon2 = new ImageIcon(changedImg2);
 		
-		lbl_img2 = new JLabel(Icon2);
+		lbl_img2 = new JLabel("<html>"+review.get(9).getRev_date()+"<br>평점 : " +review.get(9).getRev_score()+"점 \t 연령: " + review.get(9).getAge()+"대 <br>" + review.get(9).getRev_con()+"<html>");
+		lbl_img2.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img2);
 		
-		lbl_review2 = new JLabel("<html>"+review.get(9).getRev_date()+"<br>평점 : " +review.get(9).getRev_score()+"점 \t 연령: " + review.get(9).getAge()+"대 <br>" + review.get(9).getRev_con()+"<html>");
-		lbl_review2.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		lbl_review2 = new JLabel(Icon2);
 		panel.add(lbl_review2);
 		
-		lbl_revno3 = new JLabel("<html>"+"3."+"<br>"+review.get(11).getRev_no()+"<br>"+"인천소래포구축제"+"<html>");
+		lbl_revno3 = new JLabel("<html>"+"3."+"<br>"+review.get(12).getRev_no()+"<br>"+"인천소래포구축제"+"<html>");
 		lbl_revno3.setHorizontalAlignment(SwingConstants.LEFT);
 		lbl_revno3.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno3);
@@ -149,11 +150,11 @@ public class ReviewGUI {
 		Image changedImg3 = originImg3.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon3 = new ImageIcon(changedImg3);
 		
-		lbl_img3 = new JLabel(Icon3);
+		lbl_img3 = new JLabel("<html>"+review.get(12).getRev_date()+"<br>평점 : " +review.get(12).getRev_score()+"점 \t 연령: " + review.get(12).getAge()+"대 <br>" + review.get(12).getRev_con()+"<html>");
+		lbl_img3.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img3);
 		
-		lbl_review3 = new JLabel("<html>"+review.get(11).getRev_date()+"<br>평점 : " +review.get(11).getRev_score()+"점 \t 연령: " + review.get(11).getAge()+"대 <br>" + review.get(11).getRev_con()+"<html>");
-		lbl_review3.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		lbl_review3 = new JLabel(Icon3);
 		panel.add(lbl_review3);
 		
 		lbl_revno4 = new JLabel("<html>"+"4."+"<br>"+review.get(16).getRev_no()+"<br>"+"베어트리파크 철쭉제"+"<html>");
@@ -167,11 +168,11 @@ public class ReviewGUI {
 		Image changedImg4 = originImg4.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
-		lbl_img4 = new JLabel(Icon4);
+		lbl_img4 = new JLabel("<html>"+review.get(17).getRev_date()+"<br>평점 : " +review.get(17).getRev_score()+"점 \t 연령: " + review.get(17).getAge()+"대 <br>" + review.get(17).getRev_con()+"<html>");
+		lbl_img4.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img4);
 		
-		lbl_review4 = new JLabel("<html>"+review.get(16).getRev_date()+"<br>평점 : " +review.get(16).getRev_score()+"점 \t 연령: " + review.get(16).getAge()+"대 <br>" + review.get(16).getRev_con()+"<html>");
-		lbl_review4.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		lbl_review4 = new JLabel(Icon4);
 		panel.add(lbl_review4);
 		
 		

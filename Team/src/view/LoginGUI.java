@@ -125,7 +125,7 @@ public class LoginGUI {
 				btn_Login.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 14));
 				
 						btn_Join = new JButton("Join");
-						btn_Join.setBounds(92, 533, 250, 20);
+						btn_Join.setBounds(92, 533, 250, 30);
 						panel.add(btn_Join);
 						btn_Join.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
 						btn_Join.addActionListener(new ActionListener() {

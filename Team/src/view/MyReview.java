@@ -238,7 +238,7 @@ public class MyReview {
 		lblNewLabel_1.setBounds(12, 202, 87, 29);
 		panel.add(lblNewLabel_1);
 
-		JLabel lblNewLabel_2 = new JLabel("\uB098\uC774");
+		JLabel lblNewLabel_2 = new JLabel("\uC5F0\uB839\uB300");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_2.setBounds(12, 163, 87, 29);
 		panel.add(lblNewLabel_2);
