@@ -53,6 +53,13 @@ public class ReviewGUI2 {
 		ImageIcon Icon11 = new ImageIcon(changedImg11);
 		
 		JLabel lbl_back = new JLabel(Icon11);
+		lbl_back.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				MainGUI maingui = new MainGUI();
+				frame.dispose();
+			}
+		});
 		lbl_back.setBounds(0, 0, 69, 69);
 		frame.getContentPane().add(lbl_back);
 		
@@ -146,6 +153,7 @@ public class ReviewGUI2 {
 		panel.add(lblNewLabel_11);
 		
 		JLabel lblNewLabel_10 = new JLabel("<html>"+review.get(49).getRev_date()+"<br>평점 : " +review.get(49).getRev_score()+"점 \t 연령: " + review.get(49).getAge()+"대 <br>" + review.get(49).getRev_con()+"<html>");
+		lblNewLabel_10.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		lblNewLabel_10.setBounds(145, 385, 149, 131);
 		panel.add(lblNewLabel_10);
 		

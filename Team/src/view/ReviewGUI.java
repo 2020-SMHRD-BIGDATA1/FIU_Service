@@ -75,6 +75,13 @@ public class ReviewGUI {
 		ImageIcon Icon11 = new ImageIcon(changedImg11);
 		
 		lbl_back = new JLabel(Icon11);
+		lbl_back.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				MainGUI maingui = new MainGUI();
+				frame.dispose();
+			}
+		});
 		lbl_back.setBounds(2, 0, 70, 70);
 		frame.getContentPane().add(lbl_back);
 		
@@ -106,12 +113,13 @@ public class ReviewGUI {
 		panel.setBackground(new Color(255, 255, 255));
 		panel.setBounds(0, 70, 434, 522);
 		frame.getContentPane().add(panel);
-		panel.setLayout(new GridLayout(4, 3, 0, 0));
 		
 		ArrayList<ReviewVO> review = controller.getReview();
+		panel.setLayout(null);
 		
 		
 		lbl_revno1 = new JLabel("<html>"+"1."+"<br>"+review.get(2).getRev_no()+"<br>" +"한성백제문화제"+"<html>");
+		lbl_revno1.setBounds(2, 3, 143, 129);
 		lbl_revno1.setBackground(new Color(255, 255, 255));
 		lbl_revno1.setHorizontalAlignment(SwingConstants.LEFT);
 		lbl_revno1.setFont(new Font("빙그레체", Font.PLAIN, 13));
@@ -124,15 +132,18 @@ public class ReviewGUI {
 		ImageIcon Icon1 = new ImageIcon(changedImg1);
 		
 		lbl_img1 = new JLabel("<html>"+review.get(1).getRev_date()+"<br>평점 : " +review.get(1).getRev_score()+"점 \t 연령: " + review.get(1).getAge()+"대 <br>" + review.get(1).getRev_con()+"<html>");
+		lbl_img1.setBounds(145, 3, 143, 129);
 		lbl_img1.setBackground(new Color(255, 255, 255));
 		lbl_img1.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img1);
 		
 		lbl_review1 = new JLabel(Icon1);
+		lbl_review1.setBounds(288, 3, 143, 129);
 		
 		panel.add(lbl_review1);
 		
 		lbl_revno2 = new JLabel("<html>"+"2."+"<br>"+review.get(9).getRev_no()+"<br>"+"시흥갯골축제"+"<html>");
+		lbl_revno2.setBounds(2, 132, 143, 129);
 		lbl_revno2.setHorizontalAlignment(SwingConstants.LEFT);
 		lbl_revno2.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno2);
@@ -144,13 +155,16 @@ public class ReviewGUI {
 		ImageIcon Icon2 = new ImageIcon(changedImg2);
 		
 		lbl_img2 = new JLabel("<html>"+review.get(9).getRev_date()+"<br>평점 : " +review.get(9).getRev_score()+"점 \t 연령: " + review.get(9).getAge()+"대 <br>" + review.get(9).getRev_con()+"<html>");
+		lbl_img2.setBounds(145, 132, 143, 129);
 		lbl_img2.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img2);
 		
 		lbl_review2 = new JLabel(Icon2);
+		lbl_review2.setBounds(288, 132, 143, 129);
 		panel.add(lbl_review2);
 		
 		lbl_revno3 = new JLabel("<html>"+"3."+"<br>"+review.get(12).getRev_no()+"<br>"+"인천소래포구축제"+"<html>");
+		lbl_revno3.setBounds(2, 261, 143, 129);
 		lbl_revno3.setHorizontalAlignment(SwingConstants.LEFT);
 		lbl_revno3.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno3);
@@ -162,13 +176,16 @@ public class ReviewGUI {
 		ImageIcon Icon3 = new ImageIcon(changedImg3);
 		
 		lbl_img3 = new JLabel("<html>"+review.get(12).getRev_date()+"<br>평점 : " +review.get(12).getRev_score()+"점 \t 연령: " + review.get(12).getAge()+"대 <br>" + review.get(12).getRev_con()+"<html>");
+		lbl_img3.setBounds(145, 261, 153, 137);
 		lbl_img3.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img3);
 		
 		lbl_review3 = new JLabel(Icon3);
+		lbl_review3.setBounds(288, 261, 143, 129);
 		panel.add(lbl_review3);
 		
 		lbl_revno4 = new JLabel("<html>"+"4."+"<br>"+review.get(79).getRev_no()+"<br>"+"영광 불갑산상사화축제"+"<html>");
+		lbl_revno4.setBounds(2, 390, 143, 129);
 		lbl_revno4.setHorizontalAlignment(SwingConstants.LEFT);
 		lbl_revno4.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno4);
@@ -180,10 +197,12 @@ public class ReviewGUI {
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
 		lbl_img4 = new JLabel("<html>"+review.get(79).getRev_date()+"<br>평점 : " +review.get(79).getRev_score()+"점 \t 연령: " + review.get(79).getAge()+"대 <br>" + review.get(79).getRev_con()+"<html>");
+		lbl_img4.setBounds(145, 390, 143, 129);
 		lbl_img4.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img4);
 		
 		lbl_review4 = new JLabel(Icon4);
+		lbl_review4.setBounds(288, 390, 143, 129);
 		panel.add(lbl_review4);
 		
 		
