@@ -119,12 +119,14 @@ public class LoginGUI {
 		txt_PW.setBorder(null);
 		panel_2.add(txt_PW);
 		
-				btn_Login = new JButton("Login");
+				btn_Login = new JButton("");
+				btn_Login.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_log.png"));
 				btn_Login.setBounds(92, 488, 250, 35);
 				panel.add(btn_Login);
 				btn_Login.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 14));
 				
-						btn_Join = new JButton("Join");
+						btn_Join = new JButton("");
+						btn_Join.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_join.PNG"));
 						btn_Join.setBounds(92, 533, 250, 30);
 						panel.add(btn_Join);
 						btn_Join.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
