@@ -54,7 +54,7 @@ public class FestivalInformation{
 		
 		btnMore = new JButton("\uD6C4\uAE30 \uBCF4\uAE30");
 		btnMore.setBounds(345, 628, 86, 33);
-		btnMore.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 13));
+		btnMore.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 12));
 		btnMore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
