@@ -138,6 +138,15 @@ public class ReviewGUI {
 		panel.add(lbl_img1);
 		
 		lbl_review1 = new JLabel(Icon1);
+		lbl_review1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String f_name = "한성백제문화제2020";
+				FestivalInformation Fest = new FestivalInformation(f_name);
+				frame.setVisible(false);
+			}
+		});
+
 		lbl_review1.setBounds(288, 3, 143, 129);
 		
 		panel.add(lbl_review1);
