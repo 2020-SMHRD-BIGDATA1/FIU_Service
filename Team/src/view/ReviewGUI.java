@@ -133,7 +133,7 @@ public class ReviewGUI {
 		ImageIcon Icon2 = new ImageIcon(changedImg2);
 		
 		lbl_img2 = new JLabel("<html>"+review.get(9).getRev_date()+"<br>평점 : " +review.get(9).getRev_score()+"점 \t 연령: " + review.get(9).getAge()+"대 <br>" + review.get(9).getRev_con()+"<html>");
-		lbl_review2.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		lbl_img2.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img2);
 		
 		lbl_review2 = new JLabel(Icon2);
