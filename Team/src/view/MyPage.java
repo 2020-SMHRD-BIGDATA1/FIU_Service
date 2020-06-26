@@ -111,6 +111,7 @@ public class MyPage {
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MyPageEdit join = new MyPageEdit();
+				frame.dispose();
 			}
 
 		});

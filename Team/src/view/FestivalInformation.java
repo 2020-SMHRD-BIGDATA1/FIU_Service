@@ -135,6 +135,19 @@ public class FestivalInformation{
 		txtpnInfo.setBounds(12, 310, 419, 257);
 		panel.add(txtpnInfo);
 		
+		JButton back = new JButton("");
+		back.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainGUI mainGUI = new MainGUI();
+				frame.setVisible(false);
+			}
+		});
+		back.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_back.png"));
+		back.setBorderPainted(false);
+		back.setBackground(new Color(240, 248, 255));
+		back.setBounds(33, 10, 52, 45);
+		panel.add(back);
+		
 //		ArrayList<String> list = dao.getList();
 //		
 //		String[] header = {"Á¤º¸"};

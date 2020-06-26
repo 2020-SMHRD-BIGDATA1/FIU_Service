@@ -150,6 +150,8 @@ public class LoginGUI {
 									frame.dispose();
 								} else {
 									JOptionPane.showMessageDialog(frame, "로그인 실패", "로그인 결과", JOptionPane.ERROR_MESSAGE);
+									txt_ID.setText("");
+									txt_PW.setText("");
 								}
 							}
 						});
