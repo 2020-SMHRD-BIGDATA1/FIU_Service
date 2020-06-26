@@ -57,7 +57,7 @@ public class ReviewGUI2 {
 		
 		ArrayList<ReviewVO> review = controller.getReview();
 		
-		JLabel lblNewLabel = new JLabel("<html>"+"5."+"<br>"+review.get(41).getRev_no()+"<br>" +"울산고래축제"+"<html>");
+		JLabel lblNewLabel = new JLabel("<html>"+"5."+"<br>"+review.get(35).getRev_no()+"<br>" +"울산고래축제"+"<html>");
 		lblNewLabel.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lblNewLabel);
 		
@@ -67,12 +67,12 @@ public class ReviewGUI2 {
 		Image changedImg5 = originImg5.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon5 = new ImageIcon(changedImg5);
 		
-		JLabel lblNewLabel_8 = new JLabel(Icon5);
-		panel.add(lblNewLabel_8);
-		
-		JLabel lblNewLabel_4 = new JLabel("<html>"+review.get(41).getRev_date()+"<br>평점 : " +review.get(41).getRev_score()+"점 \t 연령: " + review.get(41).getAge()+"대 <br>" + review.get(41).getRev_con()+"<html>");
+		JLabel lblNewLabel_4 = new JLabel("<html>"+review.get(35).getRev_date()+"<br>평점 : " +review.get(35).getRev_score()+"점 \t 연령: " + review.get(35).getAge()+"대 <br>" + review.get(35).getRev_con()+"<html>");
 		lblNewLabel_4.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_8 = new JLabel(Icon5);
+		panel.add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_2 = new JLabel("<html>"+"6."+"<br>"+review.get(23).getRev_no()+"<br>" +"대전국제와인페스티벌"+"<html>");
 		lblNewLabel_2.setFont(new Font("빙그레체", Font.PLAIN, 13));
@@ -84,11 +84,11 @@ public class ReviewGUI2 {
 		Image changedImg6 = originImg6.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon6 = new ImageIcon(changedImg6);
 		
-		JLabel lblNewLabel_5 = new JLabel(Icon6);
+		JLabel lblNewLabel_5 = new JLabel("<html>"+review.get(23).getRev_date()+"<br>평점 : " +review.get(23).getRev_score()+"점 \t 연령: " + review.get(23).getAge()+"대 <br>" + review.get(23).getRev_con()+"<html>");
+		lblNewLabel_5.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_3 = new JLabel("<html>"+review.get(23).getRev_date()+"<br>평점 : " +review.get(23).getRev_score()+"점 \t 연령: " + review.get(23).getAge()+"대 <br>" + review.get(23).getRev_con()+"<html>");
-		lblNewLabel_3.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		JLabel lblNewLabel_3 = new JLabel(Icon6);
 		panel.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_9 = new JLabel("<html>"+"7."+"<br>"+review.get(28).getRev_no()+"<br>" +"이월드 아쿠아판타지"+"<html>");
@@ -101,28 +101,28 @@ public class ReviewGUI2 {
 		Image changedImg7 = originImg7.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon7 = new ImageIcon(changedImg7);
 		
-		JLabel lblNewLabel_6 = new JLabel(Icon7);
+		JLabel lblNewLabel_6 = new JLabel("<html>"+review.get(28).getRev_date()+"<br>평점 : " +review.get(28).getRev_score()+"점 \t 연령: " + review.get(28).getAge()+"대 <br>" + review.get(28).getRev_con()+"<html>");
+		lblNewLabel_6.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_1 = new JLabel("<html>"+review.get(28).getRev_date()+"<br>평점 : " +review.get(28).getRev_score()+"점 \t 연령: " + review.get(28).getAge()+"대 <br>" + review.get(28).getRev_con()+"<html>");
-		lblNewLabel_1.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		JLabel lblNewLabel_1 = new JLabel(Icon7);
 		panel.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_7 = new JLabel("<html>"+"8."+"<br>"+review.get(34).getRev_no()+"<br>" +"광주문화재야행 동구 달빛걸음"+"<html>");
 		lblNewLabel_7.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lblNewLabel_7);
 		
-		String path8 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\시흥갯골축제2020.jpg";
+		String path8 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\광주문화재야행'동구 달빛걸음'2020.jpg";
 		ImageIcon home8 = new ImageIcon(path8);
 		Image originImg8 = home8.getImage();
 		Image changedImg8 = originImg8.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon8 = new ImageIcon(changedImg8);
 		
-		JLabel lblNewLabel_10 = new JLabel(Icon8);
+		JLabel lblNewLabel_10 = new JLabel("<html>"+review.get(30).getRev_date()+"<br>평점 : " +review.get(30).getRev_score()+"점 \t 연령: " + review.get(30).getAge()+"대 <br>" + review.get(30).getRev_con()+"<html>");
+		lblNewLabel_10.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lblNewLabel_10);
 		
-		JLabel lblNewLabel_11 = new JLabel("<html>"+review.get(34).getRev_date()+"<br>평점 : " +review.get(34).getRev_score()+"점 \t 연령: " + review.get(34).getAge()+"대 <br>" + review.get(34).getRev_con()+"<html>");
-		lblNewLabel_11.setFont(new Font("빙그레체", Font.PLAIN, 12));
+		JLabel lblNewLabel_11 = new JLabel(Icon8);
 		panel.add(lblNewLabel_11);
 		
 		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
