@@ -38,6 +38,7 @@ import java.io.IOException;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.SystemColor;
+import javax.swing.UIManager;
 
 public class MainGUI {
 
@@ -141,22 +142,18 @@ public class MainGUI {
 			};
 		main1.setBounds(0, 334, 434, 258);
 		panel.add(main1);
-		main1.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(0, 191, 255)));
+		main1.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(160, 160, 160)));
 
-		JLabel lblNewLabel_1 = new JLabel("  \uCD95\uC81C NOW");
+		JLabel lblNewLabel_1 = new JLabel("  \uCD95\uC81C");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(0, 124, 200, 31);
+		lblNewLabel_1.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(0, 124, 61, 29);
 		panel.add(lblNewLabel_1);
 	
-		String path3 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo_default.png";
-		ImageIcon home = new ImageIcon(path3);
-		Image originImg5 = home.getImage();
-		Image changedImg4 = originImg5.getScaledInstance(155, 175, Image.SCALE_SMOOTH);   // »çÀÌÁîÁ¶Àý
-		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
-		JLabel lbl_logo = new JLabel(Icon4);
-		lbl_logo.setBounds(0, 0, 75, 75);
+		JLabel lbl_logo = new JLabel();
+		lbl_logo.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo_default.png"));
+		lbl_logo.setBounds(4, 4, 75, 75);
 		panel.add(lbl_logo);
 
 		JPanel menu_bar = new JPanel();
@@ -195,7 +192,7 @@ public class MainGUI {
 					}
 				});
 				btn_search.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\\uAC80\uC0C9.png"));
-				btn_search.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 15));
+				btn_search.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
 				menu_bar.add(btn_search);
 				btn_search.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -206,7 +203,7 @@ public class MainGUI {
 				btn_search.setBorderPainted(false);
 				btn_search.setBackground(Color.WHITE);
 		
-		btn_review.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 15));
+		btn_review.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 15));
 		btn_review.setBorderPainted(false);
 		btn_review.setBackground(Color.WHITE);
 		menu_bar.add(btn_review);
@@ -229,27 +226,35 @@ public class MainGUI {
 					frame.dispose();
 					}
 				});
-				btn_my.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.BOLD, 15));
+				btn_my.setFont(new Font("ºù±×·¹Ã¼", Font.BOLD, 15));
 				btn_my.setBorderPainted(false);
 				btn_my.setBackground(Color.WHITE);
 				menu_bar.add(btn_my);
 				
 				JLabel lblNewLabel_2 = new JLabel("\uC9C4\uD589\uC911\uC778 \uC774\uBCA4\uD2B8");
-				lblNewLabel_2.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 12));
-				lblNewLabel_2.setBounds(13, 155, 131, 15);
+				lblNewLabel_2.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 12));
+				lblNewLabel_2.setBounds(13, 155, 92, 15);
 				panel.add(lblNewLabel_2);
 				
 				textField = new JTextField();
 				textField.setFont(new Font("±¼¸²", Font.BOLD, 12));
 				textField.setText("\uACE0\uB798\uC758 \uAFC8! \uBC14\uB2E4\uC758 \uAFC8! \uC6B8\uC0B0\uC758 \uAFC8!");
-				textField.setBounds(0, 592, 434, 31);
+				textField.setBounds(0, 598, 434, 31);
 				panel.add(textField);
 				textField.setColumns(10);
 				
-				JLabel lblNewLabel_3 = new JLabel("  \uAC00\uC790! \uD398\uC2A4\uD2F0\uBC1C!");
-				lblNewLabel_3.setFont(new Font("ÈÞ¸ÕÆíÁöÃ¼", Font.PLAIN, 20));
+				JLabel lblNewLabel_3 = new JLabel("  HOT Festival");
+				lblNewLabel_3.setForeground(new Color(255, 0, 0));
+				lblNewLabel_3.setFont(new Font("Segoe Script", Font.BOLD, 20));
 				lblNewLabel_3.setBounds(0, 300, 200, 31);
 				panel.add(lblNewLabel_3);
+				
+				JLabel lblNewLabel_1_1 = new JLabel("NOW");
+				lblNewLabel_1_1.setForeground(new Color(255, 0, 0));
+				lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+				lblNewLabel_1_1.setFont(new Font("Segoe Script", Font.BOLD, 20));
+				lblNewLabel_1_1.setBounds(52, 124, 61, 29);
+				panel.add(lblNewLabel_1_1);
 
 	}
 }

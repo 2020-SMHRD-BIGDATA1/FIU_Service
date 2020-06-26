@@ -93,13 +93,6 @@ public class SearchGUI {
 		btn_back.setBounds(0, 0, 65, 60);
 		panel.add(btn_back);
 
-		JButton btn_list = new JButton("");
-		btn_list.setIcon(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_list.png"));
-		btn_list.setBorderPainted(false);
-		btn_list.setBackground(Color.WHITE);
-		btn_list.setBounds(369, 0, 65, 60);
-		panel.add(btn_list);
-
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(12, 108, 410, 45);
 		panel.add(panel_1);

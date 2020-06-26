@@ -67,7 +67,7 @@ public class MyPage {
 		// 새로운 Image로 ImageIcon객체를 생성
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 
-		lbl_home = new JLabel(Icon4);
+		lbl_home = new JLabel(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_back.png"));
 		lbl_home.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -75,7 +75,7 @@ public class MyPage {
 				MainGUI main = new MainGUI();
 			}
 		});
-		lbl_home.setBounds(12, 10, 75, 73);
+		lbl_home.setBounds(12, 22, 75, 73);
 		panel.add(lbl_home);
 
 		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -86,7 +86,7 @@ public class MyPage {
 		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setFont(new Font("빙그레체", Font.BOLD, 35));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(12, 0, 410, 113);
+		lblNewLabel.setBounds(12, 2, 410, 113);
 		panel.add(lblNewLabel);
 
 		JButton btn2 = new JButton("\uD6C4\uAE30 \uC791\uC131                             \u3009");
@@ -97,15 +97,7 @@ public class MyPage {
 			}
 		});
 
-		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\profile.png";
-		ImageIcon originIcon = new ImageIcon(path);
-		Image originImg = originIcon.getImage();
-		// 추출된 Image의 크기를 조절하여 새로운 Image객체 생성
-		Image changedImg = originImg.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
-		// 새로운 Image로 ImageIcon객체를 생성
-		ImageIcon Icon = new ImageIcon(changedImg);
-
-		JLabel lbl_profile = new JLabel(Icon);
+		JLabel lbl_profile = new JLabel(new ImageIcon("C:\\Users\\SMHRD\\git\\repository\\Team\\img\\profile.png"));
 		lbl_profile.setBounds(22, 138, 100, 100);
 		panel.add(lbl_profile);
 
