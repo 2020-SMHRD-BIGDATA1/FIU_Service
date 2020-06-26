@@ -47,6 +47,7 @@ public class ReviewGUI {
 	
 	private Controller controller = LoginGUI.controller;
 	private JLabel lbl_logo;
+	private JLabel lbl_back;
 
 	/**
 	 * Launch the application.
@@ -67,6 +68,16 @@ public class ReviewGUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		String path11 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_back.png";
+		ImageIcon home11 = new ImageIcon(path11);
+		Image originImg11 = home11.getImage();
+		Image changedImg11 = originImg11.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+		ImageIcon Icon11 = new ImageIcon(changedImg11);
+		
+		lbl_back = new JLabel(Icon11);
+		lbl_back.setBounds(2, 0, 70, 70);
+		frame.getContentPane().add(lbl_back);
+		
 		JLabel lblNewLabel = new JLabel("\uB9CC\uC810 \uD6C4\uAE30 \uBAA9\uB85D");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("빙그레체", Font.PLAIN, 30));
@@ -76,18 +87,18 @@ public class ReviewGUI {
 		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
 		ImageIcon home = new ImageIcon(path);
 		Image originImg = home.getImage();
-		Image changedImg = originImg.getScaledInstance(75, 75, Image.SCALE_SMOOTH);   // 사이즈조절
+		Image changedImg = originImg.getScaledInstance(60, 60, Image.SCALE_SMOOTH);   // 사이즈조절
 		ImageIcon Icon = new ImageIcon(changedImg);
 		
 		lbl_logo = new JLabel(Icon);
 		lbl_logo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
 				MainGUI mainGUI = new MainGUI();
+				frame.dispose();
 			}
 		});
-		lbl_logo.setBounds(0, 0, 70, 70);
+		lbl_logo.setBounds(364, 0, 70, 70);
 		frame.getContentPane().add(lbl_logo);
 		
 		JPanel panel = new JPanel();
@@ -157,18 +168,18 @@ public class ReviewGUI {
 		lbl_review3 = new JLabel(Icon3);
 		panel.add(lbl_review3);
 		
-		lbl_revno4 = new JLabel("<html>"+"4."+"<br>"+review.get(16).getRev_no()+"<br>"+"베어트리파크 철쭉제"+"<html>");
+		lbl_revno4 = new JLabel("<html>"+"4."+"<br>"+review.get(79).getRev_no()+"<br>"+"영광 불갑산상사화축제"+"<html>");
 		lbl_revno4.setHorizontalAlignment(SwingConstants.LEFT);
 		lbl_revno4.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lbl_revno4);
 		
-		String path4 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\베어트리파크 철쭉제.jpg";
+		String path4 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\영광 불갑산상사화축제2020.jpg";
 		ImageIcon home4 = new ImageIcon(path4);
 		Image originImg4 = home4.getImage();
 		Image changedImg4 = originImg4.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
 		ImageIcon Icon4 = new ImageIcon(changedImg4);
 		
-		lbl_img4 = new JLabel("<html>"+review.get(17).getRev_date()+"<br>평점 : " +review.get(17).getRev_score()+"점 \t 연령: " + review.get(17).getAge()+"대 <br>" + review.get(17).getRev_con()+"<html>");
+		lbl_img4 = new JLabel("<html>"+review.get(79).getRev_date()+"<br>평점 : " +review.get(79).getRev_score()+"점 \t 연령: " + review.get(79).getAge()+"대 <br>" + review.get(79).getRev_con()+"<html>");
 		lbl_img4.setFont(new Font("빙그레체", Font.PLAIN, 12));
 		panel.add(lbl_img4);
 		

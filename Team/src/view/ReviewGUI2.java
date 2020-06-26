@@ -24,6 +24,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.JTextField;
 
 
 public class ReviewGUI2 {
@@ -45,7 +46,17 @@ public class ReviewGUI2 {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lbl_title = new JLabel("\uCD94\uCC9C \uD6C4\uAE30 \uBAA9\uB85D");
+		String path11 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\btn_back.png";
+		ImageIcon home11 = new ImageIcon(path11);
+		Image originImg11 = home11.getImage();
+		Image changedImg11 = originImg11.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+		ImageIcon Icon11 = new ImageIcon(changedImg11);
+		
+		JLabel lbl_back = new JLabel(Icon11);
+		lbl_back.setBounds(0, 0, 69, 69);
+		frame.getContentPane().add(lbl_back);
+		
+		JLabel lbl_title = new JLabel("\uB9CC\uC810 \uD6C4\uAE30 \uBAA9\uB85D");
 		lbl_title.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_title.setFont(new Font("빙그레체", Font.PLAIN, 30));
 		lbl_title.setBounds(81, 0, 271, 69);
@@ -119,12 +130,12 @@ public class ReviewGUI2 {
 		lblNewLabel_1.setBounds(289, 258, 144, 129);
 		panel.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_7 = new JLabel("<html>"+"8."+"<br>"+review.get(34).getRev_no()+"<br>" +"광주문화재야행 동구 달빛걸음"+"<html>");
+		JLabel lblNewLabel_7 = new JLabel("<html>"+"8."+"<br>"+review.get(49).getRev_no()+"<br>" +"춘천 드론페스티벌"+"<html>");
 		lblNewLabel_7.setBounds(1, 387, 144, 129);
 		lblNewLabel_7.setFont(new Font("빙그레체", Font.PLAIN, 13));
 		panel.add(lblNewLabel_7);
 		
-		String path8 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\광주문화재야행'동구 달빛걸음'2020.jpg";
+		String path8 = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\춘천 드론페스티벌2020.jpg";
 		ImageIcon home8 = new ImageIcon(path8);
 		Image originImg8 = home8.getImage();
 		Image changedImg8 = originImg8.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
@@ -134,13 +145,9 @@ public class ReviewGUI2 {
 		lblNewLabel_11.setBounds(289, 387, 144, 129);
 		panel.add(lblNewLabel_11);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		scrollPane.setBounds(145, 387, 144, 119);
-		panel.add(scrollPane);
-		
-		JLabel lblNewLabel_10 = new JLabel("<html>"+review.get(30).getRev_date()+"<br>평점 : " +review.get(30).getRev_score()+"점 \t 연령: " + review.get(30).getAge()+"대 <br>" + review.get(30).getRev_con()+"<html>");
-		scrollPane.setViewportView(lblNewLabel_10);
+		JLabel lblNewLabel_10 = new JLabel("<html>"+review.get(49).getRev_date()+"<br>평점 : " +review.get(49).getRev_score()+"점 \t 연령: " + review.get(49).getAge()+"대 <br>" + review.get(49).getRev_con()+"<html>");
+		lblNewLabel_10.setBounds(145, 385, 149, 131);
+		panel.add(lblNewLabel_10);
 		
 		String path = "C:\\Users\\SMHRD\\git\\repository\\Team\\img\\main_logo.png";
 		ImageIcon home = new ImageIcon(path);
@@ -156,7 +163,7 @@ public class ReviewGUI2 {
 				frame.dispose();
 			}
 		});
-		lbl_logo.setBounds(0, 0, 60, 60);
+		lbl_logo.setBounds(365, 0, 69, 69);
 		frame.getContentPane().add(lbl_logo);
 		
 		JButton btnNewButton = new JButton("\uB2E4\uC74C \uB9AC\uBDF0");
