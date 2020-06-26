@@ -4,6 +4,7 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,6 +41,7 @@ public class FestivalMore {
 	int cnt30 = 0;
 	int cnt40 = 0;
 	String name = null;
+	private FontMake fm = new FontMake();
 	/**
 	 * Launch the application.
 	 */
@@ -59,6 +61,9 @@ public class FestivalMore {
 		frame.setBounds(100, 100, 450, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
+		
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		fm.FontChange(ge);
 
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(240, 248, 255));
@@ -130,7 +135,7 @@ public class FestivalMore {
 		
 		//한글을 적용하기 위한 Font 객체 생성
 		// 1.폰트종류 2.폰트타입 3.크기
-		Font f = new Font("Gulim",Font.BOLD, 14);
+		Font f = new Font("빙그레체",Font.BOLD, 14);
 		barChart.getTitle().setFont(f);
 		
 		
@@ -173,7 +178,7 @@ public class FestivalMore {
 		table.setFillsViewportHeight(true);
 		table.setRowHeight(35);
 		table.setSurrendersFocusOnKeystroke(true);
-		table.setFont(new Font("굴림", Font.PLAIN, 20));
+		table.setFont(new Font("빙그레체", Font.PLAIN, 20));
 		JScrollPane scrollPane = new JScrollPane(table);
 		scrollPane.setBounds(10, 374, 422, 234);
 		panel.add(scrollPane);

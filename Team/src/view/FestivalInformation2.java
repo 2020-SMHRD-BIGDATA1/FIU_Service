@@ -20,6 +20,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
+import java.awt.Font;
 
 public class FestivalInformation2 {
 
@@ -57,6 +58,7 @@ public class FestivalInformation2 {
 		
 		String path = "C:\\\\Users\\\\SMHRD\\\\Desktop\\\\¼ö±¹.jpg";
 		JLabel lblImage = new JLabel(new ImageIcon(path));
+		lblImage.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 12));
 		lblImage.setBackground(new Color(240, 248, 255));
 		springLayout.putConstraint(SpringLayout.WEST, lblImage, 133, SpringLayout.WEST, panel);
 		panel.add(lblImage);
@@ -67,6 +69,7 @@ public class FestivalInformation2 {
 		String infor = dao.getInfor(f_name);
 
 		JTextArea textArea = new JTextArea();
+		textArea.setFont(new Font("ºù±×·¹Ã¼", Font.PLAIN, 13));
 		textArea.setBackground(new Color(240, 248, 255));
 		textArea.setText(infor);
 		textArea.setLineWrap(true);
